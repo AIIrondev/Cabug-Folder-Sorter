@@ -65,24 +65,23 @@ class sorting:
             "archive": ["zip", "rar", "7z", "tar", "gz", "xz"],
             "code": ["py", "html", "css", "js", "cpp", "c", "java", "h", "hpp", "cs", "php", "json", "xml", "sql", "asm", "asmx", "aspx", "jsp", "vb", "vbs", "rb", "pl", "go", "swift", "kt", "m", "r", "lua", "ts", "tsx", "yml", "yaml", "ini", "cfg", "conf", "md", "markdown", "bat", "cmd", "ps1", "psm1", "psd1", "ps1xml", "psc1", "pssc", "reg", "scf", "scr", "vbs", "ws", "wsf", "wsc", "wsh", "ps2", "ps2xml", "psc2", "pscxml", "cdxml", "xaml", "xaml", "xsl", "xslt", "xsd", "xsc", "xsd", "xsf", "config", "settings", "props", "sln", "csproj", "vbproj", "vcxproj", "vcproj", "dbproj", "njsproj", "vcxitems", "vcxitems", "csproj", "vbproj", "vcxproj", "vcproj", "dbproj", "njsproj", "vcxitems", "vcxitems", "vcxitems", "proj", "projitems", "shproj", "manifest", "appxmanifest"],
         }
-        self.sort_ending(folder)
+        self.sort_ending(folder)  
 
     def sort_ending(self, ending_folder):
         logger.debug("Sorting endings")
         for file in os.listdir(ending_folder):
             logger.debug(file)
             file_ending = self.get_file_ending(file)
-            if file_ending:
+            if file_ending == False:
+                logger.warning("No ending found")
+            else:
                 for folder in self.ending_folder_changer:
                     if file_ending[1:] in self.ending_folder_changer[folder]:
                         self.create_folder(folder)
                         self.move_file(file, folder)
                         logger.debug("File moved")
-                        break
                     else:
                         logger.warning("No folder found")
-            else:
-                logger.warning("No ending found1")
     def move_file(self, file, folder):
         os.system(f"move {file} {folder}")
 
