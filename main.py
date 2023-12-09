@@ -70,15 +70,19 @@ class sorting:
     def sort_ending(self, ending_folder):
         logger.debug("Sorting endings")
         for file in os.listdir(ending_folder):
-            for folder in self.ending_folder_changer:
-                for ending in self.ending_folder_changer[folder]:
-                    if ending == self.get_file_ending(file):
+            logger.debug(file)
+            file_ending = self.get_file_ending(file)
+            if file_ending:
+                for folder in self.ending_folder_changer:
+                    if file_ending[1:] in self.ending_folder_changer[folder]:
                         self.create_folder(folder)
                         self.move_file(file, folder)
                         logger.debug("File moved")
+                        break
                     else:
-                        logger.debug("File not moved")
-        
+                        logger.warning("No folder found")
+            else:
+                logger.warning("No ending found1")
     def move_file(self, file, folder):
         os.system(f"move {file} {folder}")
 
