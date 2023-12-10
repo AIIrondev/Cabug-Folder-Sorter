@@ -26,7 +26,7 @@ class GUI:
         self.window.title("Folder sorter")
         self.window.geometry("275x300")
         self.window.resizable(False, False)
-        self.window._set_appearance_mode("light") # geht nur mit light mode und nicht mit dark mode -> ? umändern ?
+        self.window._set_appearance_mode("light")
         self.main_menu()
 
     def main_menu(self):
@@ -106,7 +106,7 @@ class sorting:
                         
     def move_file(self, file, folder):
         try:
-            shutil.move(file, folder) # shutil.move(file, folder) better than os.system(f"move {file} {folder}")/os.system(f"mv {file} {folder}") -> shutil.move() is faster/more reliable
+            shutil.move(file, folder)
         except shutil.Error:
             logger.debug(f"Moved {file} to {folder}")
 
