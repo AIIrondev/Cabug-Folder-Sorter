@@ -25,7 +25,7 @@ class GUI:
         self.window.title("Folder sorter")
         self.window.geometry("500x500")
         self.window.resizable(False, False)
-        self.window._set_appearance_mode("light")
+        self.window._set_appearance_mode("light") # geht nur mit light mode und nicht mit dark mode -> ? umändern ?
         self.main_menu()
 
     def main_menu(self):
@@ -64,6 +64,7 @@ class sorting:
             "executable": ["exe", "msi", "bat", "sh", "jar"],
             "archive": ["zip", "rar", "7z", "tar", "gz", "xz"],
             "code": ["py", "html", "css", "js", "cpp", "c", "java", "h", "hpp", "cs", "php", "json", "xml", "sql", "asm", "asmx", "aspx", "jsp", "vb", "vbs", "rb", "pl", "go", "swift", "kt", "m", "r", "lua", "ts", "tsx", "yml", "yaml", "ini", "cfg", "conf", "md", "markdown", "bat", "cmd", "ps1", "psm1", "psd1", "ps1xml", "psc1", "pssc", "reg", "scf", "scr", "vbs", "ws", "wsf", "wsc", "wsh", "ps2", "ps2xml", "psc2", "pscxml", "cdxml", "xaml", "xaml", "xsl", "xslt", "xsd", "xsc", "xsd", "xsf", "config", "settings", "props", "sln", "csproj", "vbproj", "vcxproj", "vcproj", "dbproj", "njsproj", "vcxitems", "vcxitems", "csproj", "vbproj", "vcxproj", "vcproj", "dbproj", "njsproj", "vcxitems", "vcxitems", "vcxitems", "proj", "projitems", "shproj", "manifest", "appxmanifest"],
+            "other": ["sonsiges"]
         }
         self.sort_ending(folder)  
 
@@ -76,30 +77,40 @@ class sorting:
                 logger.warning("No ending found")
             else:
                 for folder in self.ending_folder_changer:
-                    if file_ending[1:] in self.ending_folder_changer[folder]:
-                        self.create_folder(folder)
-                        self.move_file(file, folder)
+                    if file_ending in self.ending_folder_changer[folder]:
+                        logger.debug("Moving file")
+                        self.create_folder(f"{ending_folder}/{folder}")
+                        self.move_file(f"{ending_folder}/{file}", f"{ending_folder}/{folder}")
                         logger.debug("File moved")
+                        break
                     else:
-                        logger.warning("No folder found")
+                        logger.debug("No ending found")
+                        continue
+                        
     def move_file(self, file, folder):
         os.system(f"move {file} {folder}")
 
     def create_folder(self, folder):
-        if not os.path.exists(folder):
+        if not os.path.exists(folder): # windows / linux check machen und einbauen -> create funktion system_check machen
             os.system(f"mkdir {folder}")
             logger.debug("Folder created")
         else:
             logger.debug("Folder already exists")
 
     def get_file_ending(self, file):
-        for i in range(len(file)):
-            if file[i] == ".":
-                return file[i:]
-                logger.debug("Ending found")
+        logger.debug("Getting file ending")
+        if "." in file:
+            file_ending = file.split(".")[1]
+            logger.debug(f"the following ending was found {file_ending}")
+            if file_ending in self.ending_folder_changer["image"] or file_ending in self.ending_folder_changer["video"] or file_ending in self.ending_folder_changer["3d object"] or file_ending in self.ending_folder_changer["document"] or file_ending in self.ending_folder_changer["audio"] or file_ending in self.ending_folder_changer["executable"] or file_ending in self.ending_folder_changer["archive"] or file_ending in self.ending_folder_changer["code"]:
+                logger.debug("Ending found valid")
+                return file_ending
             else:
-                logger.warning("No ending found")
-                return False
+                logger.warning("Ending not registert")
+                return "sonsiges" # kann zu fehlern führen!!! -> muss eventuell noch geändert werden
+        else:
+            logger.warning("No ending found")
+            return False
 
 if __name__ == "__main__":
     window = GUI()

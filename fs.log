@@ -68,3 +68,339 @@
 2023-12-09 21:29:38,212 - folder sorter - WARNING - No ending found
 2023-12-09 21:29:41,528 - folder sorter - DEBUG - Opening menu
 2023-12-09 21:29:41,528 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:25:58,753 - folder sorter - INFO - Programm gestartet
+2023-12-10 17:25:58,955 - folder sorter - DEBUG - Opening menu
+2023-12-10 17:25:58,955 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:26:00,107 - folder sorter - DEBUG - Opening main menu
+2023-12-10 17:26:00,107 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:26:02,717 - folder sorter - DEBUG - Sorting endings
+2023-12-10 17:26:02,717 - folder sorter - DEBUG - audio.wav
+2023-12-10 17:26:02,717 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,717 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,717 - folder sorter - DEBUG - bild.png
+2023-12-10 17:26:02,717 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,717 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,717 - folder sorter - DEBUG - dokum.txt
+2023-12-10 17:26:02,717 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,717 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,717 - folder sorter - DEBUG - dreid.obj
+2023-12-10 17:26:02,718 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,718 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,718 - folder sorter - DEBUG - dukument.pdf
+2023-12-10 17:26:02,718 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,718 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,718 - folder sorter - DEBUG - exekutqwable.exe
+2023-12-10 17:26:02,718 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,718 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,718 - folder sorter - DEBUG - komp.zip
+2023-12-10 17:26:02,718 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,718 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,718 - folder sorter - DEBUG - ruby.rb
+2023-12-10 17:26:02,718 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,718 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,718 - folder sorter - DEBUG - video.mp4
+2023-12-10 17:26:02,718 - folder sorter - WARNING - No ending found
+2023-12-10 17:26:02,718 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:36,546 - folder sorter - INFO - Programm gestartet
+2023-12-10 17:27:36,713 - folder sorter - DEBUG - Opening menu
+2023-12-10 17:27:36,713 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:27:38,231 - folder sorter - DEBUG - Opening main menu
+2023-12-10 17:27:38,231 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:27:41,249 - folder sorter - DEBUG - Sorting endings
+2023-12-10 17:27:41,249 - folder sorter - DEBUG - audio.wav
+2023-12-10 17:27:41,249 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:27:41,249 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,249 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,249 - folder sorter - DEBUG - bild.png
+2023-12-10 17:27:41,249 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:27:41,250 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,250 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,250 - folder sorter - DEBUG - dokum.txt
+2023-12-10 17:27:41,250 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:27:41,250 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,250 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,250 - folder sorter - DEBUG - dreid.obj
+2023-12-10 17:27:41,250 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:27:41,250 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,250 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,250 - folder sorter - DEBUG - dukument.pdf
+2023-12-10 17:27:41,250 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:27:41,250 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,250 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,250 - folder sorter - DEBUG - exekutqwable.exe
+2023-12-10 17:27:41,250 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:27:41,250 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,250 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,250 - folder sorter - DEBUG - komp.zip
+2023-12-10 17:27:41,250 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:27:41,250 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,250 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,250 - folder sorter - DEBUG - ruby.rb
+2023-12-10 17:27:41,250 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:27:41,250 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,250 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,250 - folder sorter - DEBUG - video.mp4
+2023-12-10 17:27:41,251 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:27:41,251 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:41,251 - folder sorter - WARNING - No ending found
+2023-12-10 17:27:42,681 - folder sorter - DEBUG - Opening menu
+2023-12-10 17:27:42,681 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:35:35,815 - folder sorter - INFO - Programm gestartet
+2023-12-10 17:35:35,989 - folder sorter - DEBUG - Opening menu
+2023-12-10 17:35:35,989 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:35:37,073 - folder sorter - DEBUG - Opening main menu
+2023-12-10 17:35:37,073 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:35:40,342 - folder sorter - DEBUG - Sorting endings
+2023-12-10 17:35:40,342 - folder sorter - DEBUG - audio.wav
+2023-12-10 17:35:40,342 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:35:40,342 - folder sorter - DEBUG - the following ending was foundwav
+2023-12-10 17:36:00,514 - folder sorter - INFO - Programm gestartet
+2023-12-10 17:36:00,683 - folder sorter - DEBUG - Opening menu
+2023-12-10 17:36:00,683 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:36:01,843 - folder sorter - DEBUG - Opening main menu
+2023-12-10 17:36:01,843 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:36:04,920 - folder sorter - DEBUG - Sorting endings
+2023-12-10 17:36:04,920 - folder sorter - DEBUG - audio.wav
+2023-12-10 17:36:04,920 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:36:04,920 - folder sorter - DEBUG - the following ending was foundwav
+2023-12-10 17:36:04,920 - folder sorter - WARNING - Ending not registert
+2023-12-10 17:36:04,920 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,920 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - DEBUG - bild.png
+2023-12-10 17:36:04,921 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:36:04,921 - folder sorter - DEBUG - the following ending was foundpng
+2023-12-10 17:36:04,921 - folder sorter - WARNING - Ending not registert
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - DEBUG - dokum.txt
+2023-12-10 17:36:04,921 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:36:04,921 - folder sorter - DEBUG - the following ending was foundtxt
+2023-12-10 17:36:04,921 - folder sorter - WARNING - Ending not registert
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,921 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - DEBUG - dreid.obj
+2023-12-10 17:36:04,922 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:36:04,922 - folder sorter - DEBUG - the following ending was foundobj
+2023-12-10 17:36:04,922 - folder sorter - WARNING - Ending not registert
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - DEBUG - dukument.pdf
+2023-12-10 17:36:04,922 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:36:04,922 - folder sorter - DEBUG - the following ending was foundpdf
+2023-12-10 17:36:04,922 - folder sorter - WARNING - Ending not registert
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,922 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - DEBUG - exekutqwable.exe
+2023-12-10 17:36:04,923 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:36:04,923 - folder sorter - DEBUG - the following ending was foundexe
+2023-12-10 17:36:04,923 - folder sorter - WARNING - Ending not registert
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - DEBUG - komp.zip
+2023-12-10 17:36:04,923 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:36:04,923 - folder sorter - DEBUG - the following ending was foundzip
+2023-12-10 17:36:04,923 - folder sorter - WARNING - Ending not registert
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,923 - folder sorter - DEBUG - ruby.rb
+2023-12-10 17:36:04,923 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:36:04,923 - folder sorter - DEBUG - the following ending was foundrb
+2023-12-10 17:36:04,923 - folder sorter - WARNING - Ending not registert
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - DEBUG - video.mp4
+2023-12-10 17:36:04,924 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:36:04,924 - folder sorter - DEBUG - the following ending was foundmp4
+2023-12-10 17:36:04,924 - folder sorter - WARNING - Ending not registert
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:36:04,924 - folder sorter - WARNING - No folder found
+2023-12-10 17:41:36,743 - folder sorter - DEBUG - Opening menu
+2023-12-10 17:41:36,743 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:42:34,699 - folder sorter - INFO - Programm gestartet
+2023-12-10 17:42:34,869 - folder sorter - DEBUG - Opening menu
+2023-12-10 17:42:34,869 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:42:40,855 - folder sorter - DEBUG - Opening main menu
+2023-12-10 17:42:40,855 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:42:44,608 - folder sorter - DEBUG - Sorting endings
+2023-12-10 17:42:44,608 - folder sorter - DEBUG - audio.wav
+2023-12-10 17:42:44,608 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:42:44,608 - folder sorter - DEBUG - the following ending was found wav
+2023-12-10 17:42:44,608 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:42:44,608 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,608 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,608 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,608 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - DEBUG - bild.png
+2023-12-10 17:42:44,609 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:42:44,609 - folder sorter - DEBUG - the following ending was found png
+2023-12-10 17:42:44,609 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - DEBUG - dokum.txt
+2023-12-10 17:42:44,609 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:42:44,609 - folder sorter - DEBUG - the following ending was found txt
+2023-12-10 17:42:44,609 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,609 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - DEBUG - dreid.obj
+2023-12-10 17:42:44,610 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:42:44,610 - folder sorter - DEBUG - the following ending was found obj
+2023-12-10 17:42:44,610 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - DEBUG - dukument.pdf
+2023-12-10 17:42:44,610 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:42:44,610 - folder sorter - DEBUG - the following ending was found pdf
+2023-12-10 17:42:44,610 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,610 - folder sorter - DEBUG - exekutqwable.exe
+2023-12-10 17:42:44,611 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:42:44,611 - folder sorter - DEBUG - the following ending was found exe
+2023-12-10 17:42:44,611 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - DEBUG - komp.zip
+2023-12-10 17:42:44,611 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:42:44,611 - folder sorter - DEBUG - the following ending was found zip
+2023-12-10 17:42:44,611 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - DEBUG - ruby.rb
+2023-12-10 17:42:44,611 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:42:44,611 - folder sorter - DEBUG - the following ending was found rb
+2023-12-10 17:42:44,611 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,611 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - DEBUG - video.mp4
+2023-12-10 17:42:44,612 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:42:44,612 - folder sorter - DEBUG - the following ending was found mp4
+2023-12-10 17:42:44,612 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
+2023-12-10 17:42:47,061 - folder sorter - DEBUG - Opening menu
+2023-12-10 17:42:47,061 - folder sorter - DEBUG - Clearing window
