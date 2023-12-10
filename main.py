@@ -6,6 +6,7 @@ import os
 import shutil
 import time
 import logging
+import webbrowser
 
 
 # Konfigurieren des Loggers
@@ -23,26 +24,39 @@ class GUI:
     def __init__(self):
         self.window = tk.CTk()
         self.window.title("Folder sorter")
-        self.window.geometry("500x500")
-        self.window.resizable(False, False)
+        self.window.geometry("275x300")
+        # self.window.resizable(False, False)
         self.window._set_appearance_mode("light") # geht nur mit light mode und nicht mit dark mode -> ? umändern ?
         self.main_menu()
 
     def main_menu(self):
         logger.debug("Opening menu")
         self.clear_window()
-        tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="blue").place(x=175, y=0) # set corner to #242424 for dark mode
-        tk.CTkButton(self.window, text="Sort folder", corner_radius=32, command=lambda: self.main()).place(x=175, y=100)
-        tk.CTkButton(self.window, text="Exit", corner_radius=32, command=self.window.destroy, fg_color="#ff0000", hover_color="#b30000").place(x=175, y=150)
+        tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0) # set corner to #242424 for dark mode
+        tk.CTkButton(self.window, text="Sort folder", corner_radius=32, text_color="black",command=lambda: self.main()).place(x=75, y=100)
+        tk.CTkButton(self.window, text="Exit", corner_radius=32, command=self.window.destroy, fg_color="#ff0000", hover_color="#b30000", text_color="black").place(x=75, y=200)
+        tk.CTkButton(self.window, text="About", corner_radius=32, command=self.about, text_color="black").place(x=75, y=150)
+        tk.CTkLabel(self.window, text="Made by: @AIIrondev", font=("Arial", 10), text_color="black").place(x=90, y=250)
+        tk.CTkLabel(self.window, text="Version: 0.1.1", font=("Arial", 10), text_color="black").place(x=100, y=270)
 
     def main(self):
         logger.debug("Opening main menu")
         self.clear_window()
         self.folder_button = None
-        tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25)).place(x=175, y=0)
-        tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32).place(x=175, y=100)
-        tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu).place(x=175, y=150)
+        tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=175, y=0)
+        tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=100)
+        tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=150)
 
+    def about(self):
+        logger.debug("Opening about menu")
+        self.clear_window()
+        tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
+        tk.CTkLabel(self.window, text="Made by: @AIIrondev", font=("Arial", 15), text_color="black").place(x=90, y=25)
+        tk.CTkButton(self.window, text="LICENCE", text_color="blue", command=lambda: self.open_html_file("LICENCE.html"), corner_radius=32).place(x=75, y=100)
+        tk.CTkLabel(self.window, text="Version: 1.0.0", font=("Arial", 15), text_color="black").place(x=100, y=270)
+        tk.CTkLabel(self.window, text="Github: https://github.com/Iron-witch/Folder-sorter", font=("Arial", 12), text_color="blue").place(x=25, y=50)
+        tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=150)
+    
     def select_folder(self):
         self.button = tk.filedialog.askdirectory()
         self.folder_button = self.button
@@ -52,6 +66,11 @@ class GUI:
         logger.debug("Clearing window")
         for widget in self.window.winfo_children():
             widget.destroy()
+            
+    def open_html_file(self, file_path):
+        logger.debug("Opening html file")
+        # Open the HTML file in the default web browser
+        webbrowser.open(file_path)
 
 class sorting:
     def __init__(self, folder):
@@ -87,7 +106,7 @@ class sorting:
                         
     def move_file(self, file, folder):
         try:
-            shutil.move(file, folder)
+            shutil.move(file, folder) # shutil.move(file, folder) better than os.system(f"move {file} {folder}")/os.system(f"mv {file} {folder}") -> shutil.move() is faster/more reliable
         except shutil.Error:
             logger.debug(f"Moved {file} to {folder}")
 
