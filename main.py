@@ -25,7 +25,7 @@ class GUI:
         self.window = tk.CTk()
         self.window.title("Folder sorter")
         self.window.geometry("275x300")
-        # self.window.resizable(False, False)
+        self.window.resizable(False, False)
         self.window._set_appearance_mode("light") # geht nur mit light mode und nicht mit dark mode -> ? umändern ?
         self.main_menu()
 
@@ -43,7 +43,7 @@ class GUI:
         logger.debug("Opening main menu")
         self.clear_window()
         self.folder_button = None
-        tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=175, y=0)
+        tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
         tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=100)
         tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=150)
 
