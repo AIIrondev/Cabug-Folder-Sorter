@@ -86,8 +86,10 @@ class sorting:
                     logger.debug("No ending found2 -> moving to other folder")
                         
     def move_file(self, file, folder):
-        os.system(f"move {file} {folder}")
-        logger.debug(f"Moved {file} to {folder}")
+        try:
+            shutil.move(file, folder)
+        except shutil.Error:
+            logger.debug(f"Moved {file} to {folder}")
 
     def create_folder(self, folder):
         if not os.path.exists(folder):

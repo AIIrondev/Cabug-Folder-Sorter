@@ -831,3 +831,29 @@
 2023-12-10 19:38:25,050 - folder sorter - DEBUG - Moved C:/Users/Maxi/Music/Neuer Ordner/video.mp4 to C:/Users/Maxi/Music/Neuer Ordner/video
 2023-12-10 19:38:33,944 - folder sorter - DEBUG - Opening menu
 2023-12-10 19:38:33,945 - folder sorter - DEBUG - Clearing window
+2023-12-10 19:41:38,593 - folder sorter - INFO - Programm gestartet
+2023-12-10 19:41:38,749 - folder sorter - DEBUG - Opening menu
+2023-12-10 19:41:38,749 - folder sorter - DEBUG - Clearing window
+2023-12-10 19:41:39,874 - folder sorter - DEBUG - Opening main menu
+2023-12-10 19:41:39,874 - folder sorter - DEBUG - Clearing window
+2023-12-10 19:41:48,514 - folder sorter - DEBUG - Sorting endings
+2023-12-10 19:41:48,514 - folder sorter - DEBUG - audio.wav
+2023-12-10 19:41:48,514 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:41:48,516 - folder sorter - DEBUG - bild.png
+2023-12-10 19:41:48,516 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:41:48,521 - folder sorter - DEBUG - dokum.txt
+2023-12-10 19:41:48,521 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:41:48,522 - folder sorter - DEBUG - dreid.obj
+2023-12-10 19:41:48,522 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:41:48,523 - folder sorter - DEBUG - dukument.pdf
+2023-12-10 19:41:48,523 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:41:48,524 - folder sorter - DEBUG - exekutqwable.exe
+2023-12-10 19:41:48,524 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:41:48,525 - folder sorter - DEBUG - komp.zip
+2023-12-10 19:41:48,526 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:41:48,527 - folder sorter - DEBUG - ruby.rb
+2023-12-10 19:41:48,527 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:41:48,528 - folder sorter - DEBUG - video.mp4
+2023-12-10 19:41:48,528 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:41:56,625 - folder sorter - DEBUG - Opening menu
+2023-12-10 19:41:56,625 - folder sorter - DEBUG - Clearing window
