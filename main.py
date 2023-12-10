@@ -74,43 +74,27 @@ class sorting:
             logger.debug(file)
             file_ending = self.get_file_ending(file)
             if file_ending == False:
-                logger.warning("No ending found")
+                logger.warning("No ending found1 -> moving to other folder")
             else:
                 for folder in self.ending_folder_changer:
                     if file_ending in self.ending_folder_changer[folder]:
-                        logger.debug("Moving file")
+                        logger.debug("Ending found1 -> moving to folder")
                         self.create_folder(f"{ending_folder}/{folder}")
                         self.move_file(f"{ending_folder}/{file}", f"{ending_folder}/{folder}")
-                        logger.debug("File moved")
                         break
-                    else:
-                        logger.debug("No ending found")
-                        continue
+                else:
+                    logger.debug("No ending found2 -> moving to other folder")
                         
     def move_file(self, file, folder):
         os.system(f"move {file} {folder}")
+        logger.debug(f"Moved {file} to {folder}")
 
     def create_folder(self, folder):
-        if not os.path.exists(folder): # windows / linux check machen und einbauen -> create funktion system_check machen
-            os.system(f"mkdir {folder}")
-            logger.debug("Folder created")
-        else:
-            logger.debug("Folder already exists")
+        if not os.path.exists(folder):
+            os.makedirs(folder)
 
     def get_file_ending(self, file):
-        logger.debug("Getting file ending")
-        if "." in file:
-            file_ending = file.split(".")[1]
-            logger.debug(f"the following ending was found {file_ending}")
-            if file_ending in self.ending_folder_changer["image"] or file_ending in self.ending_folder_changer["video"] or file_ending in self.ending_folder_changer["3d object"] or file_ending in self.ending_folder_changer["document"] or file_ending in self.ending_folder_changer["audio"] or file_ending in self.ending_folder_changer["executable"] or file_ending in self.ending_folder_changer["archive"] or file_ending in self.ending_folder_changer["code"]:
-                logger.debug("Ending found valid")
-                return file_ending
-            else:
-                logger.warning("Ending not registert")
-                return "sonsiges" # kann zu fehlern führen!!! -> muss eventuell noch geändert werden
-        else:
-            logger.warning("No ending found")
-            return False
+        return os.path.splitext(file)[1][1:]
 
 if __name__ == "__main__":
     window = GUI()

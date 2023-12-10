@@ -404,3 +404,430 @@
 2023-12-10 17:42:44,612 - folder sorter - WARNING - No folder found
 2023-12-10 17:42:47,061 - folder sorter - DEBUG - Opening menu
 2023-12-10 17:42:47,061 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:46:31,845 - folder sorter - INFO - Programm gestartet
+2023-12-10 17:46:32,000 - folder sorter - DEBUG - Opening menu
+2023-12-10 17:46:32,000 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:46:33,591 - folder sorter - DEBUG - Opening main menu
+2023-12-10 17:46:33,592 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:46:42,342 - folder sorter - DEBUG - Sorting endings
+2023-12-10 17:46:42,342 - folder sorter - DEBUG - audio.wav
+2023-12-10 17:46:42,342 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:46:42,342 - folder sorter - DEBUG - the following ending was found wav
+2023-12-10 17:46:42,342 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:46:42,342 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,342 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,342 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,342 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,343 - folder sorter - DEBUG - Moving file
+2023-12-10 17:46:42,349 - folder sorter - DEBUG - Folder created
+2023-12-10 17:46:42,357 - folder sorter - DEBUG - File moved
+2023-12-10 17:46:42,357 - folder sorter - DEBUG - bild.png
+2023-12-10 17:46:42,357 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:46:42,357 - folder sorter - DEBUG - the following ending was found png
+2023-12-10 17:46:42,357 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:46:42,357 - folder sorter - DEBUG - Moving file
+2023-12-10 17:46:42,365 - folder sorter - DEBUG - Folder created
+2023-12-10 17:46:42,373 - folder sorter - DEBUG - File moved
+2023-12-10 17:46:42,373 - folder sorter - DEBUG - dokum.txt
+2023-12-10 17:46:42,373 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:46:42,373 - folder sorter - DEBUG - the following ending was found txt
+2023-12-10 17:46:42,373 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:46:42,373 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,373 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,373 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,373 - folder sorter - DEBUG - Moving file
+2023-12-10 17:46:42,380 - folder sorter - DEBUG - Folder created
+2023-12-10 17:46:42,387 - folder sorter - DEBUG - File moved
+2023-12-10 17:46:42,388 - folder sorter - DEBUG - dreid.obj
+2023-12-10 17:46:42,388 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:46:42,388 - folder sorter - DEBUG - the following ending was found obj
+2023-12-10 17:46:42,388 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:46:42,388 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,388 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,388 - folder sorter - DEBUG - Moving file
+2023-12-10 17:46:42,394 - folder sorter - DEBUG - Folder created
+2023-12-10 17:46:42,401 - folder sorter - DEBUG - File moved
+2023-12-10 17:46:42,401 - folder sorter - DEBUG - dukument.pdf
+2023-12-10 17:46:42,401 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:46:42,401 - folder sorter - DEBUG - the following ending was found pdf
+2023-12-10 17:46:42,401 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:46:42,401 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,401 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,401 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,401 - folder sorter - DEBUG - Moving file
+2023-12-10 17:46:42,408 - folder sorter - DEBUG - Folder created
+2023-12-10 17:46:42,415 - folder sorter - DEBUG - File moved
+2023-12-10 17:46:42,415 - folder sorter - DEBUG - exekutqwable.exe
+2023-12-10 17:46:42,415 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:46:42,416 - folder sorter - DEBUG - the following ending was found exe
+2023-12-10 17:46:42,416 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:46:42,416 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,416 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,416 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,416 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,416 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,416 - folder sorter - DEBUG - Moving file
+2023-12-10 17:46:42,423 - folder sorter - DEBUG - Folder created
+2023-12-10 17:46:42,430 - folder sorter - DEBUG - File moved
+2023-12-10 17:46:42,430 - folder sorter - DEBUG - komp.zip
+2023-12-10 17:46:42,430 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:46:42,430 - folder sorter - DEBUG - the following ending was found zip
+2023-12-10 17:46:42,430 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:46:42,430 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,430 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,430 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,430 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,430 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,430 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,430 - folder sorter - DEBUG - Moving file
+2023-12-10 17:46:42,437 - folder sorter - DEBUG - Folder created
+2023-12-10 17:46:42,445 - folder sorter - DEBUG - File moved
+2023-12-10 17:46:42,445 - folder sorter - DEBUG - ruby.rb
+2023-12-10 17:46:42,445 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:46:42,445 - folder sorter - DEBUG - the following ending was found rb
+2023-12-10 17:46:42,445 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:46:42,445 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,445 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,445 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,445 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,445 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,445 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,445 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,445 - folder sorter - DEBUG - Moving file
+2023-12-10 17:46:42,454 - folder sorter - DEBUG - Folder created
+2023-12-10 17:46:42,464 - folder sorter - DEBUG - File moved
+2023-12-10 17:46:42,464 - folder sorter - DEBUG - video.mp4
+2023-12-10 17:46:42,464 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:46:42,464 - folder sorter - DEBUG - the following ending was found mp4
+2023-12-10 17:46:42,464 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:46:42,464 - folder sorter - DEBUG - No ending found
+2023-12-10 17:46:42,464 - folder sorter - DEBUG - Moving file
+2023-12-10 17:46:42,474 - folder sorter - DEBUG - Folder created
+2023-12-10 17:46:42,482 - folder sorter - DEBUG - File moved
+2023-12-10 17:46:45,777 - folder sorter - DEBUG - Opening menu
+2023-12-10 17:46:45,777 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:51:41,142 - folder sorter - INFO - Programm gestartet
+2023-12-10 17:51:41,297 - folder sorter - DEBUG - Opening menu
+2023-12-10 17:51:41,297 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:51:42,413 - folder sorter - DEBUG - Opening main menu
+2023-12-10 17:51:42,413 - folder sorter - DEBUG - Clearing window
+2023-12-10 17:51:45,952 - folder sorter - DEBUG - Sorting endings
+2023-12-10 17:51:45,952 - folder sorter - DEBUG - audio.wav
+2023-12-10 17:51:45,952 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:51:45,952 - folder sorter - DEBUG - the following ending was found wav
+2023-12-10 17:51:45,952 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:51:45,952 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:45,952 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:45,952 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:45,952 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:45,952 - folder sorter - DEBUG - Moving file
+2023-12-10 17:51:45,959 - folder sorter - DEBUG - Folder created
+2023-12-10 17:51:45,966 - folder sorter - DEBUG - File moved
+2023-12-10 17:51:45,966 - folder sorter - DEBUG - bild.png
+2023-12-10 17:51:45,966 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:51:45,966 - folder sorter - DEBUG - the following ending was found png
+2023-12-10 17:51:45,966 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:51:45,966 - folder sorter - DEBUG - Moving file
+2023-12-10 17:51:45,972 - folder sorter - DEBUG - Folder created
+2023-12-10 17:51:45,980 - folder sorter - DEBUG - File moved
+2023-12-10 17:51:45,980 - folder sorter - DEBUG - dokum.txt
+2023-12-10 17:51:45,980 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:51:45,980 - folder sorter - DEBUG - the following ending was found txt
+2023-12-10 17:51:45,980 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:51:45,980 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:45,980 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:45,980 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:45,980 - folder sorter - DEBUG - Moving file
+2023-12-10 17:51:45,986 - folder sorter - DEBUG - Folder created
+2023-12-10 17:51:45,992 - folder sorter - DEBUG - File moved
+2023-12-10 17:51:45,993 - folder sorter - DEBUG - dreid.obj
+2023-12-10 17:51:45,993 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:51:45,993 - folder sorter - DEBUG - the following ending was found obj
+2023-12-10 17:51:45,993 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:51:45,993 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:45,993 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:45,993 - folder sorter - DEBUG - Moving file
+2023-12-10 17:51:46,000 - folder sorter - DEBUG - Folder created
+2023-12-10 17:51:46,007 - folder sorter - DEBUG - File moved
+2023-12-10 17:51:46,007 - folder sorter - DEBUG - dukument.pdf
+2023-12-10 17:51:46,007 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:51:46,007 - folder sorter - DEBUG - the following ending was found pdf
+2023-12-10 17:51:46,007 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:51:46,007 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,007 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,007 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,007 - folder sorter - DEBUG - Moving file
+2023-12-10 17:51:46,014 - folder sorter - DEBUG - Folder created
+2023-12-10 17:51:46,021 - folder sorter - DEBUG - File moved
+2023-12-10 17:51:46,021 - folder sorter - DEBUG - exekutqwable.exe
+2023-12-10 17:51:46,021 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:51:46,021 - folder sorter - DEBUG - the following ending was found exe
+2023-12-10 17:51:46,021 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:51:46,021 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,021 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,021 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,021 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,022 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,022 - folder sorter - DEBUG - Moving file
+2023-12-10 17:51:46,028 - folder sorter - DEBUG - Folder created
+2023-12-10 17:51:46,035 - folder sorter - DEBUG - File moved
+2023-12-10 17:51:46,035 - folder sorter - DEBUG - komp.zip
+2023-12-10 17:51:46,035 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:51:46,035 - folder sorter - DEBUG - the following ending was found zip
+2023-12-10 17:51:46,035 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:51:46,035 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,035 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,035 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,035 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,035 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,035 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,035 - folder sorter - DEBUG - Moving file
+2023-12-10 17:51:46,041 - folder sorter - DEBUG - Folder created
+2023-12-10 17:51:46,049 - folder sorter - DEBUG - File moved
+2023-12-10 17:51:46,049 - folder sorter - DEBUG - ruby.rb
+2023-12-10 17:51:46,049 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:51:46,049 - folder sorter - DEBUG - the following ending was found rb
+2023-12-10 17:51:46,049 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:51:46,049 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,049 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,049 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,049 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,049 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,049 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,049 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,049 - folder sorter - DEBUG - Moving file
+2023-12-10 17:51:46,055 - folder sorter - DEBUG - Folder created
+2023-12-10 17:51:46,062 - folder sorter - DEBUG - File moved
+2023-12-10 17:51:46,062 - folder sorter - DEBUG - video.mp4
+2023-12-10 17:51:46,062 - folder sorter - DEBUG - Getting file ending
+2023-12-10 17:51:46,062 - folder sorter - DEBUG - the following ending was found mp4
+2023-12-10 17:51:46,062 - folder sorter - DEBUG - Ending found valid
+2023-12-10 17:51:46,062 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 17:51:46,062 - folder sorter - DEBUG - Moving file
+2023-12-10 17:51:46,069 - folder sorter - DEBUG - Folder created
+2023-12-10 17:51:46,077 - folder sorter - DEBUG - File moved
+2023-12-10 18:39:28,209 - folder sorter - INFO - Programm gestartet
+2023-12-10 18:39:28,386 - folder sorter - DEBUG - Opening menu
+2023-12-10 18:39:28,386 - folder sorter - DEBUG - Clearing window
+2023-12-10 18:39:30,004 - folder sorter - DEBUG - Opening main menu
+2023-12-10 18:39:30,004 - folder sorter - DEBUG - Clearing window
+2023-12-10 18:39:32,389 - folder sorter - DEBUG - Sorting endings
+2023-12-10 18:39:32,389 - folder sorter - DEBUG - audio.wav
+2023-12-10 18:39:32,389 - folder sorter - DEBUG - Getting file ending
+2023-12-10 18:39:32,389 - folder sorter - DEBUG - the following ending was found wav
+2023-12-10 18:39:32,389 - folder sorter - DEBUG - Ending found valid
+2023-12-10 18:39:32,389 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,389 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,389 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,389 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,389 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:39:32,396 - folder sorter - DEBUG - Folder created
+2023-12-10 18:39:32,404 - folder sorter - DEBUG - bild.png
+2023-12-10 18:39:32,404 - folder sorter - DEBUG - Getting file ending
+2023-12-10 18:39:32,404 - folder sorter - DEBUG - the following ending was found png
+2023-12-10 18:39:32,404 - folder sorter - DEBUG - Ending found valid
+2023-12-10 18:39:32,404 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:39:32,411 - folder sorter - DEBUG - Folder created
+2023-12-10 18:39:32,419 - folder sorter - DEBUG - dokum.txt
+2023-12-10 18:39:32,419 - folder sorter - DEBUG - Getting file ending
+2023-12-10 18:39:32,419 - folder sorter - DEBUG - the following ending was found txt
+2023-12-10 18:39:32,419 - folder sorter - DEBUG - Ending found valid
+2023-12-10 18:39:32,419 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,419 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,419 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,419 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:39:32,426 - folder sorter - DEBUG - Folder created
+2023-12-10 18:39:32,434 - folder sorter - DEBUG - dreid.obj
+2023-12-10 18:39:32,434 - folder sorter - DEBUG - Getting file ending
+2023-12-10 18:39:32,434 - folder sorter - DEBUG - the following ending was found obj
+2023-12-10 18:39:32,434 - folder sorter - DEBUG - Ending found valid
+2023-12-10 18:39:32,434 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,434 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,434 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:39:32,441 - folder sorter - DEBUG - Folder created
+2023-12-10 18:39:32,448 - folder sorter - DEBUG - dukument.pdf
+2023-12-10 18:39:32,448 - folder sorter - DEBUG - Getting file ending
+2023-12-10 18:39:32,448 - folder sorter - DEBUG - the following ending was found pdf
+2023-12-10 18:39:32,448 - folder sorter - DEBUG - Ending found valid
+2023-12-10 18:39:32,448 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,448 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,448 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,448 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:39:32,455 - folder sorter - DEBUG - Folder created
+2023-12-10 18:39:32,462 - folder sorter - DEBUG - exekutqwable.exe
+2023-12-10 18:39:32,462 - folder sorter - DEBUG - Getting file ending
+2023-12-10 18:39:32,462 - folder sorter - DEBUG - the following ending was found exe
+2023-12-10 18:39:32,462 - folder sorter - DEBUG - Ending found valid
+2023-12-10 18:39:32,462 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,462 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,462 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,462 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,463 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,463 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:39:32,470 - folder sorter - DEBUG - Folder created
+2023-12-10 18:39:32,477 - folder sorter - DEBUG - komp.zip
+2023-12-10 18:39:32,477 - folder sorter - DEBUG - Getting file ending
+2023-12-10 18:39:32,477 - folder sorter - DEBUG - the following ending was found zip
+2023-12-10 18:39:32,477 - folder sorter - DEBUG - Ending found valid
+2023-12-10 18:39:32,477 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,477 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,477 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,477 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,478 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,478 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,478 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:39:32,485 - folder sorter - DEBUG - Folder created
+2023-12-10 18:39:32,492 - folder sorter - DEBUG - ruby.rb
+2023-12-10 18:39:32,492 - folder sorter - DEBUG - Getting file ending
+2023-12-10 18:39:32,492 - folder sorter - DEBUG - the following ending was found rb
+2023-12-10 18:39:32,492 - folder sorter - DEBUG - Ending found valid
+2023-12-10 18:39:32,492 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,492 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,492 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,492 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,493 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,493 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,493 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,493 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:39:32,500 - folder sorter - DEBUG - Folder created
+2023-12-10 18:39:32,507 - folder sorter - DEBUG - video.mp4
+2023-12-10 18:39:32,507 - folder sorter - DEBUG - Getting file ending
+2023-12-10 18:39:32,507 - folder sorter - DEBUG - the following ending was found mp4
+2023-12-10 18:39:32,507 - folder sorter - DEBUG - Ending found valid
+2023-12-10 18:39:32,507 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:39:32,507 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:39:32,514 - folder sorter - DEBUG - Folder created
+2023-12-10 18:39:33,116 - folder sorter - DEBUG - Opening menu
+2023-12-10 18:39:33,116 - folder sorter - DEBUG - Clearing window
+2023-12-10 18:54:29,317 - folder sorter - INFO - Programm gestartet
+2023-12-10 18:54:29,542 - folder sorter - DEBUG - Opening menu
+2023-12-10 18:54:29,542 - folder sorter - DEBUG - Clearing window
+2023-12-10 18:54:30,359 - folder sorter - DEBUG - Opening main menu
+2023-12-10 18:54:30,359 - folder sorter - DEBUG - Clearing window
+2023-12-10 18:54:32,420 - folder sorter - DEBUG - Sorting endings
+2023-12-10 18:54:32,420 - folder sorter - DEBUG - audio.wav
+2023-12-10 18:54:32,420 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,420 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,420 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,420 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,420 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:54:32,428 - folder sorter - DEBUG - bild.png
+2023-12-10 18:54:32,428 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:54:32,435 - folder sorter - DEBUG - dokum.txt
+2023-12-10 18:54:32,435 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,435 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,435 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,435 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:54:32,442 - folder sorter - DEBUG - dreid.obj
+2023-12-10 18:54:32,442 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,442 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,443 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:54:32,450 - folder sorter - DEBUG - dukument.pdf
+2023-12-10 18:54:32,450 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,450 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,450 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,451 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:54:32,457 - folder sorter - DEBUG - exekutqwable.exe
+2023-12-10 18:54:32,457 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,457 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,457 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,457 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,457 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,457 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:54:32,476 - folder sorter - DEBUG - komp.zip
+2023-12-10 18:54:32,476 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,476 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,476 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,476 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,476 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,476 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,476 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:54:32,484 - folder sorter - DEBUG - ruby.rb
+2023-12-10 18:54:32,484 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,484 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,484 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,484 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,484 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,484 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,485 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,485 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:54:32,492 - folder sorter - DEBUG - video.mp4
+2023-12-10 18:54:32,492 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 18:54:32,492 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 18:54:39,188 - folder sorter - DEBUG - Opening menu
+2023-12-10 18:54:39,188 - folder sorter - DEBUG - Clearing window
+2023-12-10 19:36:42,588 - folder sorter - INFO - Programm gestartet
+2023-12-10 19:36:42,778 - folder sorter - DEBUG - Opening menu
+2023-12-10 19:36:42,778 - folder sorter - DEBUG - Clearing window
+2023-12-10 19:36:43,757 - folder sorter - DEBUG - Opening main menu
+2023-12-10 19:36:43,757 - folder sorter - DEBUG - Clearing window
+2023-12-10 19:36:46,639 - folder sorter - DEBUG - Sorting endings
+2023-12-10 19:36:46,639 - folder sorter - DEBUG - audio.wav
+2023-12-10 19:36:46,639 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:36:46,646 - folder sorter - DEBUG - bild.png
+2023-12-10 19:36:46,646 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:36:46,653 - folder sorter - DEBUG - dokum.txt
+2023-12-10 19:36:46,654 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:36:46,661 - folder sorter - DEBUG - dreid.obj
+2023-12-10 19:36:46,661 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:36:46,679 - folder sorter - DEBUG - dukument.pdf
+2023-12-10 19:36:46,679 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:36:46,687 - folder sorter - DEBUG - exekutqwable.exe
+2023-12-10 19:36:46,687 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:36:46,695 - folder sorter - DEBUG - komp.zip
+2023-12-10 19:36:46,695 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:36:46,703 - folder sorter - DEBUG - ruby.rb
+2023-12-10 19:36:46,703 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:36:46,710 - folder sorter - DEBUG - video.mp4
+2023-12-10 19:36:46,710 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:36:50,027 - folder sorter - DEBUG - Opening menu
+2023-12-10 19:36:50,028 - folder sorter - DEBUG - Clearing window
+2023-12-10 19:37:45,732 - folder sorter - INFO - Programm gestartet
+2023-12-10 19:37:45,904 - folder sorter - DEBUG - Opening menu
+2023-12-10 19:37:45,904 - folder sorter - DEBUG - Clearing window
+2023-12-10 19:37:46,910 - folder sorter - DEBUG - Opening main menu
+2023-12-10 19:37:46,910 - folder sorter - DEBUG - Clearing window
+2023-12-10 19:37:49,498 - folder sorter - DEBUG - Sorting endings
+2023-12-10 19:37:49,498 - folder sorter - DEBUG - 3d object
+2023-12-10 19:37:49,498 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 19:37:49,498 - folder sorter - DEBUG - archive
+2023-12-10 19:37:49,498 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 19:37:49,498 - folder sorter - DEBUG - audio
+2023-12-10 19:37:49,498 - folder sorter - DEBUG - No ending found2 -> moving to other folder
+2023-12-10 19:37:49,499 - folder sorter - DEBUG - audio.wav
+2023-12-10 19:37:49,499 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:38:21,105 - folder sorter - INFO - Programm gestartet
+2023-12-10 19:38:21,271 - folder sorter - DEBUG - Opening menu
+2023-12-10 19:38:21,271 - folder sorter - DEBUG - Clearing window
+2023-12-10 19:38:22,237 - folder sorter - DEBUG - Opening main menu
+2023-12-10 19:38:22,237 - folder sorter - DEBUG - Clearing window
+2023-12-10 19:38:24,982 - folder sorter - DEBUG - Sorting endings
+2023-12-10 19:38:24,982 - folder sorter - DEBUG - audio.wav
+2023-12-10 19:38:24,982 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:38:24,989 - folder sorter - DEBUG - Moved C:/Users/Maxi/Music/Neuer Ordner/audio.wav to C:/Users/Maxi/Music/Neuer Ordner/audio
+2023-12-10 19:38:24,989 - folder sorter - DEBUG - bild.png
+2023-12-10 19:38:24,989 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:38:24,996 - folder sorter - DEBUG - Moved C:/Users/Maxi/Music/Neuer Ordner/bild.png to C:/Users/Maxi/Music/Neuer Ordner/image
+2023-12-10 19:38:24,996 - folder sorter - DEBUG - dokum.txt
+2023-12-10 19:38:24,996 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:38:25,003 - folder sorter - DEBUG - Moved C:/Users/Maxi/Music/Neuer Ordner/dokum.txt to C:/Users/Maxi/Music/Neuer Ordner/document
+2023-12-10 19:38:25,003 - folder sorter - DEBUG - dreid.obj
+2023-12-10 19:38:25,003 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:38:25,011 - folder sorter - DEBUG - Moved C:/Users/Maxi/Music/Neuer Ordner/dreid.obj to C:/Users/Maxi/Music/Neuer Ordner/3d object
+2023-12-10 19:38:25,011 - folder sorter - DEBUG - dukument.pdf
+2023-12-10 19:38:25,011 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:38:25,018 - folder sorter - DEBUG - Moved C:/Users/Maxi/Music/Neuer Ordner/dukument.pdf to C:/Users/Maxi/Music/Neuer Ordner/document
+2023-12-10 19:38:25,018 - folder sorter - DEBUG - exekutqwable.exe
+2023-12-10 19:38:25,018 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:38:25,026 - folder sorter - DEBUG - Moved C:/Users/Maxi/Music/Neuer Ordner/exekutqwable.exe to C:/Users/Maxi/Music/Neuer Ordner/executable
+2023-12-10 19:38:25,026 - folder sorter - DEBUG - komp.zip
+2023-12-10 19:38:25,026 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:38:25,034 - folder sorter - DEBUG - Moved C:/Users/Maxi/Music/Neuer Ordner/komp.zip to C:/Users/Maxi/Music/Neuer Ordner/archive
+2023-12-10 19:38:25,034 - folder sorter - DEBUG - ruby.rb
+2023-12-10 19:38:25,034 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:38:25,042 - folder sorter - DEBUG - Moved C:/Users/Maxi/Music/Neuer Ordner/ruby.rb to C:/Users/Maxi/Music/Neuer Ordner/code
+2023-12-10 19:38:25,042 - folder sorter - DEBUG - video.mp4
+2023-12-10 19:38:25,042 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-10 19:38:25,050 - folder sorter - DEBUG - Moved C:/Users/Maxi/Music/Neuer Ordner/video.mp4 to C:/Users/Maxi/Music/Neuer Ordner/video
+2023-12-10 19:38:33,944 - folder sorter - DEBUG - Opening menu
+2023-12-10 19:38:33,945 - folder sorter - DEBUG - Clearing window
