@@ -3,8 +3,10 @@
 ## Supported Versions
 
 The supportet versions are save to use on you're PC
+
 The supportet versions are marked with an ✅
-The unsupportet or not released but planed versions are merked with an :x:
+
+The unsupportet or not released but planed versions are marked with an :x:
 
 | Version | Supported          | Date of release       |
 | ------- | ------------------ |---------------------- |
