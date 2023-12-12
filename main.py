@@ -41,8 +41,7 @@ class GUI:
 
     def main_menu(self):
         logger.debug("Opening menu")
-        self.clear_window()
-        self.window.geometry("275x300") # extra funktions für das zurücksetzten der größe und der elements
+        self.first_reset()
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0) # set corner to #242424 for dark mode
         tk.CTkButton(self.window, text="Sort folder", corner_radius=32, text_color="black",command=lambda: self.main()).place(x=75, y=100)
         tk.CTkButton(self.window, text="Exit", corner_radius=32, command=self.window.destroy, fg_color="#ff0000", hover_color="#b30000", text_color="black").place(x=75, y=200)
@@ -52,8 +51,7 @@ class GUI:
 
     def main(self):
         logger.debug("Opening main menu")
-        self.clear_window()
-        self.window.geometry("275x300")
+        self.first_reset()
         self.folder_button = None
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
         tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=30)
@@ -63,13 +61,17 @@ class GUI:
 
     def about(self):
         logger.debug("Opening about menu")
-        self.clear_window()
+        self.first_reset()
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
-        tk.CTkLabel(self.window, text="Made by: @AIIrondev", font=("Arial", 15), text_color="black").place(x=90, y=25)
+        tk.CTkLabel(self.window, text="Made by: @AIIrondev", font=("Arial", 15), text_color="black").place(x=90, y=250)
         tk.CTkButton(self.window, text="LICENCE", text_color="blue", command=lambda: self.open_html_file("li.html"), corner_radius=32).place(x=75, y=100)
         tk.CTkLabel(self.window, text="Version: 1.2.2", font=("Arial", 15), text_color="black").place(x=100, y=270)
         tk.CTkLabel(self.window, text="Github: https://github.com/Iron-witch/Folder-sorter", font=("Arial", 10), text_color="blue").place(x=25, y=50)
         tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=150)
+    
+    def first_reset(self, window_size_x=275, window_size_y=300):
+        self.clear_window()
+        self.window.geometry(f"{window_size_x}x{window_size_y}")
     
     def select_folder(self):
         self.button = tk.filedialog.askdirectory()
@@ -88,8 +90,7 @@ class GUI:
 
     def option_calback_menu(self, value):
         logger.debug("Opening option menu")
-        self.clear_window()
-        self.window.geometry("275x400")
+        self.first_reset(275, 400)
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
         tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=30)
         tk.CTkLabel(self.window, text="Mode: ", font=("Arial", 15), text_color="black").place(x=90, y=75)
@@ -108,7 +109,7 @@ class GUI:
             tk.CTkCheckBox(self.window, text="Other", command=lambda: self.custom_mode_gui("other")).place(x=150, y=275)
             tk.CTkButton(self.window, text="Start", corner_radius=32, command=lambda: self.custom_mode(self.entry.get()), text_color="black").place(x=75, y=310)
         elif value == "Normal":
-            tk.CTkButton(self.window, text="Start", corner_radius=32, command=self.main, text_color="black").place(x=75, y=225)
+            self.main()
 
     def custom_mode_gui(self, mode): # check umänern in dem wenn Start gedrückt wird alle CheckBoxes überprüft werden und dann erst einbinden
         global image, video, object3d, document, audio, executable, archive, code, other
