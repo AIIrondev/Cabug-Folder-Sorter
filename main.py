@@ -111,7 +111,7 @@ class GUI:
         elif value == "Normal":
             self.main()
 
-    def custom_mode_gui(self, mode): # check umänern in dem wenn Start gedrückt wird alle CheckBoxes überprüft werden und dann erst einbinden
+    def custom_mode_gui(self, mode): # check umänern in dem wenn Start gedrückt, wird alle CheckBoxes überprüft werden und dann erst einbinden
         global image, video, object3d, document, audio, executable, archive, code, other
         if mode == "image":
             image = True
