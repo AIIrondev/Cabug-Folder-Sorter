@@ -30,6 +30,15 @@ other = False
 
 logger.info("Programm gestartet")
 
+# Version 2.1.1 -> verwendet auch die .py dateien zum ändern der Directorys
+# Version 2.1.2 -> verwendet auch die .py dateien zum ändern der Directorys final
+# Version 2.2.2 -> Verbessern des Codes und hinzufügen von mehr optionen -> effizienter und schneller
+# Version 3.1.1 -> Einfügen von einem File system watcher -> wenn ein neues File in den Ordner kommt wird es automatisch verschoben
+# Version 3.1.2 -> Einfügen von einem File system watcher -> wenn ein neues File in den Ordner kommt wird es automatisch verschoben final
+# Version 3.2.2 -> Zwei verschiedene Modi -> Normal und Advanced -> besser für Anfänger und Fortgeschrittene
+# Version 4.1.1 -> Einführen von einem File system -> umbau auf ein File system -> mit den Funkltionen von v.3.1.2
+# Version 4.1.2 -> Einführen von einem File system -> umbau auf ein File system -> mit den Funkltionen von v.3.1.2 final
+
 class GUI:
     def __init__(self):
         self.window = tk.CTk()
