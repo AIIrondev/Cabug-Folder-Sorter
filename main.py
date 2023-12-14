@@ -98,41 +98,61 @@ class GUI:
         tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=350)
         if value == "Custom": # Optimieren vom cuatom system(durch die einmalige abfrage Fehler anfällig -> umändern auf einmal alle CheckBoxes überprüfen und dann erst einbinden) und hinzufügen von mehr optionen
             tk.CTkLabel(self.window, text="Custom mode", font=("Arial", 15), text_color="black").place(x=75, y=150)
-            tk.CTkCheckBox(self.window, text="Image", command=lambda: self.custom_mode_gui("image")).place(x=50, y=175)
-            tk.CTkCheckBox(self.window, text="Video", command=lambda: self.custom_mode_gui("video")).place(x=50, y=200)
-            tk.CTkCheckBox(self.window, text="3D object", command=lambda: self.custom_mode_gui("3d object")).place(x=50, y=225)
-            tk.CTkCheckBox(self.window, text="Document", command=lambda: self.custom_mode_gui("document")).place(x=50, y=250)
-            tk.CTkCheckBox(self.window, text="Audio", command=lambda: self.custom_mode_gui("audio")).place(x=150, y=175)
-            tk.CTkCheckBox(self.window, text="Executable", command=lambda: self.custom_mode_gui("executable")).place(x=150, y=200)
-            tk.CTkCheckBox(self.window, text="Archive", command=lambda: self.custom_mode_gui("archive")).place(x=150, y=225)
-            tk.CTkCheckBox(self.window, text="Code", command=lambda: self.custom_mode_gui("code")).place(x=150, y=250)
-            tk.CTkCheckBox(self.window, text="Other", command=lambda: self.custom_mode_gui("other")).place(x=150, y=275)
-            tk.CTkButton(self.window, text="Start", corner_radius=32, command=lambda: self.custom_mode(self.entry.get()), text_color="black").place(x=75, y=310)
+            tk.CTkCheckBox(self.window, text="Image").place(x=50, y=175)
+            tk.CTkCheckBox(self.window, text="Video").place(x=50, y=200)
+            tk.CTkCheckBox(self.window, text="3D object").place(x=50, y=225)
+            tk.CTkCheckBox(self.window, text="Document").place(x=50, y=250)
+            tk.CTkCheckBox(self.window, text="Audio").place(x=150, y=175)
+            tk.CTkCheckBox(self.window, text="Executable").place(x=150, y=200)
+            tk.CTkCheckBox(self.window, text="Archive").place(x=150, y=225)
+            tk.CTkCheckBox(self.window, text="Code").place(x=150, y=250)
+            tk.CTkCheckBox(self.window, text="Other").place(x=150, y=275)
+            tk.CTkButton(self.window, text="Start", corner_radius=32, command=lambda: self.custom_mode_gui(), text_color="black").place(x=75, y=310)
         elif value == "Normal":
             self.main()
 
     def custom_mode_gui(self, mode): # check umänern in dem wenn Start gedrückt, wird alle CheckBoxes überprüft werden und dann erst einbinden
         global image, video, object3d, document, audio, executable, archive, code, other
-        if mode == "image":
+        if tk.CTkCheckBox(self.window, text="Image").state() == "normal":
             image = True
-        elif mode == "video":
+        else:
+            image = False
+        if tk.CTkCheckBox(self.window, text="Video").state() == "normal":
             video = True
-        elif mode == "3d object":
+        else:
+            video = False
+        if tk.CTkCheckBox(self.window, text="3D object").state() == "normal":
             object3d = True
-        elif mode == "document":
+        else:
+            object3d = False
+        if tk.CTkCheckBox(self.window, text="Document").state() == "normal":
             document = True
-        elif mode == "audio":
+        else:
+            document = False
+        if tk.CTkCheckBox(self.window, text="Audio").state() == "normal":
             audio = True
-        elif mode == "executable":
+        else:
+            audio = False
+        if tk.CTkCheckBox(self.window, text="Executable").state() == "normal":
             executable = True
-        elif mode == "archive":
+        else:
+            executable = False
+        if tk.CTkCheckBox(self.window, text="Archive").state() == "normal":
             archive = True
-        elif mode == "code":
+        else:
+            archive = False
+        if tk.CTkCheckBox(self.window, text="Code").state() == "normal":
             code = True
-        elif mode == "other":
+        else:
+            code = False
+        if tk.CTkCheckBox(self.window, text="Other").state() == "normal":
             other = True
         else:
-            logger.warning("Wrong mode")
+            other = False
+        if self.folder_button == None:
+            self.select_folder()
+        sorting(self.folder_button)
+        
       
 class sorting:
     def __init__(self, folder):
@@ -150,6 +170,9 @@ class sorting:
         self.sort_ending(folder)
         if image == True or video == True or object3d == True or document == True or audio == True or executable == True or archive == True or code == True or other == True:
             self.custom_mode(folder, f"{image},{video},{object3d},{document},{audio},{executable},{archive},{code},{other}")
+        else:
+            pass
+            
     def custom_mode(self, folder, mode):
         # create right table for custom mode
         image, video, object3d, document, audio, executable, archive, code, other = mode.split(",")
