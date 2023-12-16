@@ -64,9 +64,9 @@ class GUI:
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
         tk.CTkEntry(self.window, placeholder_text="Direktory").place(x=75, y=100)
         tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=70)
-        tk.CTkLabel(self.window, text="Mode: ", font=("Arial", 15), text_color="black").place(x=90, y=125)
+        tk.CTkLabel(self.window, text="Mode: ", font=("Arial", 15), text_color="black").place(x=90, y=130)
         tk.CTkButton(self.window, text="Start", corner_radius=32, command=lambda: self.option_calback_menu, text_color="black").place(x=75, y=200)
-        tk.CTkOptionMenu(self.window, values=["Normal", "Custom"], command=self.option_calback_menu).place(x=75, y=175)
+        tk.CTkOptionMenu(self.window, values=["Normal", "Custom"], command=self.option_calback_menu).place(x=75, y=160)
         tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=250)
 
     def about(self):
@@ -85,7 +85,7 @@ class GUI:
     
     def select_folder(self):
         self.button = tk.filedialog.askdirectory()
-        self.CTkEntry = tk.CTkentry(self.window, placeholder_text=self.button, state="readonly").place(x=75, y=100)
+        self.CTkentry = tk.CTkEntry(self.window, placeholder_text=self.button, state="readonly").place(x=75, y=100)
     
     def clear_window(self):
         logger.debug("Clearing window")
@@ -114,21 +114,21 @@ class GUI:
         check_var_oth = tk.StringVar(value="off")
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
         tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=30)
-        tk.CTkLabel(self.window, text="selectet folder: ", font=("Arial", 15), text_color="black").place(x=90, y=75)
-        tk.CTkEntry(self.window, placeholder_text=self.folder_button, state="readonly").place(x=75, y=100)
+        tk.CTkLabel(self.window, text="selectet folder: ", font=("Arial", 15), text_color="black").place(x=90, y=60)
+        tk.CTkEntry(self.window, placeholder_text="Direktory").place(x=75, y=75)
         tk.CTkOptionMenu(self.window, values=["Normal", "Custom"], command=self.option_calback_menu).place(x=75, y=110)
         tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=350)
         if value == "Custom": 
             tk.CTkLabel(self.window, text="Custom mode", font=("Arial", 15), text_color="black").place(x=75, y=150)
-            tk.CTkCheckBox(self.window, text="Image", variable=check_var ,onvalue="normal", offvalue="off").place(x=50, y=175)
-            tk.CTkCheckBox(self.window, text="Video", variable=check_var ,onvalue="normal", offvalue="off").place(x=50, y=200)
-            tk.CTkCheckBox(self.window, text="3D object", variable=check_var ,onvalue="normal", offvalue="off").place(x=50, y=225)
-            tk.CTkCheckBox(self.window, text="Document", variable=check_var ,onvalue="normal", offvalue="off").place(x=50, y=250)
-            tk.CTkCheckBox(self.window, text="Audio", variable=check_var ,onvalue="normal", offvalue="off").place(x=150, y=175)
-            tk.CTkCheckBox(self.window, text="Executable", variable=check_var ,onvalue="normal", offvalue="off").place(x=150, y=200)
-            tk.CTkCheckBox(self.window, text="Archive", variable=check_var ,onvalue="normal", offvalue="off").place(x=150, y=225)
-            tk.CTkCheckBox(self.window, text="Code", variable=check_var ,onvalue="normal", offvalue="off").place(x=150, y=250)
-            tk.CTkCheckBox(self.window, text="Other", variable=check_var ,onvalue="normal", offvalue="off").place(x=150, y=275)
+            tk.CTkCheckBox(self.window, text="Image", variable=check_var_img ,onvalue="normal", offvalue="off").place(x=50, y=175)
+            tk.CTkCheckBox(self.window, text="Video", variable=check_var_vid ,onvalue="normal", offvalue="off").place(x=50, y=200)
+            tk.CTkCheckBox(self.window, text="3D object", variable=check_var_3do ,onvalue="normal", offvalue="off").place(x=50, y=225)
+            tk.CTkCheckBox(self.window, text="Document", variable=check_var_doc ,onvalue="normal", offvalue="off").place(x=50, y=250)
+            tk.CTkCheckBox(self.window, text="Audio", variable=check_var_aud ,onvalue="normal", offvalue="off").place(x=150, y=175)
+            tk.CTkCheckBox(self.window, text="Executable", variable=check_var_exe ,onvalue="normal", offvalue="off").place(x=150, y=200)
+            tk.CTkCheckBox(self.window, text="Archive", variable=check_var_arc ,onvalue="normal", offvalue="off").place(x=150, y=225)
+            tk.CTkCheckBox(self.window, text="Code", variable=check_var_cod ,onvalue="normal", offvalue="off").place(x=150, y=250)
+            tk.CTkCheckBox(self.window, text="Other", variable=check_var_oth ,onvalue="normal", offvalue="off").place(x=150, y=275)
             tk.CTkButton(self.window, text="Start", corner_radius=32, command=lambda: self.custom_mode_gui(), text_color="black").place(x=75, y=310)
         elif value == "Normal":
             self.main()
