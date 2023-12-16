@@ -61,10 +61,11 @@ class GUI:
     def main(self):
         logger.debug("Opening main menu")
         self.first_reset()
-        self.folder_button = None
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
-        tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=100)
-        tk.CTkLabel(self.window, text="Mode: ", font=("Arial", 15), text_color="black").place(x=90, y=150)
+        tk.CTkEntry(self.window, placeholder_text="Direktory").place(x=75, y=100)
+        tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=70)
+        tk.CTkLabel(self.window, text="Mode: ", font=("Arial", 15), text_color="black").place(x=90, y=125)
+        tk.CTkButton(self.window, text="Start", corner_radius=32, command=lambda: self.option_calback_menu, text_color="black").place(x=75, y=200)
         tk.CTkOptionMenu(self.window, values=["Normal", "Custom"], command=self.option_calback_menu).place(x=75, y=175)
         tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=250)
 
@@ -84,8 +85,7 @@ class GUI:
     
     def select_folder(self):
         self.button = tk.filedialog.askdirectory()
-        self.folder_button = self.button
-        self.CTkentry = tk.CTkentry(self.window, text=self.folder_button, state="readonly")
+        self.CTkEntry = tk.CTkentry(self.window, placeholder_text=self.button, state="readonly").place(x=75, y=100)
     
     def clear_window(self):
         logger.debug("Clearing window")
@@ -103,10 +103,19 @@ class GUI:
     def option_calback_menu(self, value):
         logger.debug("Opening option menu")
         self.first_reset(275, 400)
+        check_var_img = tk.StringVar(value="off")
+        check_var_vid = tk.StringVar(value="off")
+        check_var_3do = tk.StringVar(value="off")
+        check_var_doc = tk.StringVar(value="off")
+        check_var_aud = tk.StringVar(value="off")
+        check_var_exe = tk.StringVar(value="off")
+        check_var_arc = tk.StringVar(value="off")
+        check_var_cod = tk.StringVar(value="off")
+        check_var_oth = tk.StringVar(value="off")
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
         tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=30)
         tk.CTkLabel(self.window, text="selectet folder: ", font=("Arial", 15), text_color="black").place(x=90, y=75)
-        tk.CTkentry(self.window, text=self.folder_button, state="readonly").place(x=75, y=100)
+        tk.CTkEntry(self.window, placeholder_text=self.folder_button, state="readonly").place(x=75, y=100)
         tk.CTkOptionMenu(self.window, values=["Normal", "Custom"], command=self.option_calback_menu).place(x=75, y=110)
         tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=350)
         if value == "Custom": 
@@ -126,8 +135,14 @@ class GUI:
 
     def custom_mode_gui(self): # check umänern in dem wenn Start gedrückt, wird alle CheckBoxes überprüft werden und dann erst einbinden
         global image, video, object3d, document, audio, executable, archive, code, other
-        
-        sorting(self.folder_button)
+        self.entry = tk.CTkEntry(self.window, placeholder_text=self.folder_button, state="readonly").place(x=75, y=100)
+        if tk.CTkCheckBox(self.window, text="Image", variable=check_var ,onvalue="normal", offvalue="off").place(x=50, y=175) == "normal":
+            image = True
+            print("Image")
+        else:
+            image = False
+            print("Image")
+        #sorting(self.entry)
         
       
 class sorting:
