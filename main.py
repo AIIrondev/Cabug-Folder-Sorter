@@ -85,7 +85,7 @@ class GUI:
     def select_folder(self):
         self.button = tk.filedialog.askdirectory()
         self.folder_button = self.button
-        sorting(self.folder_button)
+        self.CTkentry = tk.CTkentry(self.window, text=self.folder_button, state="readonly")
     
     def clear_window(self):
         logger.debug("Clearing window")
@@ -97,69 +97,36 @@ class GUI:
         # Open the HTML file in the default web browser
         webbrowser.open(file_path)
 
+    def check_var(self):
+        pass
+
     def option_calback_menu(self, value):
         logger.debug("Opening option menu")
         self.first_reset(275, 400)
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
         tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=30)
-        tk.CTkLabel(self.window, text="Mode: ", font=("Arial", 15), text_color="black").place(x=90, y=75)
+        tk.CTkLabel(self.window, text="selectet folder: ", font=("Arial", 15), text_color="black").place(x=90, y=75)
+        tk.CTkentry(self.window, text=self.folder_button, state="readonly").place(x=75, y=100)
         tk.CTkOptionMenu(self.window, values=["Normal", "Custom"], command=self.option_calback_menu).place(x=75, y=110)
         tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=350)
-        if value == "Custom": # Optimieren vom cuatom system(durch die einmalige abfrage Fehler anfällig -> umändern auf einmal alle CheckBoxes überprüfen und dann erst einbinden) und hinzufügen von mehr optionen
+        if value == "Custom": 
             tk.CTkLabel(self.window, text="Custom mode", font=("Arial", 15), text_color="black").place(x=75, y=150)
-            tk.CTkCheckBox(self.window, text="Image").place(x=50, y=175)
-            tk.CTkCheckBox(self.window, text="Video").place(x=50, y=200)
-            tk.CTkCheckBox(self.window, text="3D object").place(x=50, y=225)
-            tk.CTkCheckBox(self.window, text="Document").place(x=50, y=250)
-            tk.CTkCheckBox(self.window, text="Audio").place(x=150, y=175)
-            tk.CTkCheckBox(self.window, text="Executable").place(x=150, y=200)
-            tk.CTkCheckBox(self.window, text="Archive").place(x=150, y=225)
-            tk.CTkCheckBox(self.window, text="Code").place(x=150, y=250)
-            tk.CTkCheckBox(self.window, text="Other").place(x=150, y=275)
+            tk.CTkCheckBox(self.window, text="Image", variable=check_var ,onvalue="normal", offvalue="off").place(x=50, y=175)
+            tk.CTkCheckBox(self.window, text="Video", variable=check_var ,onvalue="normal", offvalue="off").place(x=50, y=200)
+            tk.CTkCheckBox(self.window, text="3D object", variable=check_var ,onvalue="normal", offvalue="off").place(x=50, y=225)
+            tk.CTkCheckBox(self.window, text="Document", variable=check_var ,onvalue="normal", offvalue="off").place(x=50, y=250)
+            tk.CTkCheckBox(self.window, text="Audio", variable=check_var ,onvalue="normal", offvalue="off").place(x=150, y=175)
+            tk.CTkCheckBox(self.window, text="Executable", variable=check_var ,onvalue="normal", offvalue="off").place(x=150, y=200)
+            tk.CTkCheckBox(self.window, text="Archive", variable=check_var ,onvalue="normal", offvalue="off").place(x=150, y=225)
+            tk.CTkCheckBox(self.window, text="Code", variable=check_var ,onvalue="normal", offvalue="off").place(x=150, y=250)
+            tk.CTkCheckBox(self.window, text="Other", variable=check_var ,onvalue="normal", offvalue="off").place(x=150, y=275)
             tk.CTkButton(self.window, text="Start", corner_radius=32, command=lambda: self.custom_mode_gui(), text_color="black").place(x=75, y=310)
         elif value == "Normal":
             self.main()
 
-    def custom_mode_gui(self, mode): # check umänern in dem wenn Start gedrückt, wird alle CheckBoxes überprüft werden und dann erst einbinden
+    def custom_mode_gui(self): # check umänern in dem wenn Start gedrückt, wird alle CheckBoxes überprüft werden und dann erst einbinden
         global image, video, object3d, document, audio, executable, archive, code, other
-        if tk.CTkCheckBox(self.window, text="Image").state() == "normal":
-            image = True
-        else:
-            image = False
-        if tk.CTkCheckBox(self.window, text="Video").state() == "normal":
-            video = True
-        else:
-            video = False
-        if tk.CTkCheckBox(self.window, text="3D object").state() == "normal":
-            object3d = True
-        else:
-            object3d = False
-        if tk.CTkCheckBox(self.window, text="Document").state() == "normal":
-            document = True
-        else:
-            document = False
-        if tk.CTkCheckBox(self.window, text="Audio").state() == "normal":
-            audio = True
-        else:
-            audio = False
-        if tk.CTkCheckBox(self.window, text="Executable").state() == "normal":
-            executable = True
-        else:
-            executable = False
-        if tk.CTkCheckBox(self.window, text="Archive").state() == "normal":
-            archive = True
-        else:
-            archive = False
-        if tk.CTkCheckBox(self.window, text="Code").state() == "normal":
-            code = True
-        else:
-            code = False
-        if tk.CTkCheckBox(self.window, text="Other").state() == "normal":
-            other = True
-        else:
-            other = False
-        if self.folder_button == None:
-            self.select_folder()
+        
         sorting(self.folder_button)
         
       
