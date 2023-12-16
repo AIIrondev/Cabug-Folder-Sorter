@@ -11,7 +11,7 @@ The unsupportet or not released but planed versions are marked with an :x:
 | Version | Supported          | Date of release       |
 | ------- | ------------------ |---------------------- |
 | 0.1.1   | :white_check_mark: | 2023.12.10            |
-| 0.2.1   | :x:                | 2023.12.17            |
+| 0.1.2   | :x:                | 2023.12.23            |
 
 ## Reporting a Vulnerability
 
