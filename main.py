@@ -30,6 +30,8 @@ other = False
 
 logger.info("Programm gestartet")
 
+# Version 0.1.2
+# Version 1.1.2
 # Version 2.1.1 -> verwendet auch die .py dateien zum ändern der Directorys
 # Version 2.1.2 -> verwendet auch die .py dateien zum ändern der Directorys final
 # Version 2.2.2 -> Verbessern des Codes und hinzufügen von mehr optionen -> effizienter und schneller
