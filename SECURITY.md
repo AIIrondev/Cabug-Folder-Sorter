@@ -8,9 +8,9 @@ The supportet versions are marked with an ✅
 
 The unsupportet or not released but planed versions are marked with an :x:
 
-| Version | Supported          | Date of release       |
-| ------- | ------------------ |---------------------- |
-| 0.1.1   | :white_check_mark: | 2023.12.10            |
+| Version | Supported          | Date of release       | Content            |
+| ------- | ------------------ |---------------------- |--------------------|
+| 0.1.1   | :white_check_mark: | 2023.12.10            |                    |
 | 0.1.2   | :x:                | 2023.12.23            |
 | 1.1.1   | :x:                | 2024.1.23            |
 | 1.1.2   | :x:                | 2024.2.23            |
