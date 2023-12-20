@@ -30,15 +30,10 @@ other = False
 
 logger.info("Programm gestartet")
 
-<<<<<<< HEAD
 # Version 0.1.1 -> first version of the folder sorter
 # Version 0.1.2 -> first version of the folder sorter with extra menu final
 # Version 1.1.1 -> Versions fix von 0.1.2 -> VErbesserte und effizientere Version
 # Version 1.1.2 -> Einfügung von einem extra menu -> besser für Anfänger
-=======
-# Version 0.1.2
-# Version 1.1.2
->>>>>>> 123b483c1e192a68a3dae729e6f47607a875fc28
 # Version 2.1.1 -> verwendet auch die .py dateien zum ändern der Directorys
 # Version 2.1.2 -> verwendet auch die .py dateien zum ändern der Directorys final
 # Version 2.2.2 -> Verbessern des Codes und hinzufügen von mehr optionen -> effizienter und schneller
