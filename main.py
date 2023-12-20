@@ -30,6 +30,10 @@ other = False
 
 logger.info("Programm gestartet")
 
+# Version 0.1.1 -> first version of the folder sorter
+# Version 0.1.2 -> first version of the folder sorter with extra menu final
+# Version 1.1.1 -> Versions fix von 0.1.2 -> VErbesserte und effizientere Version
+# Version 1.1.2 -> Einfügung von einem extra menu -> besser für Anfänger
 # Version 2.1.1 -> verwendet auch die .py dateien zum ändern der Directorys
 # Version 2.1.2 -> verwendet auch die .py dateien zum ändern der Directorys final
 # Version 2.2.2 -> Verbessern des Codes und hinzufügen von mehr optionen -> effizienter und schneller
@@ -65,7 +69,6 @@ class GUI:
         tk.CTkEntry(self.window, placeholder_text="Direktory").place(x=75, y=100)
         tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=70)
         tk.CTkLabel(self.window, text="Mode: ", font=("Arial", 15), text_color="black").place(x=90, y=130)
-        tk.CTkButton(self.window, text="Start", corner_radius=32, command=lambda: self.option_calback_menu, text_color="black").place(x=75, y=200)
         tk.CTkOptionMenu(self.window, values=["Normal", "Custom"], command=self.option_calback_menu).place(x=75, y=160)
         tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=250)
 
@@ -79,13 +82,14 @@ class GUI:
         tk.CTkLabel(self.window, text="Github: https://github.com/Iron-witch/Folder-sorter", font=("Arial", 10), text_color="blue").place(x=25, y=50)
         tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=150)
     
+    def select_folder(self):
+        logger.debug("Selecting folder")
+        self.folder_button = tk.filedialog.askdirectory()
+        self.entry = tk.CTkEntry(self.window, placeholder_text=self.folder_button, state="readonly").place(x=75, y=100)
+    
     def first_reset(self, window_size_x=275, window_size_y=300):
         self.clear_window()
         self.window.geometry(f"{window_size_x}x{window_size_y}")
-    
-    def select_folder(self):
-        self.button = tk.filedialog.askdirectory()
-        self.CTkentry = tk.CTkEntry(self.window, placeholder_text=self.button, state="readonly").place(x=75, y=100)
     
     def clear_window(self):
         logger.debug("Clearing window")
@@ -114,7 +118,6 @@ class GUI:
         check_var_oth = tk.StringVar(value="off")
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
         tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=30)
-        tk.CTkLabel(self.window, text="selectet folder: ", font=("Arial", 15), text_color="black").place(x=90, y=60)
         tk.CTkEntry(self.window, placeholder_text="Direktory").place(x=75, y=75)
         tk.CTkOptionMenu(self.window, values=["Normal", "Custom"], command=self.option_calback_menu).place(x=75, y=110)
         tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=350)
