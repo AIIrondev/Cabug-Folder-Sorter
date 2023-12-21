@@ -822,3 +822,22 @@
 2023-12-21 18:13:06,060 - folder sorter - DEBUG - 3d.obj
 2023-12-21 18:13:06,060 - folder sorter - DEBUG - Ending found1 -> moving to folder
 2023-12-21 18:13:12,235 - folder sorter - INFO - Programm beendet
+2023-12-21 21:33:29,323 - folder sorter - INFO - Programm gestartet
+2023-12-21 21:33:29,495 - folder sorter - DEBUG - Opening menu
+2023-12-21 21:33:29,496 - folder sorter - DEBUG - Clearing window
+2023-12-21 21:33:31,482 - folder sorter - INFO - Programm beendet
+2023-12-21 21:33:39,087 - folder sorter - INFO - Programm gestartet
+2023-12-21 21:33:39,276 - folder sorter - DEBUG - Opening menu
+2023-12-21 21:33:39,276 - folder sorter - DEBUG - Clearing window
+2023-12-21 21:33:40,122 - folder sorter - DEBUG - Opening main menu
+2023-12-21 21:33:40,122 - folder sorter - DEBUG - Clearing window
+2023-12-21 21:33:41,831 - folder sorter - DEBUG - Opening option menu
+2023-12-21 21:33:41,831 - folder sorter - DEBUG - Clearing window
+2023-12-21 21:33:45,901 - folder sorter - DEBUG - Selecting folder
+2023-12-21 21:33:50,241 - folder sorter - DEBUG - Starting custom mode
+2023-12-21 21:33:50,241 - folder sorter - DEBUG - Starting sorting
+2023-12-21 21:33:50,241 - folder sorter - DEBUG - 3d.obj
+2023-12-21 21:33:50,241 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-21 21:33:54,004 - folder sorter - DEBUG - Opening menu
+2023-12-21 21:33:54,004 - folder sorter - DEBUG - Clearing window
+2023-12-21 21:33:54,805 - folder sorter - INFO - Programm beendet
