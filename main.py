@@ -30,7 +30,7 @@ other = False
 
 # Version 0.1.1 -> first version of the folder sorter
 # Version 0.1.2 -> first version of the folder sorter with extra menu final
-# Version 1.1.1 -> Versions fix von 0.1.2 -> VErbesserte und effizientere Version und haptisch3s Featback für bessere User Experience
+# Version 1.1.1 -> Versions fix von 0.1.2 -> VErbesserte und effizientere Version und haptisches Featback für bessere User Experience
 # Version 1.1.2 -> Einfügung von einem extra menu -> besser für Anfänger
 # Version 2.1.1 -> verwendet auch die .py dateien zum ändern der Directorys
 # Version 2.1.2 -> verwendet auch die .py dateien zum ändern der Directorys final
@@ -163,12 +163,11 @@ class sorting:
             "code": ["py", "html", "css", "js", "cpp", "c", "java", "h", "hpp", "cs", "php", "json", "xml", "sql", "asm", "asmx", "aspx", "jsp", "vb", "vbs", "rb", "pl", "go", "swift", "kt", "m", "r", "lua", "ts", "tsx", "yml", "yaml", "ini", "cfg", "conf", "md", "markdown", "bat", "cmd", "ps1", "psm1", "psd1", "ps1xml", "psc1", "pssc", "reg", "scf", "scr", "vbs", "ws", "wsf", "wsc", "wsh", "ps2", "ps2xml", "psc2", "pscxml", "cdxml", "xaml", "xaml", "xsl", "xslt", "xsd", "xsc", "xsd", "xsf", "config", "settings", "props", "sln", "csproj", "vbproj", "vcxproj", "vcproj", "dbproj", "njsproj", "vcxitems", "vcxitems", "csproj", "vbproj", "vcxproj", "vcproj", "dbproj", "njsproj", "vcxitems", "vcxitems", "vcxitems", "proj", "projitems", "shproj", "manifest", "appxmanifest"],
             "other": ["sonsiges"]
         }
-        self.sort_ending(folder)
-        if image == True or video == True or object3d == True or document == True or audio == True or executable == True or archive == True or code == True or other == True:
+        if image or video or object3d or document or audio or executable or archive or code or other:
             self.custom_mode(folder, f"{image},{video},{object3d},{document},{audio},{executable},{archive},{code},{other}")
-            
+            logger.debug(f"Starting custom mode with {image},{video},{object3d},{document},{audio},{executable},{archive},{code},{other}")
         else:
-            pass
+            self.sort_ending(folder)
             
     def custom_mode(self, folder, mode):
         # create right table for custom mode
@@ -207,7 +206,7 @@ class sorting:
                         self.move_file(f"{file}", f"{folder}")
                         break
                 else:
-                    logger.debug("No ending found2 -> moving to other folder")
+                    logger.debug("No ending found3 -> moving to other folder")
         
 
     def sort_ending(self, ending_folder):
@@ -216,7 +215,7 @@ class sorting:
             logger.debug(file)
             file_ending = self.get_file_ending(file)
             if file_ending == False:
-                logger.warning("No ending found1 -> moving to other folder")
+                logger.warning("No ending found -> moving to other folder")
             else:
                 for folder in self.ending_folder_changer:
                     if file_ending in self.ending_folder_changer[folder]:
@@ -231,7 +230,7 @@ class sorting:
         try:
             shutil.move(file, folder)
         except shutil.Error:
-            logger.debug(f"Moved {file} to {folder}")
+            logger.debug(f"Couldn't Moved {file} to {folder}")
 
     def create_folder(self, folder):
         if not os.path.exists(folder):
