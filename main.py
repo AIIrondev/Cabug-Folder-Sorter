@@ -68,7 +68,7 @@ class GUI:
         tk.CTkLabel(self.window, text="Mode: ", font=("Arial", 15), text_color="black").place(x=90, y=130)
         tk.CTkOptionMenu(self.window, values=["Normal", "Custom"], command=self.option_calback_menu).place(x=75, y=160)
         tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=250)
-        tk.CTkButton(self.window, text="Start", corner_radius=32, command=lambda: self.normal_mode_gui(), text_color="black").place(x=75, y=200)
+        tk.CTkButton(self.window, text="Start", corner_radius=32, command=self.normal_mode_gui, text_color="black").place(x=75, y=200)
 
     def about(self):
         logger.debug("Opening about menu")
@@ -101,15 +101,15 @@ class GUI:
     def option_calback_menu(self, value):
         logger.debug("Opening option menu")
         self.first_reset(275, 400)
-        self.check_var_img = tk.StringVar(value=False)
-        self.check_var_vid = tk.StringVar(value=False)
-        self.check_var_3do = tk.StringVar(value=False)
-        self.check_var_doc = tk.StringVar(value=False)
-        self.check_var_aud = tk.StringVar(value=False)
-        self.check_var_exe = tk.StringVar(value=False)
-        self.check_var_arc = tk.StringVar(value=False)
-        self.check_var_cod = tk.StringVar(value=False)
-        self.check_var_oth = tk.StringVar(value=False)
+        self.check_var_img = tk.BooleanVar()
+        self.check_var_vid = tk.BooleanVar()
+        self.check_var_3do = tk.BooleanVar()
+        self.check_var_doc = tk.BooleanVar()
+        self.check_var_aud = tk.BooleanVar()
+        self.check_var_exe = tk.BooleanVar()
+        self.check_var_arc = tk.BooleanVar()
+        self.check_var_cod = tk.BooleanVar()
+        self.check_var_oth = tk.BooleanVar()
         logger.debug(f"Selected option: {value}")
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
         tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=30)
@@ -149,11 +149,11 @@ class GUI:
         archive = self.check_var_arc.get()
         code = self.check_var_cod.get()
         other = self.check_var_oth.get()
-        try:
-            sorting(self.folder_button)
-        except AttributeError:
-            logger.warning("No folder selected")
-            tkinter.messagebox.showwarning("Warning", "No folder selected")
+        #try:
+        sorting(self.folder_button)
+        #except AttributeError:
+        #    logger.warning("No folder selected")
+        #    tkinter.messagebox.showwarning("Warning", "No folder selected")
             
 class sorting:
     def __init__(self, folder):
@@ -168,15 +168,15 @@ class sorting:
             "code": ["py", "html", "css", "js", "cpp", "c", "java", "h", "hpp", "cs", "php", "json", "xml", "sql", "asm", "asmx", "aspx", "jsp", "vb", "vbs", "rb", "pl", "go", "swift", "kt", "m", "r", "lua", "ts", "tsx", "yml", "yaml", "ini", "cfg", "conf", "md", "markdown", "bat", "cmd", "ps1", "psm1", "psd1", "ps1xml", "psc1", "pssc", "reg", "scf", "scr", "vbs", "ws", "wsf", "wsc", "wsh", "ps2", "ps2xml", "psc2", "pscxml", "cdxml", "xaml", "xaml", "xsl", "xslt", "xsd", "xsc", "xsd", "xsf", "config", "settings", "props", "sln", "csproj", "vbproj", "vcxproj", "vcproj", "dbproj", "njsproj", "vcxitems", "vcxitems", "csproj", "vbproj", "vcxproj", "vcproj", "dbproj", "njsproj", "vcxitems", "vcxitems", "vcxitems", "proj", "projitems", "shproj", "manifest", "appxmanifest"],
             "other": ["sonsiges"]
         }
-        if image == 1 or video == 1 or object3d == 1 or document == 1 or audio == 1 or executable == 1 or archive == 1 or code == 1 or other == 1:
-            self.custom_mode(folder, f"{image},{video},{object3d},{document},{audio},{executable},{archive},{code},{other}")
-            logger.debug(f"Starting custom mode with {image},{video},{object3d},{document},{audio},{executable},{archive},{code},{other}")
-        else:
-            logger.debug(f"Starting Normal mode with {image},{video},{object3d},{document},{audio},{executable},{archive},{code},{other}")
+        if not image and not video and object3d and not document and not audio and not executable and not archive and not code and not other:
             self.sort_ending(folder)
-            
+            logger.debug(f"Starting Normal mode with {image},{video},{object3d},{document},{audio},{executable},{archive},{code},{other}1")
+        else:
+            self.custom_mode(folder, f"{image},{video},{object3d},{document},{audio},{executable},{archive},{code},{other}")
+            logger.debug(f"Starting custom mode with {image},{video},{object3d},{document},{audio},{executable},{archive},{code},{other}1")
+
     def custom_mode(self, folder, mode):
-        # create right table for custom mode
+        # create right table for custom mode 
         image, video, object3d, document, audio, executable, archive, code, other = mode.split(",")
         logger.debug("Starting custom mode")
         self.custom_mode_folder_changer = self.ending_folder_changer.copy()
@@ -202,18 +202,21 @@ class sorting:
         for file in os.listdir(folder):
             logger.debug(file)
             file_ending = self.get_file_ending(file)
-            if file_ending == False:
+            if file_ending == 1:
                 logger.warning("No ending found1 -> moving to other folder")
+                other_folder = os.path.join(ending_folder, "other")
+                self.create_folder(other_folder)
+                self.move_file(os.path.join(ending_folder, file), other_folder)
             else:
                 for folder in self.custom_mode_folder_changer:
                     if file_ending in self.custom_mode_folder_changer[folder]:
                         logger.debug("Ending found1 -> moving to folder")
-                        self.create_folder(f"{folder}")
-                        self.move_file(f"{file}", f"{folder}")
+                        self.create_folder(f"{ending_folder}/{folder}")
+                        self.move_file(f"{ending_folder}/{file}", f"{ending_folder}/{folder}")
                         break
                 else:
                     logger.debug("No ending found3 -> moving to other folder")
-        
+
     def sort_ending(self, ending_folder):
         logger.debug("Sorting endings")
         for file in os.listdir(ending_folder):
@@ -221,7 +224,7 @@ class sorting:
             file_ending = self.get_file_ending(file)
             if file_ending == False:
                 logger.warning("No ending found -> moving to other folder")
-                self.create_folder(f"{ending_folder}other")
+                self.create_folder(f"{ending_folder}/other")
                 self.move_file(f"{ending_folder}/{file}", f"{ending_folder}/other")
             else:
                 for folder in self.ending_folder_changer:
@@ -232,7 +235,7 @@ class sorting:
                         break
                 else:
                     logger.debug("No ending found2 -> moving to other folder")
-                        
+
     def move_file(self, file, folder):
         file_path = os.path.join(folder, file)
         if os.path.exists(file_path):
