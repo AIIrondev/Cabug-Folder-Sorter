@@ -227,10 +227,11 @@ class sorting:
                     logger.debug("No ending found2 -> moving to other folder")
                         
     def move_file(self, file, folder):
-        try:
-            shutil.move(file, folder)
-        except shutil.Error:
-            logger.debug(f"Couldn't Moved {file} to {folder}")
+        file_path = os.path.join(folder, file)
+        if os.path.exists(file_path):
+            shutil.move(file_path, folder)
+        else:
+            logger.error(f"File not found: {file_path}")
 
     def create_folder(self, folder):
         if not os.path.exists(folder):
