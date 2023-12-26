@@ -1533,3 +1533,34 @@
 2023-12-26 19:23:56,517 - folder sorter - DEBUG - Opening menu
 2023-12-26 19:23:56,517 - folder sorter - DEBUG - Clearing window
 2023-12-26 19:23:59,052 - folder sorter - INFO - Programm beendet
+2023-12-26 19:36:16,655 - folder sorter - INFO - Programm gestartet
+2023-12-26 19:36:16,832 - folder sorter - DEBUG - Opening menu
+2023-12-26 19:36:16,832 - folder sorter - DEBUG - Clearing window
+2023-12-26 19:36:17,741 - folder sorter - DEBUG - Opening main menu
+2023-12-26 19:36:17,741 - folder sorter - DEBUG - Clearing window
+2023-12-26 19:36:19,938 - folder sorter - DEBUG - Opening option menu
+2023-12-26 19:36:19,938 - folder sorter - DEBUG - Clearing window
+2023-12-26 19:36:19,945 - folder sorter - DEBUG - Selected option: Custom
+2023-12-26 19:36:23,634 - folder sorter - INFO - Programm beendet
+2023-12-26 19:36:49,209 - folder sorter - INFO - Programm gestartet
+2023-12-26 19:36:49,389 - folder sorter - DEBUG - Opening menu
+2023-12-26 19:36:49,390 - folder sorter - DEBUG - Clearing window
+2023-12-26 19:36:50,701 - folder sorter - DEBUG - Opening main menu
+2023-12-26 19:36:50,701 - folder sorter - DEBUG - Clearing window
+2023-12-26 19:36:53,137 - folder sorter - DEBUG - Opening option menu
+2023-12-26 19:36:53,137 - folder sorter - DEBUG - Clearing window
+2023-12-26 19:36:53,143 - folder sorter - DEBUG - Selected option: Custom
+2023-12-26 19:37:24,290 - folder sorter - INFO - Programm gestartet
+2023-12-26 19:37:24,468 - folder sorter - DEBUG - Opening menu
+2023-12-26 19:37:24,468 - folder sorter - DEBUG - Clearing window
+2023-12-26 19:37:25,859 - folder sorter - DEBUG - Opening main menu
+2023-12-26 19:37:25,859 - folder sorter - DEBUG - Clearing window
+2023-12-26 19:37:28,168 - folder sorter - DEBUG - Opening option menu
+2023-12-26 19:37:28,169 - folder sorter - DEBUG - Clearing window
+2023-12-26 19:37:28,175 - folder sorter - DEBUG - Selected option: Custom
+2023-12-26 19:37:37,597 - folder sorter - DEBUG - Selecting folder
+2023-12-26 19:37:41,115 - folder sorter - DEBUG - Starting custom mode
+2023-12-26 19:37:41,116 - folder sorter - DEBUG - Starting sorting
+2023-12-26 19:37:41,116 - folder sorter - DEBUG - 3d.obj
+2023-12-26 19:37:41,116 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-26 19:37:46,409 - folder sorter - INFO - Programm beendet

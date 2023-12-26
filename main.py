@@ -112,7 +112,7 @@ class GUI:
         self.check_var_oth = tk.BooleanVar()
         logger.debug(f"Selected option: {value}")
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
-        tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=30)
+        tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=50)
         tk.CTkOptionMenu(self.window, values=["Normal", "Custom"], command=self.option_calback_menu).place(x=75, y=110)
         tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=350)
         if value == "Custom": 
@@ -149,11 +149,11 @@ class GUI:
         archive = self.check_var_arc.get()
         code = self.check_var_cod.get()
         other = self.check_var_oth.get()
-        #try:
-        sorting(self.folder_button)
-        #except AttributeError:
-        #    logger.warning("No folder selected")
-        #    tkinter.messagebox.showwarning("Warning", "No folder selected")
+        try:
+            sorting(self.folder_button)
+        except AttributeError:
+            logger.warning("No folder selected")
+            tkinter.messagebox.showwarning("Warning", "No folder selected")
             
 class sorting:
     def __init__(self, folder):
@@ -204,9 +204,9 @@ class sorting:
             file_ending = self.get_file_ending(file)
             if file_ending == 1:
                 logger.warning("No ending found1 -> moving to other folder")
-                other_folder = os.path.join(ending_folder, "other")
+                other_folder = os.path.join(folder, "other")
                 self.create_folder(other_folder)
-                self.move_file(os.path.join(ending_folder, file), other_folder)
+                self.move_file(os.path.join(folder, file), other_folder)
             else:
                 for folder in self.custom_mode_folder_changer:
                     if file_ending in self.custom_mode_folder_changer[folder]:
