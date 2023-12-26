@@ -38,8 +38,8 @@ other = False
 # Version 3.1.1 -> Einfügen von einem File system watcher -> wenn ein neues File in den Ordner kommt wird es automatisch verschoben
 # Version 3.1.2 -> Einfügen von einem File system watcher -> wenn ein neues File in den Ordner kommt wird es automatisch verschoben final
 # Version 3.2.2 -> Zwei verschiedene Modi -> Normal und Advanced -> besser für Anfänger und Fortgeschrittene
-# Version 4.1.1 -> Einführen von einem File system -> umbau auf ein File system -> mit den Funkltionen von v.3.1.2
-# Version 4.1.2 -> Einführen von einem File system -> umbau auf ein File system -> mit den Funkltionen von v.3.1.2 final
+# Version 4.1.1 -> Einführen von einem File system -> umbau auf ein File system -> mit den Funktionen von v.3.1.2
+# Version 4.1.2 -> Einführen von einem File system -> umbau auf ein File system -> mit den Funktionen von v.3.1.2 final
 
 class GUI:
     def __init__(self):
@@ -178,26 +178,22 @@ class sorting:
     def custom_mode(self, folder, mode):
         # create right table for custom mode 
         image, video, object3d, document, audio, executable, archive, code, other = mode.split(",")
+        folder_types = {
+            "image": image,
+            "video": video,
+            "3d object": object3d,
+            "document": document,
+            "audio": audio,
+            "executable": executable,
+            "archive": archive,
+            "code": code,
+            "other": other
+        }
         logger.debug("Starting custom mode")
         self.custom_mode_folder_changer = self.ending_folder_changer.copy()
-        if image == 0:
-            del self.custom_mode_folder_changer["image"]
-        if video == 0:
-            del self.custom_mode_folder_changer["video"]
-        if object3d == 0:
-            del self.custom_mode_folder_changer["3d object"]
-        if document == 0:
-            del self.custom_mode_folder_changer["document"]
-        if audio == 0:
-            del self.custom_mode_folder_changer["audio"]
-        if executable == 0:
-            del self.custom_mode_folder_changer["executable"]
-        if archive == 0:
-            del self.custom_mode_folder_changer["archive"]
-        if code == 0:
-            del self.custom_mode_folder_changer["code"]
-        if other == 0:
-            del self.custom_mode_folder_changer["other"]
+        for folder_type, value in folder_types.items():
+            if not value and folder_type in self.custom_mode_folder_changer:
+                del self.custom_mode_folder_changer[folder_type]
         logger.debug("Starting sorting")
         for file in os.listdir(folder):
             logger.debug(file)
@@ -208,11 +204,11 @@ class sorting:
                 self.create_folder(other_folder)
                 self.move_file(os.path.join(folder, file), other_folder)
             else:
-                for folder in self.custom_mode_folder_changer:
-                    if file_ending in self.custom_mode_folder_changer[folder]:
+                for folder1 in self.custom_mode_folder_changer:
+                    if file_ending in self.custom_mode_folder_changer[folder1]:
                         logger.debug("Ending found1 -> moving to folder")
-                        self.create_folder(f"{ending_folder}/{folder}")
-                        self.move_file(f"{ending_folder}/{file}", f"{ending_folder}/{folder}")
+                        self.create_folder(f"{folder}/{folder1}")
+                        self.move_file(f"{folder}/{file}", f"{folder}/{folder1}")
                         break
                 else:
                     logger.debug("No ending found3 -> moving to other folder")
