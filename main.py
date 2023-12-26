@@ -180,23 +180,23 @@ class sorting:
         image, video, object3d, document, audio, executable, archive, code, other = mode.split(",")
         logger.debug("Starting custom mode")
         self.custom_mode_folder_changer = self.ending_folder_changer.copy()
-        if image == "False":
+        if image == 0:
             del self.custom_mode_folder_changer["image"]
-        if video == "False":
+        if video == 0:
             del self.custom_mode_folder_changer["video"]
-        if object3d == "False":
+        if object3d == 0:
             del self.custom_mode_folder_changer["3d object"]
-        if document == "False":
+        if document == 0:
             del self.custom_mode_folder_changer["document"]
-        if audio == "False":
+        if audio == 0:
             del self.custom_mode_folder_changer["audio"]
-        if executable == "False":
+        if executable == 0:
             del self.custom_mode_folder_changer["executable"]
-        if archive == "False":
+        if archive == 0:
             del self.custom_mode_folder_changer["archive"]
-        if code == "False":
+        if code == 0:
             del self.custom_mode_folder_changer["code"]
-        if other == "False":
+        if other == 0:
             del self.custom_mode_folder_changer["other"]
         logger.debug("Starting sorting")
         for file in os.listdir(folder):
@@ -214,7 +214,6 @@ class sorting:
                 else:
                     logger.debug("No ending found3 -> moving to other folder")
         
-
     def sort_ending(self, ending_folder):
         logger.debug("Sorting endings")
         for file in os.listdir(ending_folder):
