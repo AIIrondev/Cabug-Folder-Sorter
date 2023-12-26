@@ -68,7 +68,7 @@ class GUI:
         tk.CTkLabel(self.window, text="Mode: ", font=("Arial", 15), text_color="black").place(x=90, y=130)
         tk.CTkOptionMenu(self.window, values=["Normal", "Custom"], command=self.option_calback_menu).place(x=75, y=160)
         tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=250)
-        tk.CTkButton(self.window, text="Start", corner_radius=32, command=lambda: sorting(self.folder_button), text_color="black").place(x=75, y=200)
+        tk.CTkButton(self.window, text="Start", corner_radius=32, command=lambda: self.normal_mode_gui(), text_color="black").place(x=75, y=200)
 
     def about(self):
         logger.debug("Opening about menu")
@@ -98,9 +98,6 @@ class GUI:
         # Open the HTML file in the default web browser
         webbrowser.open(file_path)
 
-    def check_var(self):
-        pass
-
     def option_calback_menu(self, value):
         logger.debug("Opening option menu")
         self.first_reset(275, 400)
@@ -113,6 +110,7 @@ class GUI:
         self.check_var_arc = tk.StringVar(value=False)
         self.check_var_cod = tk.StringVar(value=False)
         self.check_var_oth = tk.StringVar(value=False)
+        logger.debug(f"Selected option: {value}")
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
         tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=30)
         tk.CTkOptionMenu(self.window, values=["Normal", "Custom"], command=self.option_calback_menu).place(x=75, y=110)
@@ -132,6 +130,13 @@ class GUI:
         elif value == "Normal":
             self.main()
     
+    def normal_mode_gui(self):
+        try:
+            sorting(self.folder_button)
+        except AttributeError:
+            logger.warning("No folder selected")
+            tkinter.messagebox.showwarning("Warning", "No folder selected")
+
     def custom_mode_gui(self):
         # get values from check boxes
         global image, video, object3d, document, audio, executable, archive, code, other
@@ -146,10 +151,10 @@ class GUI:
         other = self.check_var_oth.get()
         try:
             sorting(self.folder_button)
-        except NameError:
+        except AttributeError:
             logger.warning("No folder selected")
-            warning = tk.CTkWarning(self.window, text="No folder selected", text_color="black")
-      
+            tkinter.messagebox.showwarning("Warning", "No folder selected")
+            
 class sorting:
     def __init__(self, folder):
         self.ending_folder_changer = {
@@ -163,10 +168,11 @@ class sorting:
             "code": ["py", "html", "css", "js", "cpp", "c", "java", "h", "hpp", "cs", "php", "json", "xml", "sql", "asm", "asmx", "aspx", "jsp", "vb", "vbs", "rb", "pl", "go", "swift", "kt", "m", "r", "lua", "ts", "tsx", "yml", "yaml", "ini", "cfg", "conf", "md", "markdown", "bat", "cmd", "ps1", "psm1", "psd1", "ps1xml", "psc1", "pssc", "reg", "scf", "scr", "vbs", "ws", "wsf", "wsc", "wsh", "ps2", "ps2xml", "psc2", "pscxml", "cdxml", "xaml", "xaml", "xsl", "xslt", "xsd", "xsc", "xsd", "xsf", "config", "settings", "props", "sln", "csproj", "vbproj", "vcxproj", "vcproj", "dbproj", "njsproj", "vcxitems", "vcxitems", "csproj", "vbproj", "vcxproj", "vcproj", "dbproj", "njsproj", "vcxitems", "vcxitems", "vcxitems", "proj", "projitems", "shproj", "manifest", "appxmanifest"],
             "other": ["sonsiges"]
         }
-        if image or video or object3d or document or audio or executable or archive or code or other:
+        if image == 1 or video == 1 or object3d == 1 or document == 1 or audio == 1 or executable == 1 or archive == 1 or code == 1 or other == 1:
             self.custom_mode(folder, f"{image},{video},{object3d},{document},{audio},{executable},{archive},{code},{other}")
             logger.debug(f"Starting custom mode with {image},{video},{object3d},{document},{audio},{executable},{archive},{code},{other}")
         else:
+            logger.debug(f"Starting Normal mode with {image},{video},{object3d},{document},{audio},{executable},{archive},{code},{other}")
             self.sort_ending(folder)
             
     def custom_mode(self, folder, mode):
@@ -216,6 +222,8 @@ class sorting:
             file_ending = self.get_file_ending(file)
             if file_ending == False:
                 logger.warning("No ending found -> moving to other folder")
+                self.create_folder(f"{ending_folder}other")
+                self.move_file(f"{ending_folder}/{file}", f"{ending_folder}/other")
             else:
                 for folder in self.ending_folder_changer:
                     if file_ending in self.ending_folder_changer[folder]:
