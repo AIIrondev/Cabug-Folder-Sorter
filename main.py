@@ -232,7 +232,7 @@ class sorting:
                         logger.debug("Ending found1 -> moving to folder")
                         self.create_folder(f"{ending_folder}/{folder}")
                         self.move_file(f"{ending_folder}/{file}", f"{ending_folder}/{folder}")
-                        GUI().window.after(1000, self.sort_ending, ending_folder)
+                        GUI().featback()
                         break
                 else:
                     logger.debug("No ending found2 -> moving to other folder")
