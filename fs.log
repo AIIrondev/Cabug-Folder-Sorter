@@ -1629,3 +1629,46 @@
 2023-12-26 20:21:13,244 - folder sorter - DEBUG - Opening menu
 2023-12-26 20:21:13,244 - folder sorter - DEBUG - Clearing window
 2023-12-26 20:21:14,085 - folder sorter - INFO - Programm beendet
+2023-12-27 16:13:06,356 - folder sorter - INFO - Programm gestartet
+2023-12-27 16:13:06,525 - folder sorter - DEBUG - Opening menu
+2023-12-27 16:13:06,525 - folder sorter - DEBUG - Clearing window
+2023-12-27 16:13:07,791 - folder sorter - DEBUG - Opening main menu
+2023-12-27 16:13:07,791 - folder sorter - DEBUG - Clearing window
+2023-12-27 16:13:08,432 - folder sorter - DEBUG - Selecting folder
+2023-12-27 16:13:18,035 - folder sorter - DEBUG - Opening option menu
+2023-12-27 16:13:18,035 - folder sorter - DEBUG - Clearing window
+2023-12-27 16:13:18,039 - folder sorter - DEBUG - Selected option: Custom
+2023-12-27 16:13:20,251 - folder sorter - DEBUG - Starting custom mode
+2023-12-27 16:13:20,251 - folder sorter - DEBUG - Starting sorting
+2023-12-27 16:13:20,251 - folder sorter - DEBUG - 3d.obj
+2023-12-27 16:13:20,251 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-27 16:13:20,252 - folder sorter - DEBUG - achive.zip
+2023-12-27 16:13:20,253 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-27 16:13:20,254 - folder sorter - DEBUG - audio.wav
+2023-12-27 16:13:20,254 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-27 16:13:20,255 - folder sorter - DEBUG - Code.py
+2023-12-27 16:13:20,255 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-27 16:13:20,256 - folder sorter - DEBUG - Coding.css
+2023-12-27 16:13:20,256 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-27 16:13:20,257 - folder sorter - DEBUG - exe.bat
+2023-12-27 16:13:20,257 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-27 16:13:20,258 - folder sorter - DEBUG - executable.exe
+2023-12-27 16:13:20,258 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-27 16:13:20,259 - folder sorter - DEBUG - Image.png
+2023-12-27 16:13:20,259 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-27 16:13:20,260 - folder sorter - DEBUG - Objekt.fbx
+2023-12-27 16:13:20,260 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-27 16:13:20,261 - folder sorter - DEBUG - sonstiges.fll
+2023-12-27 16:13:20,261 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-27 16:13:20,261 - folder sorter - DEBUG - text.pdf
+2023-12-27 16:13:20,261 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-27 16:13:20,262 - folder sorter - DEBUG - textfiles.tar
+2023-12-27 16:13:20,262 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-27 16:13:20,263 - folder sorter - DEBUG - video.mp4
+2023-12-27 16:13:20,263 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-27 16:13:20,264 - folder sorter - DEBUG - videos.mp3
+2023-12-27 16:13:20,264 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-27 16:13:20,265 - folder sorter - DEBUG - Starting custom mode with True,True,False,False,True,False,False,False,False1
+2023-12-27 16:13:22,425 - folder sorter - DEBUG - Opening menu
+2023-12-27 16:13:22,425 - folder sorter - DEBUG - Clearing window
+2023-12-27 16:13:23,045 - folder sorter - INFO - Programm beendet
