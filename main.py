@@ -132,7 +132,7 @@ class GUI:
     
     def normal_mode_gui(self):
         try:
-            sorting(self.folder_button)
+            sorting(self.folder_button, False, False, False, False, False, False, False, False, False)
         except AttributeError:
             logger.warning("No folder selected")
             tkinter.messagebox.showwarning("Warning", "No folder selected")
@@ -216,8 +216,8 @@ class sorting:
                         other_folder = os.path.join(folder, "other")
                         self.create_folder(other_folder)
                         self.move_file(os.path.join(folder, file), other_folder)
-                tkinter.messagebox.showinfo("Finisched", "The folder is sortet!")
-                    
+
+        tkinter.messagebox.showinfo("Finished", "The folder is sorted!")
 
     def sort_ending(self, ending_folder):
         logger.debug("Sorting endings")
@@ -234,28 +234,26 @@ class sorting:
                         logger.debug("Ending found1 -> moving to folder")
                         self.create_folder(f"{ending_folder}/{folder}")
                         self.move_file(f"{ending_folder}/{file}", f"{ending_folder}/{folder}")
-                        tkinter.messagebox.showinfo("Finisched", "The folder is sortet!")
                     else:
                         logger.debug("No ending found3 -> moving to other folder")
                         other_folder = os.path.join(ending_folder, "other")
                         self.create_folder(other_folder)
                         self.move_file(os.path.join(ending_folder, file), other_folder)
-                tkinter.messagebox.showinfo("Finisched", "The folder is sortet!")
+
+        tkinter.messagebox.showinfo("Finished", "The folder is sorted!")
 
     def move_file(self, file, folder):
         file_path = os.path.join(folder, file)
         if os.path.exists(file_path):
             shutil.move(file_path, folder)
-        else:
-            logger.error(f"File not found: {file_path}")
 
     def create_folder(self, folder):
         if not os.path.exists(folder):
             os.makedirs(folder)
 
     def get_file_ending(self, file):
-        file_extension = os.path.splitext(file)[1]
-        return file_extension[1:] if file_extension else ""
+        file_ending = os.path.splitext(file)[1][1:].lower()
+        return file_ending
 
 if __name__ == "__main__":
     logger.info("Programm gestartet")

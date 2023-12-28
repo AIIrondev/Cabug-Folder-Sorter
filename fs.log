@@ -2085,3 +2085,573 @@
 2023-12-28 16:39:09,748 - folder sorter - DEBUG - Opening menu
 2023-12-28 16:39:09,748 - folder sorter - DEBUG - Clearing window
 2023-12-28 16:39:10,680 - folder sorter - INFO - Programm beendet
+2023-12-28 16:43:57,957 - folder sorter - INFO - Programm gestartet
+2023-12-28 16:43:58,120 - folder sorter - DEBUG - Opening menu
+2023-12-28 16:43:58,120 - folder sorter - DEBUG - Clearing window
+2023-12-28 16:43:59,581 - folder sorter - DEBUG - Opening main menu
+2023-12-28 16:43:59,582 - folder sorter - DEBUG - Clearing window
+2023-12-28 16:44:00,235 - folder sorter - DEBUG - Selecting folder
+2023-12-28 16:44:04,218 - folder sorter - DEBUG - Opening option menu
+2023-12-28 16:44:04,218 - folder sorter - DEBUG - Clearing window
+2023-12-28 16:44:04,223 - folder sorter - DEBUG - Selected option: Custom
+2023-12-28 16:44:06,758 - folder sorter - DEBUG - Starting custom mode with mode: True,True,False,False,True,False,False,False,False
+2023-12-28 16:44:06,758 - folder sorter - DEBUG - Starting custom mode
+2023-12-28 16:44:06,758 - folder sorter - DEBUG - Starting sorting
+2023-12-28 16:44:06,759 - folder sorter - DEBUG - 3d.obj
+2023-12-28 16:44:06,759 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:06,761 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:06,761 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\3d.obj
+2023-12-28 16:44:06,761 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:06,761 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\3d.obj
+2023-12-28 16:44:06,761 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:06,761 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\3d.obj
+2023-12-28 16:44:06,761 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:06,761 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\3d.obj
+2023-12-28 16:44:06,761 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:06,762 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\3d.obj
+2023-12-28 16:44:06,762 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:06,762 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\3d.obj
+2023-12-28 16:44:06,762 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:06,762 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\3d.obj
+2023-12-28 16:44:06,762 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:06,762 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\3d.obj
+2023-12-28 16:44:08,138 - folder sorter - DEBUG - achive.zip
+2023-12-28 16:44:08,139 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:08,140 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:08,140 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\achive.zip
+2023-12-28 16:44:08,140 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:08,140 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\achive.zip
+2023-12-28 16:44:08,140 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:08,140 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\achive.zip
+2023-12-28 16:44:08,140 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:08,141 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\achive.zip
+2023-12-28 16:44:08,141 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:08,141 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\achive.zip
+2023-12-28 16:44:08,141 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:08,141 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\achive.zip
+2023-12-28 16:44:08,141 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:08,141 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\achive.zip
+2023-12-28 16:44:08,141 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:08,141 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\achive.zip
+2023-12-28 16:44:09,187 - folder sorter - DEBUG - audio.wav
+2023-12-28 16:44:09,187 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,188 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,188 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\audio.wav
+2023-12-28 16:44:09,188 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,188 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\audio.wav
+2023-12-28 16:44:09,188 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,189 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\audio.wav
+2023-12-28 16:44:09,189 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,189 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\audio.wav
+2023-12-28 16:44:09,189 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,189 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\audio.wav
+2023-12-28 16:44:09,189 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,189 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\audio.wav
+2023-12-28 16:44:09,189 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,189 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\audio.wav
+2023-12-28 16:44:09,190 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,190 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\audio.wav
+2023-12-28 16:44:09,661 - folder sorter - DEBUG - Code.py
+2023-12-28 16:44:09,661 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,662 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,663 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Code.py
+2023-12-28 16:44:09,663 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,663 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Code.py
+2023-12-28 16:44:09,663 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,663 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Code.py
+2023-12-28 16:44:09,663 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,663 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Code.py
+2023-12-28 16:44:09,663 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,664 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Code.py
+2023-12-28 16:44:09,664 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,664 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Code.py
+2023-12-28 16:44:09,664 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,664 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Code.py
+2023-12-28 16:44:09,664 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:09,664 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Code.py
+2023-12-28 16:44:10,123 - folder sorter - DEBUG - Coding.css
+2023-12-28 16:44:10,123 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,124 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,125 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Coding.css
+2023-12-28 16:44:10,125 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,125 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Coding.css
+2023-12-28 16:44:10,125 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,125 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Coding.css
+2023-12-28 16:44:10,125 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,125 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Coding.css
+2023-12-28 16:44:10,125 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,125 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Coding.css
+2023-12-28 16:44:10,125 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,126 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Coding.css
+2023-12-28 16:44:10,126 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,126 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Coding.css
+2023-12-28 16:44:10,126 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,126 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Coding.css
+2023-12-28 16:44:10,632 - folder sorter - DEBUG - exe.bat
+2023-12-28 16:44:10,632 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,633 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,633 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\exe.bat
+2023-12-28 16:44:10,634 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,634 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\exe.bat
+2023-12-28 16:44:10,634 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,634 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\exe.bat
+2023-12-28 16:44:10,634 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,634 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\exe.bat
+2023-12-28 16:44:10,634 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,634 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\exe.bat
+2023-12-28 16:44:10,634 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,634 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\exe.bat
+2023-12-28 16:44:10,635 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,635 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\exe.bat
+2023-12-28 16:44:10,635 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:10,635 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\exe.bat
+2023-12-28 16:44:11,053 - folder sorter - DEBUG - executable.exe
+2023-12-28 16:44:11,053 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,055 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,055 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\executable.exe
+2023-12-28 16:44:11,055 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,055 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\executable.exe
+2023-12-28 16:44:11,055 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,055 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\executable.exe
+2023-12-28 16:44:11,055 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,056 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\executable.exe
+2023-12-28 16:44:11,056 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,056 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\executable.exe
+2023-12-28 16:44:11,056 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,056 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\executable.exe
+2023-12-28 16:44:11,056 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,056 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\executable.exe
+2023-12-28 16:44:11,056 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,056 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\executable.exe
+2023-12-28 16:44:11,488 - folder sorter - DEBUG - Image.png
+2023-12-28 16:44:11,488 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,489 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,490 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Image.png
+2023-12-28 16:44:11,490 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,490 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Image.png
+2023-12-28 16:44:11,490 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,490 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Image.png
+2023-12-28 16:44:11,490 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,490 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Image.png
+2023-12-28 16:44:11,490 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,491 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Image.png
+2023-12-28 16:44:11,491 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,491 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Image.png
+2023-12-28 16:44:11,491 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,491 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Image.png
+2023-12-28 16:44:11,491 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,491 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Image.png
+2023-12-28 16:44:11,938 - folder sorter - DEBUG - Objekt.fbx
+2023-12-28 16:44:11,938 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,939 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,940 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Objekt.fbx
+2023-12-28 16:44:11,940 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,940 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Objekt.fbx
+2023-12-28 16:44:11,940 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,940 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Objekt.fbx
+2023-12-28 16:44:11,940 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,940 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Objekt.fbx
+2023-12-28 16:44:11,940 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,940 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Objekt.fbx
+2023-12-28 16:44:11,940 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,940 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Objekt.fbx
+2023-12-28 16:44:11,940 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,941 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Objekt.fbx
+2023-12-28 16:44:11,941 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:11,941 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\Objekt.fbx
+2023-12-28 16:44:12,348 - folder sorter - DEBUG - sonstiges.fll
+2023-12-28 16:44:12,348 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,349 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,350 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\sonstiges.fll
+2023-12-28 16:44:12,350 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,350 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\sonstiges.fll
+2023-12-28 16:44:12,350 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,350 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\sonstiges.fll
+2023-12-28 16:44:12,350 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,350 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\sonstiges.fll
+2023-12-28 16:44:12,350 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,350 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\sonstiges.fll
+2023-12-28 16:44:12,351 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,351 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\sonstiges.fll
+2023-12-28 16:44:12,351 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,351 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\sonstiges.fll
+2023-12-28 16:44:12,351 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,351 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\sonstiges.fll
+2023-12-28 16:44:12,717 - folder sorter - DEBUG - text.pdf
+2023-12-28 16:44:12,717 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,718 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,718 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\text.pdf
+2023-12-28 16:44:12,718 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,718 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\text.pdf
+2023-12-28 16:44:12,718 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,718 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\text.pdf
+2023-12-28 16:44:12,719 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,719 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\text.pdf
+2023-12-28 16:44:12,719 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,719 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\text.pdf
+2023-12-28 16:44:12,719 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,719 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\text.pdf
+2023-12-28 16:44:12,719 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,719 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\text.pdf
+2023-12-28 16:44:12,719 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:12,719 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\text.pdf
+2023-12-28 16:44:13,342 - folder sorter - DEBUG - textfiles.tar
+2023-12-28 16:44:13,342 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,344 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,344 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\textfiles.tar
+2023-12-28 16:44:13,344 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,344 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\textfiles.tar
+2023-12-28 16:44:13,344 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,344 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\textfiles.tar
+2023-12-28 16:44:13,344 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,344 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\textfiles.tar
+2023-12-28 16:44:13,344 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,345 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\textfiles.tar
+2023-12-28 16:44:13,345 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,345 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\textfiles.tar
+2023-12-28 16:44:13,345 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,345 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\textfiles.tar
+2023-12-28 16:44:13,345 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,345 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\textfiles.tar
+2023-12-28 16:44:13,605 - folder sorter - DEBUG - video.mp4
+2023-12-28 16:44:13,605 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,606 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,606 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\video.mp4
+2023-12-28 16:44:13,606 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,606 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\video.mp4
+2023-12-28 16:44:13,606 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,607 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\video.mp4
+2023-12-28 16:44:13,607 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,607 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\video.mp4
+2023-12-28 16:44:13,607 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,607 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\video.mp4
+2023-12-28 16:44:13,607 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,607 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\video.mp4
+2023-12-28 16:44:13,607 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,607 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\video.mp4
+2023-12-28 16:44:13,607 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,607 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\video.mp4
+2023-12-28 16:44:13,823 - folder sorter - DEBUG - videos.mp3
+2023-12-28 16:44:13,823 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,825 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,825 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\videos.mp3
+2023-12-28 16:44:13,825 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,825 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\videos.mp3
+2023-12-28 16:44:13,825 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,825 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\videos.mp3
+2023-12-28 16:44:13,825 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,825 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\videos.mp3
+2023-12-28 16:44:13,825 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,825 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\videos.mp3
+2023-12-28 16:44:13,826 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,826 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\videos.mp3
+2023-12-28 16:44:13,826 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,826 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\videos.mp3
+2023-12-28 16:44:13,826 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:44:13,826 - folder sorter - ERROR - File not found: C:/Users/Maxi/Music/Neuer Ordner - Kopie (10)\videos.mp3
+2023-12-28 16:46:27,993 - folder sorter - INFO - Programm gestartet
+2023-12-28 16:46:28,156 - folder sorter - DEBUG - Opening menu
+2023-12-28 16:46:28,156 - folder sorter - DEBUG - Clearing window
+2023-12-28 16:46:29,080 - folder sorter - DEBUG - Opening main menu
+2023-12-28 16:46:29,081 - folder sorter - DEBUG - Clearing window
+2023-12-28 16:46:30,340 - folder sorter - DEBUG - Selecting folder
+2023-12-28 16:46:42,176 - folder sorter - DEBUG - Opening menu
+2023-12-28 16:46:42,176 - folder sorter - DEBUG - Clearing window
+2023-12-28 16:46:42,891 - folder sorter - INFO - Programm beendet
+2023-12-28 16:47:18,951 - folder sorter - INFO - Programm gestartet
+2023-12-28 16:47:19,113 - folder sorter - DEBUG - Opening menu
+2023-12-28 16:47:19,113 - folder sorter - DEBUG - Clearing window
+2023-12-28 16:47:21,000 - folder sorter - DEBUG - Opening main menu
+2023-12-28 16:47:21,001 - folder sorter - DEBUG - Clearing window
+2023-12-28 16:47:23,964 - folder sorter - DEBUG - Selecting folder
+2023-12-28 16:47:27,227 - folder sorter - DEBUG - Starting Normal mode
+2023-12-28 16:47:27,228 - folder sorter - DEBUG - Sorting endings
+2023-12-28 16:47:27,228 - folder sorter - DEBUG - 3d.obj
+2023-12-28 16:47:27,228 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:27,230 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:27,230 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:47:28,449 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:28,450 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:28,450 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:28,450 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:28,450 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:28,451 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,292 - folder sorter - DEBUG - achive.zip
+2023-12-28 16:47:29,292 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,293 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,294 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,294 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,294 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,294 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,294 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:47:29,462 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,463 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,620 - folder sorter - DEBUG - audio.wav
+2023-12-28 16:47:29,621 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,622 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,622 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,622 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,622 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:47:29,781 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,781 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,781 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,781 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,973 - folder sorter - DEBUG - Code.py
+2023-12-28 16:47:29,973 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,975 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,975 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,975 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,975 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,975 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,975 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:29,975 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:47:30,194 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:30,393 - folder sorter - DEBUG - Coding.css
+2023-12-28 16:47:30,393 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:30,394 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:30,395 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:30,395 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:30,395 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:30,395 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:30,395 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:30,396 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:47:30,573 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:30,796 - folder sorter - DEBUG - exe.bat
+2023-12-28 16:47:30,796 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:30,797 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:30,797 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:30,797 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:30,797 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:30,798 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:47:31,097 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:31,097 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:47:31,384 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:31,810 - folder sorter - DEBUG - executable.exe
+2023-12-28 16:47:31,810 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:31,812 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:31,812 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:31,813 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:31,813 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:31,813 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:47:32,213 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:32,213 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:32,213 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:32,515 - folder sorter - DEBUG - Image.png
+2023-12-28 16:47:32,516 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:47:32,810 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:32,810 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:32,811 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:32,811 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:32,811 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:32,811 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:32,811 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:32,811 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,050 - folder sorter - DEBUG - Objekt.fbx
+2023-12-28 16:47:33,050 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,051 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,051 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:47:33,261 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,261 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,261 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,262 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,262 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,262 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,592 - folder sorter - DEBUG - sonstiges.fll
+2023-12-28 16:47:33,592 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,593 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,594 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,594 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,594 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,594 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,594 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,594 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,594 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,839 - folder sorter - DEBUG - text.pdf
+2023-12-28 16:47:33,839 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,840 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,841 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:33,841 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:47:34,096 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:34,096 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:34,097 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:34,097 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:34,097 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:34,498 - folder sorter - DEBUG - textfiles.tar
+2023-12-28 16:47:34,498 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:34,499 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:34,499 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:34,499 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:34,499 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:34,500 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:34,500 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:47:34,815 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:34,816 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,064 - folder sorter - DEBUG - video.mp4
+2023-12-28 16:47:35,064 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,065 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:47:35,297 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,298 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,298 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,298 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,298 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,298 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,298 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,541 - folder sorter - DEBUG - videos.mp3
+2023-12-28 16:47:35,541 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,542 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,542 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,543 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,543 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:47:35,817 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,817 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,817 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:47:35,817 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:43,279 - folder sorter - INFO - Programm gestartet
+2023-12-28 16:49:43,452 - folder sorter - DEBUG - Opening menu
+2023-12-28 16:49:43,452 - folder sorter - DEBUG - Clearing window
+2023-12-28 16:49:44,952 - folder sorter - DEBUG - Opening main menu
+2023-12-28 16:49:44,952 - folder sorter - DEBUG - Clearing window
+2023-12-28 16:49:46,156 - folder sorter - DEBUG - Selecting folder
+2023-12-28 16:49:56,522 - folder sorter - DEBUG - Starting Normal mode
+2023-12-28 16:49:56,522 - folder sorter - DEBUG - Sorting endings
+2023-12-28 16:49:56,523 - folder sorter - DEBUG - 3d.obj
+2023-12-28 16:49:56,523 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:56,524 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:56,524 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:49:56,525 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:56,525 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:56,525 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:56,525 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:56,525 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:56,525 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:57,966 - folder sorter - DEBUG - achive.zip
+2023-12-28 16:49:57,967 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:57,968 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:57,968 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:57,968 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:57,968 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:57,968 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:57,969 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:49:57,969 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:57,969 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,669 - folder sorter - DEBUG - audio.wav
+2023-12-28 16:49:58,669 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,670 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,670 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,671 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,671 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:49:58,671 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,672 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,672 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,672 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,824 - folder sorter - DEBUG - Code.py
+2023-12-28 16:49:58,824 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,825 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,825 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,826 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,826 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,826 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,826 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,826 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:49:58,827 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,995 - folder sorter - DEBUG - Coding.css
+2023-12-28 16:49:58,995 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,996 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,996 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,997 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,997 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,997 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,997 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:58,997 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:49:58,997 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,149 - folder sorter - DEBUG - exe.bat
+2023-12-28 16:49:59,149 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,150 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,151 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,151 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,151 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,151 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:49:59,151 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,152 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:49:59,152 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,316 - folder sorter - DEBUG - executable.exe
+2023-12-28 16:49:59,316 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,318 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,318 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,318 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,318 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,318 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:49:59,318 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,319 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,319 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,504 - folder sorter - DEBUG - Image.png
+2023-12-28 16:49:59,504 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:49:59,506 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,506 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,506 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,506 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,506 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,507 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,507 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,507 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,692 - folder sorter - DEBUG - Objekt.fbx
+2023-12-28 16:49:59,692 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,693 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,694 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:49:59,694 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,694 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,694 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,694 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,694 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,694 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,887 - folder sorter - DEBUG - sonstiges.fll
+2023-12-28 16:49:59,887 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,888 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,889 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,889 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,889 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,889 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,889 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,889 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:49:59,890 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,073 - folder sorter - DEBUG - text.pdf
+2023-12-28 16:50:00,073 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,074 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,074 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,075 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:50:00,075 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,075 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,075 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,076 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,076 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,274 - folder sorter - DEBUG - textfiles.tar
+2023-12-28 16:50:00,274 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,276 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,276 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,276 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,276 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,276 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,276 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:50:00,277 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,277 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,471 - folder sorter - DEBUG - video.mp4
+2023-12-28 16:50:00,471 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,472 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:50:00,472 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,473 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,473 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,473 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,473 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,473 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,473 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,654 - folder sorter - DEBUG - videos.mp3
+2023-12-28 16:50:00,654 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,655 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,656 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,656 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,656 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-28 16:50:00,656 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,656 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,656 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:00,656 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-28 16:50:05,909 - folder sorter - INFO - Programm beendet
