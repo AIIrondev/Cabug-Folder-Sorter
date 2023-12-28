@@ -136,14 +136,9 @@ class GUI:
         except AttributeError:
             logger.warning("No folder selected")
             tkinter.messagebox.showwarning("Warning", "No folder selected")
-        
-    def feadback(self):
-        logger.debug("Opening feadback menu")
-        tkinter.messagebox.showinfo("Finisched", "The folder is sortet!")
 
     def custom_mode_gui(self):
         # get values from check boxes
-        global image, video, object3d, document, audio, executable, archive, code, other
         image = self.check_var_img.get()
         video = self.check_var_vid.get()
         object3d = self.check_var_3do.get()
@@ -153,14 +148,15 @@ class GUI:
         archive = self.check_var_arc.get()
         code = self.check_var_cod.get()
         other = self.check_var_oth.get()
-        try:
-            sorting(self.folder_button)
-        except AttributeError:
-            logger.warning("No folder selected")
-            tkinter.messagebox.showwarning("Warning", "No folder selected")
+        #try:
+        sorting(self.folder_button, image, video, object3d, document, audio, executable, archive, code, other)
+        #except AttributeError:
+        #    logger.warning("No folder selected")
+        #    tkinter.messagebox.showwarning("Warning", "No folder selected")
+
             
 class sorting:
-    def __init__(self, folder):
+    def __init__(self, folder, image, video, object3d, document, audio, executable, archive, code, other):
         self.ending_folder_changer = {
             "image": ["jpg", "png", "gif", "jpeg", "bmp"],
             "video": ["mp4", "avi", "mov", "mkv"],
@@ -172,12 +168,22 @@ class sorting:
             "code": ["py", "html", "css", "js", "cpp", "c", "java", "h", "hpp", "cs", "php", "json", "xml", "sql", "asm", "asmx", "aspx", "jsp", "vb", "vbs", "rb", "pl", "go", "swift", "kt", "m", "r", "lua", "ts", "tsx", "yml", "yaml", "ini", "cfg", "conf", "md", "markdown", "bat", "cmd", "ps1", "psm1", "psd1", "ps1xml", "psc1", "pssc", "reg", "scf", "scr", "vbs", "ws", "wsf", "wsc", "wsh", "ps2", "ps2xml", "psc2", "pscxml", "cdxml", "xaml", "xaml", "xsl", "xslt", "xsd", "xsc", "xsd", "xsf", "config", "settings", "props", "sln", "csproj", "vbproj", "vcxproj", "vcproj", "dbproj", "njsproj", "vcxitems", "vcxitems", "csproj", "vbproj", "vcxproj", "vcproj", "dbproj", "njsproj", "vcxitems", "vcxitems", "vcxitems", "proj", "projitems", "shproj", "manifest", "appxmanifest"],
             "other": ["sonsiges"]
         }
-        if not image and not video and object3d and not document and not audio and not executable and not archive and not code and not other:
+        self.image = image
+        self.video = video
+        self.object3d = object3d
+        self.document = document
+        self.audio = audio
+        self.executable = executable
+        self.archive = archive
+        self.code = code
+        self.other = other
+        mode = f"{self.image},{self.video},{self.object3d},{self.document},{self.audio},{self.executable},{self.archive},{self.code},{self.other}"
+        if not self.image and not self.video and not self.object3d and not self.document and not self.audio and not self.executable and not self.archive and not self.code and not self.other:
+            logger.debug("Starting Normal mode")
             self.sort_ending(folder)
-            logger.debug(f"Starting Normal mode with {image},{video},{object3d},{document},{audio},{executable},{archive},{code},{other}1")
         else:
-            self.custom_mode(folder, f"{image},{video},{object3d},{document},{audio},{executable},{archive},{code},{other}")
-            logger.debug(f"Starting custom mode with {image},{video},{object3d},{document},{audio},{executable},{archive},{code},{other}1")
+            logger.debug(f"Starting custom mode with mode: {mode}")
+            self.custom_mode(folder, mode)
 
     def custom_mode(self, folder, mode):
         # create right table for custom mode 
@@ -194,35 +200,31 @@ class sorting:
             "other": other
         }
         logger.debug("Starting custom mode")
-        self.custom_mode_folder_changer = self.ending_folder_changer.copy()
-        for folder_type, value in folder_types.items():
-            if not value and folder_type in self.custom_mode_folder_changer:
-                del self.custom_mode_folder_changer[folder_type]
+        self.custom_mode_folder_changer = {k: v.split(",") for k, v in folder_types.items() if v}
         logger.debug("Starting sorting")
         for file in os.listdir(folder):
             logger.debug(file)
             file_ending = self.get_file_ending(file)
-            if file_ending == 1:
-                logger.warning("No ending found1 -> moving to other folder")
-                other_folder = os.path.join(folder, "other")
-                self.create_folder(other_folder)
-                self.move_file(os.path.join(folder, file), other_folder)
-            else:
-                for folder1 in self.custom_mode_folder_changer:
-                    if file_ending in self.custom_mode_folder_changer[folder1]:
+            if file_ending != "":
+                for folder1, endings in self.custom_mode_folder_changer.items():
+                    if file_ending in endings:
                         logger.debug("Ending found1 -> moving to folder")
-                        self.create_folder(f"{folder}/{folder1}")
-                        self.move_file(f"{folder}/{file}", f"{folder}/{folder1}")
-                        break
-                else:
-                    logger.debug("No ending found3 -> moving to other folder")
+                        self.create_folder(os.path.join(folder, folder1))
+                        self.move_file(os.path.join(folder, file), os.path.join(folder, folder1))
+                    else:
+                        logger.debug("No ending found3 -> moving to other folder")
+                        other_folder = os.path.join(folder, "other")
+                        self.create_folder(other_folder)
+                        self.move_file(os.path.join(folder, file), other_folder)
+                tkinter.messagebox.showinfo("Finisched", "The folder is sortet!")
+                    
 
     def sort_ending(self, ending_folder):
         logger.debug("Sorting endings")
         for file in os.listdir(ending_folder):
             logger.debug(file)
             file_ending = self.get_file_ending(file)
-            if file_ending == False:
+            if file_ending == "":
                 logger.warning("No ending found -> moving to other folder")
                 self.create_folder(f"{ending_folder}/other")
                 self.move_file(f"{ending_folder}/{file}", f"{ending_folder}/other")
@@ -232,10 +234,13 @@ class sorting:
                         logger.debug("Ending found1 -> moving to folder")
                         self.create_folder(f"{ending_folder}/{folder}")
                         self.move_file(f"{ending_folder}/{file}", f"{ending_folder}/{folder}")
-                        GUI().feadback()
-                        break
-                else:
-                    logger.debug("No ending found2 -> moving to other folder")
+                        tkinter.messagebox.showinfo("Finisched", "The folder is sortet!")
+                    else:
+                        logger.debug("No ending found3 -> moving to other folder")
+                        other_folder = os.path.join(ending_folder, "other")
+                        self.create_folder(other_folder)
+                        self.move_file(os.path.join(ending_folder, file), other_folder)
+                tkinter.messagebox.showinfo("Finisched", "The folder is sortet!")
 
     def move_file(self, file, folder):
         file_path = os.path.join(folder, file)
@@ -249,7 +254,8 @@ class sorting:
             os.makedirs(folder)
 
     def get_file_ending(self, file):
-        return os.path.splitext(file)[1][1:]
+        file_extension = os.path.splitext(file)[1]
+        return file_extension[1:] if file_extension else ""
 
 if __name__ == "__main__":
     logger.info("Programm gestartet")
