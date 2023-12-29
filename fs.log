@@ -2655,3 +2655,312 @@
 2023-12-28 16:50:00,656 - folder sorter - DEBUG - No ending found3 -> moving to other folder
 2023-12-28 16:50:00,656 - folder sorter - DEBUG - No ending found3 -> moving to other folder
 2023-12-28 16:50:05,909 - folder sorter - INFO - Programm beendet
+2023-12-29 15:12:54,989 - folder sorter - INFO - Programm gestartet
+2023-12-29 15:12:55,348 - folder sorter - DEBUG - Opening menu
+2023-12-29 15:12:55,348 - folder sorter - DEBUG - Clearing window
+2023-12-29 15:12:57,181 - folder sorter - INFO - Programm beendet
+2023-12-29 15:13:12,099 - folder sorter - INFO - Programm gestartet
+2023-12-29 15:13:12,266 - folder sorter - DEBUG - Opening menu
+2023-12-29 15:13:12,267 - folder sorter - DEBUG - Clearing window
+2023-12-29 15:13:13,512 - folder sorter - DEBUG - Opening main menu
+2023-12-29 15:13:13,513 - folder sorter - DEBUG - Clearing window
+2023-12-29 15:13:14,194 - folder sorter - DEBUG - Selecting folder
+2023-12-29 15:13:19,950 - folder sorter - DEBUG - Starting Normal mode
+2023-12-29 15:13:19,950 - folder sorter - DEBUG - Sorting endings
+2023-12-29 15:13:19,951 - folder sorter - DEBUG - 3d.obj
+2023-12-29 15:13:19,951 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,964 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,964 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:13:19,964 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,965 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,965 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,965 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,965 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,965 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,966 - folder sorter - DEBUG - achive.zip
+2023-12-29 15:13:19,966 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,967 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,967 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,967 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,968 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,968 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,968 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:13:19,968 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,969 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,969 - folder sorter - DEBUG - audio.wav
+2023-12-29 15:13:19,969 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,970 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,970 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,970 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,970 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:13:19,971 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,971 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,971 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,971 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,972 - folder sorter - DEBUG - Code.py
+2023-12-29 15:13:19,972 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,973 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,973 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,973 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,973 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,973 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,973 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,973 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:13:19,974 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,974 - folder sorter - DEBUG - Coding.css
+2023-12-29 15:13:19,974 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,975 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,976 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,976 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,976 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,976 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,976 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,976 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:13:19,976 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,976 - folder sorter - DEBUG - exe.bat
+2023-12-29 15:13:19,977 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,978 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,978 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,978 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,978 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,978 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:13:19,979 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,979 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:13:19,979 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,979 - folder sorter - DEBUG - executable.exe
+2023-12-29 15:13:19,979 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,981 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,981 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,981 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,981 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,981 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:13:19,981 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,981 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,982 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,982 - folder sorter - DEBUG - Image.png
+2023-12-29 15:13:19,982 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:13:19,983 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,983 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,984 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,984 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,984 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,984 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,984 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,984 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,984 - folder sorter - DEBUG - Objekt.fbx
+2023-12-29 15:13:19,984 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,986 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,986 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:13:19,986 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,986 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,986 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,986 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,986 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,987 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,987 - folder sorter - DEBUG - sonstiges.fll
+2023-12-29 15:13:19,987 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,988 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,988 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,988 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,988 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,988 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,988 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,989 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,989 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,989 - folder sorter - DEBUG - text.pdf
+2023-12-29 15:13:19,989 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,990 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,990 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,990 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:13:19,991 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,991 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,991 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,991 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,991 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,991 - folder sorter - DEBUG - textfiles.tar
+2023-12-29 15:13:19,991 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,992 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,992 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,992 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,993 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,993 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,993 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:13:19,993 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,993 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,993 - folder sorter - DEBUG - video.mp4
+2023-12-29 15:13:19,993 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,994 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:13:19,995 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,995 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,995 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,995 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,995 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,995 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,996 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,996 - folder sorter - DEBUG - videos.mp3
+2023-12-29 15:13:19,996 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,997 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,997 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,997 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,997 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:13:19,997 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,997 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,997 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:19,998 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:13:22,336 - folder sorter - DEBUG - Opening menu
+2023-12-29 15:13:22,337 - folder sorter - DEBUG - Clearing window
+2023-12-29 15:13:22,849 - folder sorter - INFO - Programm beendet
+2023-12-29 15:16:21,422 - folder sorter - INFO - Programm gestartet
+2023-12-29 15:16:21,564 - folder sorter - DEBUG - Opening menu
+2023-12-29 15:16:21,564 - folder sorter - DEBUG - Clearing window
+2023-12-29 15:23:10,764 - folder sorter - INFO - Programm gestartet
+2023-12-29 15:23:10,911 - folder sorter - DEBUG - Opening menu
+2023-12-29 15:23:10,911 - folder sorter - DEBUG - Clearing window
+2023-12-29 15:23:18,855 - folder sorter - DEBUG - Opening main menu
+2023-12-29 15:23:18,855 - folder sorter - DEBUG - Clearing window
+2023-12-29 15:23:21,203 - folder sorter - DEBUG - Selecting folder
+2023-12-29 15:23:30,174 - folder sorter - DEBUG - Starting Normal mode
+2023-12-29 15:23:30,174 - folder sorter - DEBUG - Sorting endings
+2023-12-29 15:23:30,174 - folder sorter - DEBUG - 3d.obj
+2023-12-29 15:23:30,175 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,177 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,177 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:23:30,178 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,178 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,178 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,178 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,179 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,179 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,179 - folder sorter - DEBUG - achive.zip
+2023-12-29 15:23:30,179 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,180 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,181 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,181 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,181 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,181 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,182 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:23:30,182 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,182 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,183 - folder sorter - DEBUG - audio.wav
+2023-12-29 15:23:30,183 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,195 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,196 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,196 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,196 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:23:30,197 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,197 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,197 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,198 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,198 - folder sorter - DEBUG - Code.py
+2023-12-29 15:23:30,198 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,199 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,200 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,200 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,200 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,200 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,200 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,201 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:23:30,201 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,201 - folder sorter - DEBUG - Coding.css
+2023-12-29 15:23:30,202 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,203 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,203 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,203 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,203 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,204 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,204 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,204 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:23:30,204 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,204 - folder sorter - DEBUG - exe.bat
+2023-12-29 15:23:30,205 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,205 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,206 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,206 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,206 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,206 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:23:30,207 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,207 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:23:30,207 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,208 - folder sorter - DEBUG - executable.exe
+2023-12-29 15:23:30,208 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,209 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,209 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,209 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,209 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,210 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:23:30,210 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,210 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,210 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,210 - folder sorter - DEBUG - Image.png
+2023-12-29 15:23:30,210 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:23:30,212 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,212 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,212 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,212 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,213 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,213 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,213 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,213 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,213 - folder sorter - DEBUG - Objekt.fbx
+2023-12-29 15:23:30,214 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,214 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,215 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:23:30,215 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,215 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,215 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,215 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,216 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,216 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,216 - folder sorter - DEBUG - sonstiges.fll
+2023-12-29 15:23:30,216 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,217 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,217 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,218 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,218 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,218 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,218 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,219 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,219 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,219 - folder sorter - DEBUG - text.pdf
+2023-12-29 15:23:30,219 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,220 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,220 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,221 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:23:30,221 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,222 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,222 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,222 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,222 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,222 - folder sorter - DEBUG - textfiles.tar
+2023-12-29 15:23:30,222 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,223 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,224 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,224 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,224 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,224 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,224 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:23:30,225 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,225 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,225 - folder sorter - DEBUG - video.mp4
+2023-12-29 15:23:30,225 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,226 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:23:30,227 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,227 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,227 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,227 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,227 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,228 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,228 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,228 - folder sorter - DEBUG - videos.mp3
+2023-12-29 15:23:30,228 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,229 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,229 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,230 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,230 - folder sorter - DEBUG - Ending found1 -> moving to folder
+2023-12-29 15:23:30,230 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,230 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,230 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:30,231 - folder sorter - DEBUG - No ending found3 -> moving to other folder
+2023-12-29 15:23:32,841 - folder sorter - DEBUG - Opening menu
+2023-12-29 15:23:32,842 - folder sorter - DEBUG - Clearing window
+2023-12-29 15:23:33,380 - folder sorter - INFO - Programm beendet

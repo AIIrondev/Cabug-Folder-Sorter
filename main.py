@@ -1,7 +1,6 @@
 # import modules
 import customtkinter as tk
 import tkinter
-import PIL as Image
 import os
 import shutil
 import time
