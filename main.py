@@ -38,7 +38,7 @@ other = False
 # Version 3.1.2 -> Einfügen von einem File system watcher -> wenn ein neues File in den Ordner kommt wird es automatisch verschoben final
 # Version 3.2.2 -> Zwei verschiedene Modi -> Normal und Advanced -> besser für Anfänger und Fortgeschrittene
 # Version 4.1.1 -> Einführen von einem File system -> umbau auf ein File system -> mit den Funktionen von v.3.1.2
-# Version 4.1.2 -> Einführen von einem File system -> umbau auf ein File system -> mit den Funktionen von v.3.1.2 final
+# Version 4.1.2 -> Einführen von einem File system -> umbau auf ein File system -> mit den Funktionen von v.3.1.2 final.
 
 class GUI:
     def __init__(self):
