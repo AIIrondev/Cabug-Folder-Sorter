@@ -8,14 +8,6 @@ import logging
 import webbrowser
 
 
-# Konfigurieren des Loggers
-logger = logging.getLogger('folder sorter')
-logger.setLevel(logging.DEBUG)
-fh = logging.FileHandler('fs.log')
-fh.setLevel(logging.DEBUG)
-logger.addHandler(fh)
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-fh.setFormatter(formatter)
 # variables
 image = False
 video = False
@@ -50,7 +42,6 @@ class GUI:
         self.main_menu()
 
     def main_menu(self):
-        logger.debug("Opening menu")
         self.first_reset()
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0) # set corner to #242424 for dark mode
         tk.CTkButton(self.window, text="Sort folder", corner_radius=32, text_color="black",command=lambda: self.main()).place(x=75, y=100)
@@ -60,7 +51,6 @@ class GUI:
         tk.CTkLabel(self.window, text="Version: 0.1.2", font=("Arial", 10), text_color="black").place(x=100, y=270)
 
     def main(self):
-        logger.debug("Opening main menu")
         self.first_reset()
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
         tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=70)
@@ -70,7 +60,6 @@ class GUI:
         tk.CTkButton(self.window, text="Start", corner_radius=32, command=self.normal_mode_gui, text_color="black").place(x=75, y=200)
 
     def about(self):
-        logger.debug("Opening about menu")
         self.first_reset()
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
         tk.CTkLabel(self.window, text="Made by: @AIIrondev", font=("Arial", 15), text_color="black").place(x=90, y=250)
@@ -80,7 +69,6 @@ class GUI:
         tk.CTkButton(self.window, text="Back", corner_radius=32, command=self.main_menu, text_color="black").place(x=75, y=150)
     
     def select_folder(self):
-        logger.debug("Selecting folder")
         self.folder_button = tk.filedialog.askdirectory()
 
     def first_reset(self, window_size_x=275, window_size_y=300):
@@ -88,17 +76,14 @@ class GUI:
         self.window.geometry(f"{window_size_x}x{window_size_y}")
     
     def clear_window(self):
-        logger.debug("Clearing window")
         for widget in self.window.winfo_children():
             widget.destroy()
             
     def open_html_file(self, file_path):
-        logger.debug("Opening html file")
         # Open the HTML file in the default web browser
         webbrowser.open(file_path)
 
     def option_calback_menu(self, value):
-        logger.debug("Opening option menu")
         self.first_reset(275, 400)
         self.check_var_img = tk.BooleanVar()
         self.check_var_vid = tk.BooleanVar()
@@ -109,7 +94,6 @@ class GUI:
         self.check_var_arc = tk.BooleanVar()
         self.check_var_cod = tk.BooleanVar()
         self.check_var_oth = tk.BooleanVar()
-        logger.debug(f"Selected option: {value}")
         tk.CTkLabel(self.window, text="Folder sorter", font=("Arial", 25), text_color="black").place(x=75, y=0)
         tk.CTkButton(self.window, text="Select folder", command=self.select_folder, corner_radius=32, text_color="black").place(x=75, y=50)
         tk.CTkOptionMenu(self.window, values=["Normal", "Custom"], command=self.option_calback_menu).place(x=75, y=110)
@@ -133,7 +117,6 @@ class GUI:
         try:
             sorting(self.folder_button, False, False, False, False, False, False, False, False, False)
         except AttributeError:
-            logger.warning("No folder selected")
             tkinter.messagebox.showwarning("Warning", "No folder selected")
 
     def custom_mode_gui(self):
@@ -150,7 +133,6 @@ class GUI:
         #try:
         sorting(self.folder_button, image, video, object3d, document, audio, executable, archive, code, other)
         #except AttributeError:
-        #    logger.warning("No folder selected")
         #    tkinter.messagebox.showwarning("Warning", "No folder selected")
 
             
@@ -178,10 +160,8 @@ class sorting:
         self.other = other
         mode = f"{self.image},{self.video},{self.object3d},{self.document},{self.audio},{self.executable},{self.archive},{self.code},{self.other}"
         if not self.image and not self.video and not self.object3d and not self.document and not self.audio and not self.executable and not self.archive and not self.code and not self.other:
-            logger.debug("Starting Normal mode")
             self.sort_ending(folder)
         else:
-            logger.debug(f"Starting custom mode with mode: {mode}")
             self.custom_mode(folder, mode)
 
     def custom_mode(self, folder, mode):
@@ -198,20 +178,16 @@ class sorting:
             "code": code,
             "other": other
         }
-        logger.debug("Starting custom mode")
         self.custom_mode_folder_changer = {k: v.split(",") for k, v in folder_types.items() if v}
-        logger.debug("Starting sorting")
         for file in os.listdir(folder):
             logger.debug(file)
             file_ending = self.get_file_ending(file)
             if file_ending != "":
                 for folder1, endings in self.custom_mode_folder_changer.items():
                     if file_ending in endings:
-                        logger.debug("Ending found1 -> moving to folder")
                         self.create_folder(os.path.join(folder, folder1))
                         self.move_file(os.path.join(folder, file), os.path.join(folder, folder1))
                     else:
-                        logger.debug("No ending found3 -> moving to other folder")
                         other_folder = os.path.join(folder, "other")
                         self.create_folder(other_folder)
                         self.move_file(os.path.join(folder, file), other_folder)
@@ -219,22 +195,18 @@ class sorting:
         tkinter.messagebox.showinfo("Finished", "The folder is sorted!")
 
     def sort_ending(self, ending_folder):
-        logger.debug("Sorting endings")
         for file in os.listdir(ending_folder):
             logger.debug(file)
             file_ending = self.get_file_ending(file)
             if file_ending == "":
-                logger.warning("No ending found -> moving to other folder")
                 self.create_folder(f"{ending_folder}/other")
                 self.move_file(f"{ending_folder}/{file}", f"{ending_folder}/other")
             else:
                 for folder in self.ending_folder_changer:
                     if file_ending in self.ending_folder_changer[folder]:
-                        logger.debug("Ending found1 -> moving to folder")
                         self.create_folder(f"{ending_folder}/{folder}")
                         self.move_file(f"{ending_folder}/{file}", f"{ending_folder}/{folder}")
                     else:
-                        logger.debug("No ending found3 -> moving to other folder")
                         other_folder = os.path.join(ending_folder, "other")
                         self.create_folder(other_folder)
                         self.move_file(os.path.join(ending_folder, file), other_folder)
@@ -255,7 +227,5 @@ class sorting:
         return file_ending
 
 if __name__ == "__main__":
-    logger.info("Programm gestartet")
     window = GUI()
     window.window.mainloop()
-    logger.info("Programm beendet")
