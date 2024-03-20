@@ -24,17 +24,17 @@ file_ending = {
 
 with open("version", "r") as f:
     __version__ = f.read()
-    
-    
+
+
 # Functions
 class sort:
     def __init__(self):
         self.folder_path = folder_to_sort
         if self.folder_path == "":
             print("Please select a folder")
-        else:
+        elif os._path_exists(self.folder_path):
             self.sort_files()
-    
+
     def sort_files(self):
         for file in os.listdir(self.folder_path):
             if os.path.isdir(os.path.join(self.folder_path, file)):
@@ -47,6 +47,9 @@ class sort:
                             os.makedirs(os.path.join(self.folder_path, key))
                         shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
                         break
+
+
+# CLI
 
 @click.command()
 @click.argument("folder", type=click.Path(exists=True))
@@ -62,6 +65,6 @@ def cli(folder):
     except Exception as e:
         click.echo(f"Error: An error occurred during sorting. {str(e)}", err=True)
         sys.exit(1)
-   
+
 if __name__ == "__main__":
     cli()

@@ -1,5 +1,25 @@
 # The folder sorter v0.1.1
-## This Projekt is developt by AiIronwitch in Python 🐍
+
+This Projekt is developt by AiIronwitch in Python 🐍
 This folder sorter is in active development and has still three more Versions to go.
-## Run the skript/software
-You Need at least Python 3.11 and the Pakages that are listet in the Wiki.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Functions](#functions)
+- [Guide](#guide)
+
+## Installation
+
+To use the Cabug folder sorter, you need to install the Software. Follow the instructions below to get started:
+
+1. Download the latest version of the Cabug folder sorter from the official website or from the [github repository](https://github.com/aiirondev/folder-sorter/releases).
+2. Install the compiler on your system by running the installer.
+3. Verify the installation by running the programm.
+4. If there is any Problem please send a Email to <Iron.ai.dev@gmail.com> for bug fixing.
+
+## Functions
+
+- 
+
+## Guide
