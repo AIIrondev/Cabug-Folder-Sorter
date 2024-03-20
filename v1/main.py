@@ -180,7 +180,6 @@ class sorting:
         }
         self.custom_mode_folder_changer = {k: v.split(",") for k, v in folder_types.items() if v}
         for file in os.listdir(folder):
-            logger.debug(file)
             file_ending = self.get_file_ending(file)
             if file_ending != "":
                 for folder1, endings in self.custom_mode_folder_changer.items():
@@ -196,7 +195,6 @@ class sorting:
 
     def sort_ending(self, ending_folder):
         for file in os.listdir(ending_folder):
-            logger.debug(file)
             file_ending = self.get_file_ending(file)
             if file_ending == "":
                 self.create_folder(f"{ending_folder}/other")
