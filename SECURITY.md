@@ -10,10 +10,10 @@ The unsupportet or not released but planed versions are marked with an :x:
 
 | Version | Supported          | Date of release       | Content            |
 | ------- | ------------------ |---------------------- |--------------------|
-| 0.1.1   | :white_check_mark: | 2024.  | first version of the folder sorter |
-| 0.1.2   | :x:                | 2024.  | first version of the folder sorter with extra menu final |
-| 1.1.1   | :x:                | 2024. | Versions fix von 0.1.2 -> VErbesserte und effizientere Version |
-| 1.1.2   | :x:                | 2024. | Einfügung von einem extra menu -> besser für Anfänger |
+| 0.1.0.0   | :white_check_mark: | 2024.  | first version of the folder sorter |
+| 0.2.0.0   | :x:                | 2024.  | first version of the folder sorter with extra menu final |
+| 1.0.0.0   | :x:                | 2024. | Versions fix von 0.1.2 -> VErbesserte und effizientere Version |
+| 1.1.0.0   | :x:                | 2024. | Einfügung von einem extra menu -> besser für Anfänger |
 | 2.1.1   | :x:                | 2024. | verwendet auch die .py dateien zum ändern der Directorys |
 | 2.1.2   | :x:                | 2024. | verwendet auch die .py dateien zum ändern der Directorys final |
 | 2.2.2   | :x:                | 2024. | Verbessern des Codes und hinzufügen von mehr optionen -> effizienter und schneller |
