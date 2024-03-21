@@ -2,7 +2,7 @@
 
 [![Python application](https://github.com/AIIrondev/Folder-sorter/actions/workflows/main.yml/badge.svg)](https://github.com/AIIrondev/Folder-sorter/actions/workflows/main.yml)
 
-This Projekt is developt by AiIronwitch in Python 🐍
+This Projekt is developt by AiIronwitch in Python.
 This folder sorter is in active development and has still three more Versions to go.
 
 ## Table of Contents
