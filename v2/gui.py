@@ -24,7 +24,7 @@ class app:
         self.root.geometry("400x420")
         self.root.resizable(False, False)
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
-        self.root.iconbitmap("../Cabug-folder-sorter.ico") # IMPORTANT: delet ../ when deploying
+        self.root.iconbitmap("Cabug-folder-sorter.ico")
 
         self.folder_path = StringVar()
         self.folder_path.set("")
@@ -64,6 +64,7 @@ class sort:
             self.sort_files()
 
     def sort_files(self):
+        self.count_elements = 1
         for file in os.listdir(self.folder_path):
             if os.path.isdir(os.path.join(self.folder_path, file)):
                 continue
@@ -71,10 +72,12 @@ class sort:
                 for key in file_ending:
                     print(key)
                     if file.endswith(tuple(file_ending[key])):
+                        self.count_elements += 1
                         if not os.path.exists(os.path.join(self.folder_path, key)):
                             os.makedirs(os.path.join(self.folder_path, key))
                         shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
                         break
+                messagebox.INFO("finisched sorting", f"Finisched sorting of {self.count_elements} elements \n in the folder {self.folder_path}.")
 
 
 if __name__ == "__main__":
