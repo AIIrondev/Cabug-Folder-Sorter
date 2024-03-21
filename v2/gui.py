@@ -8,10 +8,13 @@ from tkinter import messagebox
 
 # Global Variables
 folder_to_sort = ""
-__version__ = "0.0.0.0"
+__version__ = "0.1.2.1"
 
-with open("version", "r") as f:
-    __version__ = f.read()
+try:
+    with open("version", "r") as f:
+        __version__ = f.read()
+except:
+    pass
 
 # Classes
 class app:
@@ -21,7 +24,7 @@ class app:
         self.root.geometry("400x420")
         self.root.resizable(False, False)
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
-        # self.root.iconbitmap("icon.ico") # Design real icon for version 1.0.0.0
+        self.root.iconbitmap("../Cabug-folder-sorter.ico") # IMPORTANT: delet ../ when deploying
 
         self.folder_path = StringVar()
         self.folder_path.set("")
@@ -33,7 +36,7 @@ class app:
         CTkButton(self.root, text="About", command=self.about, corner_radius=10).place(x=140, y=200)
         CTkButton(self.root, text="Exit", command=self.on_closing, corner_radius=10, fg_color="Red", hover_color="Darkred").place(x=140, y=250)
         CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=350)
-        CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=190, y=370)
+        CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
         self.root.mainloop()
 
     def on_closing(self):
