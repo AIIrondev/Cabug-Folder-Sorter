@@ -74,7 +74,7 @@ class sort:
         self.folder_path = folder_to_sort
         if self.folder_path == "":
             print("Please select a folder")
-        elif os._path_exists(self.folder_path):
+        elif os.path.exists(self.folder_path):
             self.sort_files()
 
     def sort_files(self):
@@ -84,14 +84,13 @@ class sort:
                 continue
             else:
                 for key in file_ending:
-                    print(key)
                     if file.endswith(tuple(file_ending[key])):
                         self.count_elements += 1
                         if not os.path.exists(os.path.join(self.folder_path, key)):
                             os.makedirs(os.path.join(self.folder_path, key))
                         shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
                         break
-                messagebox.INFO("finisched sorting", f"Finisched sorting of {self.count_elements} elements \n in the folder {self.folder_path}.")
+        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
 
 
 if __name__ == "__main__":
