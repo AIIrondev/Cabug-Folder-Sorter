@@ -3,7 +3,7 @@
 [![Python application](https://github.com/AIIrondev/Folder-sorter/actions/workflows/main.yml/badge.svg)](https://github.com/AIIrondev/Folder-sorter/actions/workflows/main.yml)
 
 This Projekt is developt by AiIronwitch in Python.
-This folder sorter is in active development and has still three more Versions to go.
+This folder sorter is in active development and has more Versions to come.
 
 ## Table of Contents
 
@@ -22,6 +22,10 @@ To use the Cabug folder sorter, you need to install the Software. Follow the ins
 
 ## Functions
 
-- 
+- The help function is there to help you navigate the Software
+- The about function shows you the Developer and the current Version.
+- The license function shows you the license that you agreed to.
 
 ## Guide
+
+
