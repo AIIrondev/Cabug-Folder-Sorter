@@ -1,4 +1,4 @@
-# Security Policy Version 1
+# Security Policy
 
 ## Supported Versions
 
@@ -15,5 +15,4 @@ The unsupportet or not released but planed versions are marked with an :x:
 
 ## Reporting a Vulnerability
 
-If you find Vulnerability please report this as an comment under the release ore try stepping in contact with me.
-
+If you find Vulnerability please report this as an comment under the release ore try to stepp in contact with me.
