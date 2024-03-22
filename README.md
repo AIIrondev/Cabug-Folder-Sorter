@@ -1,4 +1,4 @@
-# The folder sorter v0.1.1
+# The folder sorter v1.0.0.0
 
 [![Python application](https://github.com/AIIrondev/Folder-sorter/actions/workflows/main.yml/badge.svg)](https://github.com/AIIrondev/Folder-sorter/actions/workflows/main.yml)
 
