@@ -39,19 +39,79 @@ class app:
         self.root.resizable(False, False)
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
         self.root.iconbitmap("Cabug-folder-sorter.ico")
+        self.menu()
+        self.root.mainloop()
 
+    def menu(self):
+        self.reset()
+        heeight = 70
+        wieght = 240
+        CTkLabel(self.root, text="Cabug Folder Sorter", text_color="blue", font=("Arial", 20)).place(x=120, y=10)
+        CTkLabel(self.root, text="Select a mode", text_color="black", font=("Arial", 12)).place(x=165, y=50)
+        CTkButton(self.root, text="Simple Mode", command=self.simple_mode, corner_radius=15, width=wieght, height=heeight).place(x=90, y=90)
+        CTkButton(self.root, text="Advanced Mode", command=self.advanced_mode, corner_radius=15, width=wieght, height=heeight).place(x=90, y=170)
+        CTkButton(self.root, text="Exit", command=self.on_closing, corner_radius=15, fg_color="Red", hover_color="Darkred", width=140, height=60).place(x=140, y=250)
+        CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=350)
+        CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
+
+    def simple_mode(self):
+        self.reset()
         self.folder_path = StringVar()
         self.folder_path.set("")
 
-        CTkLabel(self.root, text="Folder Sorter", text_color="blue", font=("Arial", 20)).place(x=150, y=10)
+        CTkLabel(self.root, text="Cabug Folder Sorter Basic", text_color="blue", font=("Arial", 20)).place(x=90, y=10)
         CTkButton(self.root, text="Select Folder", command=self.browse, corner_radius=10).place(x=140, y=50)
         CTkButton(self.root, text="Sort", command=sort, corner_radius=10).place(x=140, y=100)
         CTkButton(self.root, text="Help", command=self.help, corner_radius=10).place(x=140, y=150)
-        CTkButton(self.root, text="About", command=self.about, corner_radius=10).place(x=140, y=200)
-        CTkButton(self.root, text="Exit", command=self.on_closing, corner_radius=10, fg_color="Red", hover_color="Darkred").place(x=140, y=250)
+        CTkButton(self.root, text="Main Menu", command=self.menu, corner_radius=10, fg_color="Red", hover_color="Darkred").place(x=140, y=300)
         CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=350)
         CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
-        self.root.mainloop()
+
+    def advanced_mode(self):
+        self.reset()
+        # Variables
+        self.folder_path = StringVar()
+        self.folder_path.set("")
+        self.Images = BooleanVar()
+        self.Videos = BooleanVar()
+        self.Audio = BooleanVar()
+        self.Documents = BooleanVar()
+        self.Archives = BooleanVar()
+        self.Models = BooleanVar()
+        self.PCB = BooleanVar()
+        self.Code = BooleanVar()
+        self.Executables = BooleanVar()
+        self.Fonts = BooleanVar()
+        self.Other = BooleanVar()
+        # Checkboxes positions
+        X_position_1 = 120
+        X_position_2 = 220
+        # Headline
+        CTkLabel(self.root, text="Cabug Folder Sorter Advanced", text_color="blue", font=("Arial", 20)).place(x=70, y=10)
+        CTkButton(self.root, text="Select Folder", command=self.browse, corner_radius=10).place(x=140, y=50)
+        # Checkboxes
+        CTkCheckBox(self.root, text="Images", variable=self.Images).place(x=X_position_1, y=100)
+        CTkCheckBox(self.root, text="Videos", variable=self.Videos).place(x=X_position_2, y=100)
+        CTkCheckBox(self.root, text="Audio", variable=self.Audio).place(x=X_position_1, y=130)
+        CTkCheckBox(self.root, text="Documents", variable=self.Documents).place(x=X_position_2, y=130)
+        CTkCheckBox(self.root, text="Archives", variable=self.Archives).place(x=X_position_1, y=160)
+        CTkCheckBox(self.root, text="3D Models", variable=self.Models).place(x=X_position_2, y=160)
+        CTkCheckBox(self.root, text="PCB", variable=self.PCB).place(x=X_position_1, y=190)
+        CTkCheckBox(self.root, text="Code", variable=self.Code).place(x=X_position_2, y=190)
+        CTkCheckBox(self.root, text="Executables", variable=self.Executables).place(x=X_position_1, y=220)
+        CTkCheckBox(self.root, text="Fonts", variable=self.Fonts).place(x=X_position_2, y=220)
+        CTkCheckBox(self.root, text="Other", variable=self.Other).place(x=X_position_1, y=250)
+        # Buttons
+        CTkButton(self.root, text="Help", command=self.help, corner_radius=10).place(x=140, y=280)
+        CTkButton(self.root, text="Sort", command=self.sort_advanced, corner_radius=10).place(x=140, y=310)
+        CTkButton(self.root, text="Main Menu", command=self.menu, corner_radius=10, fg_color="Red", hover_color="Darkred").place(x=140, y=340)
+        CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=370)
+        CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=390)
+
+    def sort_advanced(self):
+        self.reset()
+        CTkLabel(self.root, text="Advanced Mode", text_color="blue", font=("Arial", 20)).place(x=150, y=10)
+        CTkLabel(self.root, text="Select the file types you want to sort", text_color="black", font=("Arial", 12)).place(x=100, y=50)
 
     def on_closing(self):
         if messagebox.askokcancel("Quit", "Do you want to quit?"):
@@ -67,6 +127,10 @@ class app:
         global folder_to_sort
         folder_to_sort = filedialog.askdirectory()
         self.folder_path.set(folder_to_sort)
+
+    def reset(self):
+        for widget in self.root.winfo_children():
+            widget.destroy()
 
 
 class sort:

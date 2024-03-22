@@ -11,7 +11,7 @@ The unsupportet and has some minor bugs or not released but planed versions are 
 | Version | Supported          | Date of release       | Content            |
 | ------- | ------------------ |---------------------- |--------------------|
 | 0.1.0.0 | :x: | 2024.03.22  | first version of the folder sorter |
-| 1.0.0.0 | :white_check_mark: | 2024.03.24 | Versions fix von 0.1.3.2 -> VErbesserte und effizientere Version |
+| 1.0.0.0 | :white_check_mark: | 2024.03.24 | Versions fix from 0.1.3.2 -> better and more stabel version |
 
 ## Reporting a Vulnerability
 

@@ -85,4 +85,28 @@ messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_eleme
 
 ## Unimportant
 
+### Unintentional creating a new window 1.0.1.1
+
+This accured while reseting my screen for a new Menu.
+
+Before:
+
+```python
+def reset(self):
+    for widget in self.root.winfo_children():
+        widget.destroy()
+    self.root.geometry("400x420")
+    self.root.resizable(False, False)
+    self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
+    self.root.iconbitmap("Cabug-folder-sorter.ico")
+```
+
+After:
+
+```python
+def reset(self):
+    for widget in self.root.winfo_children():
+        widget.destroy()
+```
+
 ## Other
