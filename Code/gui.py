@@ -8,7 +8,7 @@ from tkinter import messagebox
 
 # Global Variables
 folder_to_sort = ""
-__version__ = "0.1.2.1"
+__version__ = "1.0.1.1"
 file_ending = {
     "Images": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff", ".webp", ".svg", ".ico"],
     "Videos": [".mp4", ".mkv", ".webm", ".flv", ".avi", ".mov", ".wmv", ".mpg", ".mpeg", ".3gp", ".3g2"],
@@ -58,11 +58,10 @@ class app:
         self.reset()
         self.folder_path = StringVar()
         self.folder_path.set("")
-
         CTkLabel(self.root, text="Cabug Folder Sorter Basic", text_color="blue", font=("Arial", 20)).place(x=90, y=10)
         CTkButton(self.root, text="Select Folder", command=self.browse, corner_radius=10).place(x=140, y=50)
         CTkButton(self.root, text="Sort", command=sort, corner_radius=10).place(x=140, y=100)
-        CTkButton(self.root, text="Help", command=self.help, corner_radius=10).place(x=140, y=150)
+        CTkButton(self.root, text="Help", command=self.help_Basic, corner_radius=10).place(x=140, y=150)
         CTkButton(self.root, text="Main Menu", command=self.menu, corner_radius=10, fg_color="Red", hover_color="Darkred").place(x=140, y=300)
         CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=350)
         CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
@@ -102,16 +101,14 @@ class app:
         CTkCheckBox(self.root, text="Fonts", variable=self.Fonts).place(x=X_position_2, y=220)
         CTkCheckBox(self.root, text="Other", variable=self.Other).place(x=X_position_1, y=250)
         # Buttons
-        CTkButton(self.root, text="Help", command=self.help, corner_radius=10).place(x=140, y=280)
+        CTkButton(self.root, text="Help", command=self.help_Advanced, corner_radius=10).place(x=140, y=280)
         CTkButton(self.root, text="Sort", command=self.sort_advanced, corner_radius=10).place(x=140, y=310)
         CTkButton(self.root, text="Main Menu", command=self.menu, corner_radius=10, fg_color="Red", hover_color="Darkred").place(x=140, y=340)
         CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=370)
         CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=390)
 
     def sort_advanced(self):
-        self.reset()
-        CTkLabel(self.root, text="Advanced Mode", text_color="blue", font=("Arial", 20)).place(x=150, y=10)
-        CTkLabel(self.root, text="Select the file types you want to sort", text_color="black", font=("Arial", 12)).place(x=100, y=50)
+        advanced_sort(self.Images.get(), self.Videos.get(), self.Audio.get(), self.Documents.get(), self.Archives.get(), self.Models.get(), self.PCB.get(), self.Code.get(), self.Executables.get(), self.Fonts.get(), self.Other.get())
 
     def on_closing(self):
         if messagebox.askokcancel("Quit", "Do you want to quit?"):
@@ -120,8 +117,11 @@ class app:
     def about(self):
         messagebox.showinfo("About", "Folder Sorter is a simple program to sort your files in a folder. It is developed by Maximilian Gründinger")
 
-    def help(self):
+    def help_Basic(self):
         messagebox.showinfo("Help", "To use Folder Sorter, select the folder you want to sort and click the 'Sort' button. The program will then sort the files in the folder.")
+
+    def help_Advanced(self):
+        messagebox.showinfo("Help", f"To use Folder Sorter, select the folder you want to sort and click the 'Sort' button, after you have selectet the Options you want to sort. The program will then sort the files in the folder.")
 
     def browse(self):
         global folder_to_sort
@@ -149,6 +149,86 @@ class sort:
             else:
                 for key in file_ending:
                     if file.endswith(tuple(file_ending[key])):
+                        self.count_elements += 1
+                        if not os.path.exists(os.path.join(self.folder_path, key)):
+                            os.makedirs(os.path.join(self.folder_path, key))
+                        shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
+                        break
+        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
+
+
+class advanced_script_sort: # get file ending dict as .json file
+    def __init__(self):
+        pass
+
+
+class advanced_sort:
+    def __init__(self, Images, Videos, Audio, Documents, Archives, Models, PCB, Code, Executables, Fonts, Other):
+        self.folder_path = folder_to_sort
+        self.Images = Images
+        self.Videos = Videos
+        self.Audio = Audio
+        self.Documents = Documents
+        self.Archives = Archives
+        self.Models = Models
+        self.PCB = PCB
+        self.Code = Code
+        self.Executables = Executables
+        self.Fonts = Fonts
+        self.Other = Other
+        if self.folder_path == "":
+            print("Please select a folder")
+        elif os.path.exists(self.folder_path):
+            self.sort_files()
+
+    def prepare(self):
+        self.count_elements = 1
+        self.file_ending_ = {
+            "Images": [],
+            "Videos": [],
+            "Audio": [],
+            "Documents": [],
+            "Archives": [],
+            "3D Models": [],
+            "PCB": [],
+            "Code": [],
+            "Executables": [],
+            "Fonts": [],
+            "Other": []
+        }
+        if self.Images:
+            self.file_ending_["Images"].append(file_ending["Images"])
+        if self.Videos:
+            self.file_ending_["Videos"].append(file_ending["Videos"])
+        if self.Audio:
+            self.file_ending_["Audio"].append(file_ending["Audio"])
+        if self.Documents:
+            self.file_ending_["Documents"].append(file_ending["Documents"])
+        if self.Archives:
+            self.file_ending_["Archives"].append(file_ending["Archives"])
+        if self.Models:
+            self.file_ending_["3D Models"].append(file_ending["3D Models"])
+        if self.PCB:
+            self.file_ending_["PCB"].append(file_ending["PCB"])
+        if self.Code:
+            self.file_ending_["Code"].append(file_ending["Code"])
+        if self.Executables:
+            self.file_ending_["Executables"].append(file_ending["Executables"])
+        if self.Fonts:
+            self.file_ending_["Fonts"].append(file_ending["Fonts"])
+        if self.Other:
+            self.file_ending_["Other"].append(file_ending["Other"])
+
+    def sort_files(self):
+        self.prepare()
+        for file in os.listdir(self.folder_path):
+            if os.path.isdir(os.path.join(self.folder_path, file)):
+                continue
+            else:
+                for key in self.file_ending_:
+                    if self.file_ending_[key] == []:
+                        pass
+                    elif file.endswith(tuple(self.file_ending_)):
                         self.count_elements += 1
                         if not os.path.exists(os.path.join(self.folder_path, key)):
                             os.makedirs(os.path.join(self.folder_path, key))
