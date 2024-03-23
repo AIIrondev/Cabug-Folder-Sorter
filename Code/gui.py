@@ -197,43 +197,49 @@ class advanced_sort:
             "Other": []
         }
         if self.Images:
-            self.file_ending_["Images"].append(file_ending["Images"])
+            self.file_ending_["Images"] = file_ending["Images"]
         if self.Videos:
-            self.file_ending_["Videos"].append(file_ending["Videos"])
+            self.file_ending_["Videos"] = file_ending["Videos"]
         if self.Audio:
-            self.file_ending_["Audio"].append(file_ending["Audio"])
+            self.file_ending_["Audio"] = file_ending["Audio"]
         if self.Documents:
-            self.file_ending_["Documents"].append(file_ending["Documents"])
+            self.file_ending_["Documents"] = file_ending["Documents"]
         if self.Archives:
-            self.file_ending_["Archives"].append(file_ending["Archives"])
+            self.file_ending_["Archives"] = file_ending["Archives"]
         if self.Models:
-            self.file_ending_["3D Models"].append(file_ending["3D Models"])
+            self.file_ending_["3D Models"] = file_ending["3D Models"]
         if self.PCB:
-            self.file_ending_["PCB"].append(file_ending["PCB"])
+            self.file_ending_["PCB"] = file_ending["PCB"]
         if self.Code:
-            self.file_ending_["Code"].append(file_ending["Code"])
+            self.file_ending_["Code"] = file_ending["Code"]
         if self.Executables:
-            self.file_ending_["Executables"].append(file_ending["Executables"])
+            self.file_ending_["Executables"] = file_ending["Executables"]
         if self.Fonts:
-            self.file_ending_["Fonts"].append(file_ending["Fonts"])
+            self.file_ending_["Fonts"] = file_ending["Fonts"]
         if self.Other:
-            self.file_ending_["Other"].append(file_ending["Other"])
+            self.file_ending_["Other"] = file_ending["Other"]
 
     def sort_files(self):
         self.prepare()
+        print(self.file_ending_)
         for file in os.listdir(self.folder_path):
             if os.path.isdir(os.path.join(self.folder_path, file)):
                 continue
             else:
                 for key in self.file_ending_:
-                    if self.file_ending_[key] == []:
+                    print(key)
+                    try:
+                        if self.file_ending_[key] == []:
+                            continue
+                        elif file.endswith(tuple(self.file_ending_[key])):
+                            print(tuple(self.file_ending_[key]))
+                            if not os.path.exists(os.path.join(self.folder_path, key)):
+                                os.makedirs(os.path.join(self.folder_path, key))
+                            shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
+                            self.count_elements += 1
+                            break
+                    except:
                         pass
-                    elif file.endswith(tuple(self.file_ending_)):
-                        self.count_elements += 1
-                        if not os.path.exists(os.path.join(self.folder_path, key)):
-                            os.makedirs(os.path.join(self.folder_path, key))
-                        shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
-                        break
         messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
 
 
