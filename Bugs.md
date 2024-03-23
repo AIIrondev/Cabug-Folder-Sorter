@@ -64,6 +64,14 @@ def __init__(self):
         self.sort_files()
 ```
 
+### List error Form the Advanced Funktion
+
+Thia error
+
+Before:
+
+
+
 
 ## User Interface
 
