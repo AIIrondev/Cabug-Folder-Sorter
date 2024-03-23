@@ -64,7 +64,7 @@ def __init__(self):
         self.sort_files()
 ```
 
-### Error while sorting files
+### Error while sorting files 1.1.1.1
 
 This error accured while sorting files in a folder, and the key was not defined.
 
@@ -87,7 +87,6 @@ def sort_files(self):
                     shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
                     break
     messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
-
 ```
 
 After:
@@ -102,13 +101,13 @@ def sort_files(self):
             for key in self.file_ending_:
                 if self.file_ending_[key] == []:
                     pass
-                elif file.endswith(tuple(self.file_ending_)):
+                elif file.endswith(tuple(self.file_ending_[key])):
                     try:
                         if not os.path.exists(os.path.join(self.folder_path, key)):
                             os.makedirs(os.path.join(self.folder_path, key))
                         shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
-                        break
                         self.count_elements += 1
+                        break
                     except:
                         pass
     messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
