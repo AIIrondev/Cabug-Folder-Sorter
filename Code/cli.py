@@ -3,6 +3,7 @@ import click
 import os
 import sys
 import shutil
+import json
 
 # Global Variables
 folder_to_sort = ""
@@ -32,7 +33,7 @@ class sort:
         self.folder_path = folder_to_sort
         if self.folder_path == "":
             print("Please select a folder")
-        elif os._path_exists(self.folder_path):
+        elif os.path.isdir(self.folder_path):
             self.sort_files()
 
     def sort_files(self):
@@ -49,16 +50,36 @@ class sort:
                         break
 
 
+def sort_advanced(folder, conf_file):
+    with open(conf_file, "r") as f:
+        file_ending = json.load(f)
+    for file in os.listdir(folder):
+        if os.path.isdir(os.path.join(folder, file)):
+            continue
+        else:
+            for key in file_ending:
+                if file.endswith(tuple(file_ending[key])):
+                    if not os.path.exists(os.path.join(folder, key)):
+                        os.makedirs(os.path.join(folder, key))
+                    shutil.move(os.path.join(folder, file), os.path.join(folder, key, file))
+                    break
+
 # CLI
 @click.command()
 @click.argument("folder", type=click.Path(exists=True))
+@click.option("--config", "-c", type=click.Path(exists=True), help="Path to the config file, that contains the file endings for the sorting.")
 @click.version_option(__version__, "--version", "-v", help="Show version", prog_name="Folder Sorter")
 @click.help_option("--help", "-h", help="Show this help message and exit")
-def cli(folder):
+def cli(folder, config):
+    with open('file_ending.json', 'w') as f:
+        json.dump(file_ending, f)
     try:
         global folder_to_sort
         folder_to_sort = folder
-        sort()
+        if config:
+            sort_advanced(folder, config)
+        else:
+            sort()
         click.echo(f"Successfully sortet {folder}.")
 
     except Exception as e:
