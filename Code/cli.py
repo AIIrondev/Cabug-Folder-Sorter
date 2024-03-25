@@ -52,13 +52,13 @@ class sort:
 
 def sort_advanced(folder, conf_file):
     with open(conf_file, "r") as f:
-        file_ending = json.load(f)
+        file_ending_conf = json.load(f)
     for file in os.listdir(folder):
         if os.path.isdir(os.path.join(folder, file)):
             continue
         else:
-            for key in file_ending:
-                if file.endswith(tuple(file_ending[key])):
+            for key in file_ending_conf:
+                if file.endswith(tuple(file_ending_conf[key])):
                     if not os.path.exists(os.path.join(folder, key)):
                         os.makedirs(os.path.join(folder, key))
                     shutil.move(os.path.join(folder, file), os.path.join(folder, key, file))
