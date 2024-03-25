@@ -8,6 +8,7 @@ from tkinter import messagebox
 
 # Global Variables
 folder_to_sort = ""
+conf_file = ""
 __version__ = "1.0.1.1"
 file_ending = {
     "Images": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff", ".webp", ".svg", ".ico"],
@@ -49,7 +50,7 @@ class app:
         CTkLabel(self.root, text="Cabug Folder Sorter", text_color="blue", font=("Arial", 20)).place(x=120, y=10)
         CTkLabel(self.root, text="Select a mode", text_color="black", font=("Arial", 12)).place(x=165, y=50)
         CTkButton(self.root, text="Simple Mode", command=self.simple_mode, corner_radius=15, width=wieght, height=heeight).place(x=90, y=90)
-        CTkButton(self.root, text="Advanced Mode", command=self.advanced_mode, corner_radius=15, width=wieght, height=heeight).place(x=90, y=170)
+        CTkButton(self.root, text="Advanced Mode", command=self.sort_advanced_menu, corner_radius=15, width=wieght, height=heeight).place(x=90, y=170)
         CTkButton(self.root, text="Exit", command=self.on_closing, corner_radius=15, fg_color="Red", hover_color="Darkred", width=140, height=60).place(x=140, y=250)
         CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=350)
         CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
@@ -107,6 +108,27 @@ class app:
         CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=370)
         CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=390)
 
+    def sort_advanced_menu(self):
+        self.reset()
+        CTkLabel(self.root, text="Cabug Folder Sorter Advanced", text_color="blue", font=("Arial", 20)).place(x=70, y=10)
+        CTkLabel(self.root, text="Select the Mode you want", text_color="black", font=("Arial", 12)).place(x=90, y=50)
+        CTkButton(self.root, text="Sort with Config File", command=self.sort_advanced_script, corner_radius=15, width=240, height=70).place(x=90, y=90)
+        CTkButton(self.root, text="Sort with Checkboxes", command=self.sort_advanced, corner_radius=15, width=240, height=70).place(x=90, y=170)
+
+    def sort_advanced_script(self):
+        self.reset()
+        self.folder_path = StringVar()
+        self.folder_path.set("")
+        self.conf_file = StringVar()
+        self.conf_file.set("")
+        CTkLabel(self.root, text="Cabug Folder Sorter Advanced", text_color="blue", font=("Arial", 20)).place(x=70, y=10)
+        CTkButton(self.root, text="Select Folder", command=self.browse, corner_radius=10).place(x=140, y=50)
+        CTkButton(self.root, text="Select Config File", command=self.browse_conf_file, corner_radius=10).place(x=140, y=100)
+        CTkButton(self.root, text="Sort", command=sort_advanced_script(self.folder_path, self.conf_file), corner_radius=10).place(x=140, y=150)
+        CTkButton(self.root, text="Main Menu", command=self.menu, corner_radius=10, fg_color="Red", hover_color="Darkred").place(x=140, y=300)
+        CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=350)
+        CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
+
     def sort_advanced(self):
         advanced_sort(self.Images.get(), self.Videos.get(), self.Audio.get(), self.Documents.get(), self.Archives.get(), self.Models.get(), self.PCB.get(), self.Code.get(), self.Executables.get(), self.Fonts.get(), self.Other.get())
 
@@ -127,6 +149,11 @@ class app:
         global folder_to_sort
         folder_to_sort = filedialog.askdirectory()
         self.folder_path.set(folder_to_sort)
+    
+    def browse_conf_file(self):
+        global conf_file
+        conf_file = filedialog.askopenfilename()
+        self.conf_file.set(conf_file)
 
     def reset(self):
         for widget in self.root.winfo_children():
@@ -157,10 +184,29 @@ class sort:
         messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
 
 
-class advanced_script_sort: # get file ending dict as .json file
-    def __init__(self):
-        pass
+class sort_advanced_script: # get file ending dict as .json file
+    def __init__(self, folder, conf_file):
+        self.folder = folder
+        self.conf_file = conf_file
+        if self.folder == "":
+            print("Please select a folder")
+        elif os.path.exists(self.folder):
+            self.sort_files()
 
+    def sort_advanced(self):
+        with open(conf_file, "r") as f:
+            file_ending_conf = json.load(f)
+        for file in os.listdir(folder):
+            if os.path.isdir(os.path.join(folder, file)):
+                continue
+            else:
+                for key in file_ending_conf:
+                    if file.endswith(tuple(file_ending_conf[key])):
+                        if not os.path.exists(os.path.join(folder, key)):
+                            os.makedirs(os.path.join(folder, key))
+                        shutil.move(os.path.join(folder, file), os.path.join(folder, key, file))
+                        break
+        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder}.")
 
 class advanced_sort:
     def __init__(self, Images, Videos, Audio, Documents, Archives, Models, PCB, Code, Executables, Fonts, Other):

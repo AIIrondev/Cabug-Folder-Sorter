@@ -22,9 +22,11 @@ file_ending = {
     "Other": [".*"]
 }
 
-
-with open("version", "r") as f:
-    __version__ = f.read()
+try:
+    with open("version", "r") as f:
+        __version__ = f.read()
+except:
+    pass
 
 
 # Functions
