@@ -124,7 +124,7 @@ class app:
         CTkLabel(self.root, text="Cabug Folder Sorter Advanced", text_color="blue", font=("Arial", 20)).place(x=70, y=10)
         CTkButton(self.root, text="Select Folder", command=self.browse, corner_radius=10).place(x=140, y=50)
         CTkButton(self.root, text="Select Config File", command=self.browse_conf_file, corner_radius=10).place(x=140, y=100)
-        CTkButton(self.root, text="Sort", command=sort_advanced_script(self.folder_path, self.conf_file), corner_radius=10).place(x=140, y=150)
+        CTkButton(self.root, text="Sort", command=sort_advanced_script(self.folder_path.get(), self.conf_file.get()), corner_radius=10).place(x=140, y=150)
         CTkButton(self.root, text="Main Menu", command=self.menu, corner_radius=10, fg_color="Red", hover_color="Darkred").place(x=140, y=300)
         CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=350)
         CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
