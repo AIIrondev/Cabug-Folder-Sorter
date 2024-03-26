@@ -113,7 +113,7 @@ class app:
         CTkLabel(self.root, text="Cabug Folder Sorter Advanced", text_color="blue", font=("Arial", 20)).place(x=70, y=10)
         CTkLabel(self.root, text="Select the Mode you want", text_color="black", font=("Arial", 12)).place(x=90, y=50)
         CTkButton(self.root, text="Sort with Config File", command=self.sort_advanced_script, corner_radius=15, width=240, height=70).place(x=90, y=90)
-        CTkButton(self.root, text="Sort with Checkboxes", command=self.sort_advanced, corner_radius=15, width=240, height=70).place(x=90, y=170)
+        CTkButton(self.root, text="Sort with Checkboxes", command=self.advanced_mode, corner_radius=15, width=240, height=70).place(x=90, y=170)
 
     def sort_advanced_script(self):
         self.reset()
