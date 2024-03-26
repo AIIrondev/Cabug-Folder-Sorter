@@ -113,6 +113,46 @@ def sort_files(self):
     messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
 ```
 
+### TypeError: 'sort_advanced_script' object is not callable 1.2.2.4
+
+This Error accurred because I named a class and a function out of a nother class the same way.
+
+Before:
+
+```python
+def sort_advanced_script(self):
+    self.reset()
+    self.folder_path = StringVar()
+    self.folder_path.set("")
+    self.conf_file = StringVar()
+    self.conf_file.set("")
+    CTkLabel(self.root, text="Cabug Folder Sorter Advanced", text_color="blue", font=("Arial", 20)).place(x=70, y=10)
+    CTkButton(self.root, text="Select Folder", command=self.browse, corner_radius=10).place(x=140, y=50)
+    CTkButton(self.root, text="Select Config File", command=self.browse_conf_file, corner_radius=10).place(x=140, y=100)
+    CTkButton(self.root, text="Sort", command=sort_advanced_script(self.folder_path.get(), self.conf_file.get()), corner_radius=10).place(x=140, y=150)
+    CTkButton(self.root, text="Main Menu", command=self.menu, corner_radius=10, fg_color="Red", hover_color="Darkred").place(x=140, y=300)
+    CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=350)
+    CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
+```
+
+After:
+
+```python
+def sort_advanced_menu_script(self):
+    self.reset()
+    self.folder_path = StringVar()
+    self.folder_path.set("")
+    self.conf_file = StringVar()
+    self.conf_file.set("")
+    CTkLabel(self.root, text="Cabug Folder Sorter Advanced", text_color="blue", font=("Arial", 20)).place(x=70, y=10)
+    CTkButton(self.root, text="Select Folder", command=self.browse, corner_radius=10).place(x=140, y=50)
+    CTkButton(self.root, text="Select Config File", command=self.browse_conf_file, corner_radius=10).place(x=140, y=100)
+    CTkButton(self.root, text="Sort", command=sort_advanced_script(self.folder_path.get(), self.conf_file.get()), corner_radius=10).place(x=140, y=150)
+    CTkButton(self.root, text="Main Menu", command=self.menu, corner_radius=10, fg_color="Red", hover_color="Darkred").place(x=140, y=300)
+    CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=350)
+    CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
+```
+
 ## User Interface
 
 ### `str` object is not callable for habtic featback 1.2.2.4
@@ -159,4 +199,53 @@ def reset(self):
         widget.destroy()
 ```
 
+### Changed `print` to `messagebox` 1.2.2.5
+
+This was just a improvement for the response to the User.
+
+Before:
+
+```python
+if self.folder_path == "":
+    print("Please select a folder")
+elif os.path.exists(self.folder_path):
+    self.sort_files()
+```
+
+After:
+
+```python
+if self.folder_path == "":
+    messagebox.showerror("Folder Sorter", "Please select a folder")
+elif os.path.exists(self.folder_path):
+    self.sort_files()
+```
+
 ## Other
+
+
+### AttributeError: `app` object has no attribute `Images` 1.2.2.3
+
+This Error accurred because I was building a new Menu for Script sorting / Checkbox sorting, because the names where uncleare -> have to rework the names.
+
+Before:
+
+```python
+def sort_advanced_menu(self):
+    self.reset()
+    CTkLabel(self.root, text="Cabug Folder Sorter Advanced", text_color="blue", font=("Arial", 20)).place(x=70, y=10)
+    CTkLabel(self.root, text="Select the Mode you want", text_color="black", font=("Arial", 12)).place(x=90, y=50)
+    CTkButton(self.root, text="Sort with Config File", command=self.sort_advanced_script, corner_radius=15, width=240, height=70).place(x=90, y=90)
+    CTkButton(self.root, text="Sort with Checkboxes", command=self.sort_advanced, corner_radius=15, width=240, height=70).place(x=90, y=170) # <- Error with the name
+```
+
+After:
+
+```python
+def sort_advanced_menu(self):
+    self.reset()
+    CTkLabel(self.root, text="Cabug Folder Sorter Advanced", text_color="blue", font=("Arial", 20)).place(x=70, y=10)
+    CTkLabel(self.root, text="Select the Mode you want", text_color="black", font=("Arial", 12)).place(x=90, y=50)
+    CTkButton(self.root, text="Sort with Config File", command=self.sort_advanced_script, corner_radius=15, width=240, height=70).place(x=90, y=90)
+    CTkButton(self.root, text="Sort with Checkboxes", command=self.advanced_mode, corner_radius=15, width=240, height=70).place(x=90, y=170) # <- changed the name to right one
+```

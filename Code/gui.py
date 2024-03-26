@@ -4,6 +4,7 @@ import shutil
 from customtkinter import *
 from tkinter import filedialog
 from tkinter import messagebox
+import json
 
 
 # Global Variables
@@ -112,10 +113,10 @@ class app:
         self.reset()
         CTkLabel(self.root, text="Cabug Folder Sorter Advanced", text_color="blue", font=("Arial", 20)).place(x=70, y=10)
         CTkLabel(self.root, text="Select the Mode you want", text_color="black", font=("Arial", 12)).place(x=90, y=50)
-        CTkButton(self.root, text="Sort with Config File", command=self.sort_advanced_script, corner_radius=15, width=240, height=70).place(x=90, y=90)
+        CTkButton(self.root, text="Sort with Config File", command=self.sort_advanced_menu_script, corner_radius=15, width=240, height=70).place(x=90, y=90)
         CTkButton(self.root, text="Sort with Checkboxes", command=self.advanced_mode, corner_radius=15, width=240, height=70).place(x=90, y=170)
 
-    def sort_advanced_script(self):
+    def sort_advanced_menu_script(self):
         self.reset()
         self.folder_path = StringVar()
         self.folder_path.set("")
@@ -124,7 +125,7 @@ class app:
         CTkLabel(self.root, text="Cabug Folder Sorter Advanced", text_color="blue", font=("Arial", 20)).place(x=70, y=10)
         CTkButton(self.root, text="Select Folder", command=self.browse, corner_radius=10).place(x=140, y=50)
         CTkButton(self.root, text="Select Config File", command=self.browse_conf_file, corner_radius=10).place(x=140, y=100)
-        CTkButton(self.root, text="Sort", command=sort_advanced_script(self.folder_path.get(), self.conf_file.get()), corner_radius=10).place(x=140, y=150)
+        CTkButton(self.root, text="Sort", command=lambda: sort_advanced_script(self.folder_path.get(), self.conf_file.get()), corner_radius=10).place(x=140, y=150)
         CTkButton(self.root, text="Main Menu", command=self.menu, corner_radius=10, fg_color="Red", hover_color="Darkred").place(x=140, y=300)
         CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=350)
         CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
@@ -164,7 +165,7 @@ class sort:
     def __init__(self):
         self.folder_path = folder_to_sort
         if self.folder_path == "":
-            print("Please select a folder")
+            messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder_path):
             self.sort_files()
 
@@ -189,24 +190,24 @@ class sort_advanced_script: # get file ending dict as .json file
         self.folder = folder
         self.conf_file = conf_file
         if self.folder == "":
-            print("Please select a folder")
+            messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder):
-            self.sort_files()
+            self.sort_advanced()
 
     def sort_advanced(self):
         with open(conf_file, "r") as f:
             file_ending_conf = json.load(f)
-        for file in os.listdir(folder):
-            if os.path.isdir(os.path.join(folder, file)):
+        for file in os.listdir(self.folder):
+            if os.path.isdir(os.path.join(self.folder, file)):
                 continue
             else:
                 for key in file_ending_conf:
                     if file.endswith(tuple(file_ending_conf[key])):
-                        if not os.path.exists(os.path.join(folder, key)):
-                            os.makedirs(os.path.join(folder, key))
-                        shutil.move(os.path.join(folder, file), os.path.join(folder, key, file))
+                        if not os.path.exists(os.path.join(self.folder, key)):
+                            os.makedirs(os.path.join(self.folder, key))
+                        shutil.move(os.path.join(self.folder, file), os.path.join(self.folder, key, file))
                         break
-        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder}.")
+        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {self.folder}.")
 
 class advanced_sort:
     def __init__(self, Images, Videos, Audio, Documents, Archives, Models, PCB, Code, Executables, Fonts, Other):
@@ -223,7 +224,7 @@ class advanced_sort:
         self.Fonts = Fonts
         self.Other = Other
         if self.folder_path == "":
-            print("Please select a folder")
+            messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder_path):
             self.sort_files()
 
