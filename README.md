@@ -22,10 +22,39 @@ To use the Cabug folder sorter, you need to install the Software. Follow the ins
 
 ## Functions
 
-- The help function is there to help you navigate the Software
-- The about function shows you the Developer and the current Version.
-- The license function shows you the license that you agreed to.
+- Simple Mode -> In this mode, the Programm will sort the files in the folder you selectet.
+- Advanced Checkbox Mode -> In this Mode, you can select multible category's that you want to sort.
+- Advanced Scripting Mode -> In this Mode, you can select an .json file in that you can write the Label and the file endings.
 
 ## Guide
+
+This is a simple guide for you to undestand the programm and to use it the best way.
+
+### Main Menu
+
+This is the first Menu you are confrontet with. In this Menu you can select the Mode you want and get help.
+
+
+### Advanced Menu
+
+This is the Menu that you see when you click on the Advanced Options Menu.
+
+
+
+### Simple Mode
+
+This is the simple Mode of the app that will sort the files in the folder you selectet.
+
+
+
+### Advanced Checkbox Mode 
+
+This is the advanced Checkbox Mode of the app that you can select multible category's that you want to sort.
+
+
+
+### Advanced Scripting Mode
+
+This is the advanced Scripting Mode of the app you can select an .json file in that you can write the Label and the file endings.
 
 
