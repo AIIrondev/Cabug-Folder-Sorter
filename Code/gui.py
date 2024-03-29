@@ -195,6 +195,7 @@ class sort_advanced_script: # get file ending dict as .json file
             self.sort_advanced()
 
     def sort_advanced(self):
+        self.count_elements = 1
         with open(conf_file, "r") as f:
             file_ending_conf = json.load(f)
         for file in os.listdir(self.folder):
@@ -203,6 +204,7 @@ class sort_advanced_script: # get file ending dict as .json file
             else:
                 for key in file_ending_conf:
                     if file.endswith(tuple(file_ending_conf[key])):
+                        self.count_elements += 1
                         if not os.path.exists(os.path.join(self.folder, key)):
                             os.makedirs(os.path.join(self.folder, key))
                         shutil.move(os.path.join(self.folder, file), os.path.join(self.folder, key, file))
