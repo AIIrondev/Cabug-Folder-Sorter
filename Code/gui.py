@@ -42,22 +42,24 @@ class app:
         self.root.resizable(False, False)
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
         self.root.iconbitmap("Cabug-folder-sorter.ico")
+        self.main_font = CTkFont(family="Helvetica", size=12)
+        self.root.config(bg="#262626")
+        # Template: CTkButton(,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626")
         self.menu()
         self.root.mainloop()
 
     def menu(self):
-        self.option_image = CTkImage(light_image=Image.open("option.png"),size=(30, 30))
+        self.option_image = CTkImage(light_image=Image.open("option.png"),size=(40, 40))
         self.reset()
         heeight = 70
         wieght = 240
-        CTkButton(self.root, image=self.option_image, text="", command=self.menu_options, corner_radius=15).place(x=0, y=0)
-        CTkLabel(self.root, text="Cabug Folder Sorter", text_color="blue", font=("Arial", 20)).place(x=120, y=10)
-        CTkLabel(self.root, text="Select a mode", text_color="black", font=("Arial", 12)).place(x=165, y=50)
-        CTkButton(self.root, text="Simple Mode", command=self.simple_mode, corner_radius=15, width=wieght, height=heeight).place(x=90, y=90)
+        CTkButton(self.root, image=self.option_image, text="", command=self.menu_options, width=20, height=20).place(x=0, y=0) # make the button look like the image with out borders
+        CTkLabel(self.root, text="Cabug Folder Sorter", text_color="blue", font=("Arial", 20)).place(x=120, y=10) # TODO: unified the Button look to look better
+        CTkLabel(self.root, text="Select a mode", text_color="black", font=("Arial", 12)).place(x=165, y=60) # TODO: Update the Framing
+        CTkButton(self.root, text="Simple Mode", command=self.simple_mode, width=wieght, height=heeight,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=90, y=90)
         CTkButton(self.root, text="Advanced Mode", command=self.sort_advanced_menu, corner_radius=15, width=wieght, height=heeight).place(x=90, y=170)
         CTkButton(self.root, text="Exit", command=self.on_closing, corner_radius=15, fg_color="Red", hover_color="Darkred", width=140, height=60).place(x=140, y=250)
-        CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=350)
-        CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
+        CTkLabel(self.root, text="by Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=40)
 
     def menu_options(self):
         self.reset()
