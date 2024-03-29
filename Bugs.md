@@ -171,6 +171,10 @@ After:
 messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
 ```
 
+### _tkinter.TclError: image "option.png" doesn't exist 1.2.2.5
+
+????
+
 ## Critical
 
 ## Unimportant
