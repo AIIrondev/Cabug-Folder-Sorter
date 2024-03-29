@@ -48,7 +48,7 @@ class app:
         self.reset()
         heeight = 70
         wieght = 240
-        CTkButton(self.root, image="cabug-folder-sorting-option-menu.png", text="", command=self.menu_options, corner_radius=15, width=400, height=420).place(x=0, y=0)
+        CTkButton(self.root, image="option.png", text="", command=self.menu_options, corner_radius=15, width=400, height=420).place(x=0, y=0)
         CTkLabel(self.root, text="Cabug Folder Sorter", text_color="blue", font=("Arial", 20)).place(x=120, y=10)
         CTkLabel(self.root, text="Select a mode", text_color="black", font=("Arial", 12)).place(x=165, y=50)
         CTkButton(self.root, text="Simple Mode", command=self.simple_mode, corner_radius=15, width=wieght, height=heeight).place(x=90, y=90)
