@@ -24,7 +24,7 @@ To use the Cabug folder sorter, you need to install the Software. Follow the ins
 
 - Simple Mode -> In this mode, the Programm will sort the files in the folder you selectet.
 - Advanced Checkbox Mode -> In this Mode, you can select multible category's that you want to sort.
-- Advanced Scripting Mode -> In this Mode, you can select an .json file in that you can write the Label and the file endings.
+- Advanced Scripting Mode -> In this Mode, you can select an .json file in that you can write the Label and the file endings that you want to sort.
 
 ## Guide
 
