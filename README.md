@@ -28,7 +28,7 @@ To use the Cabug folder sorter, you need to install the Software. Follow the ins
 
 ## Guide
 
-This is a simple guide for you to undestand the programm and to use it the best way.
+This is a simple guide for you to undestand the programm and to use the Programm the best way.
 
 ### Main Menu
 
