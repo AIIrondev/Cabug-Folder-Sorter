@@ -53,37 +53,45 @@ class app:
         self.reset()
         heeight = 70
         wieght = 240
-        CTkButton(self.root, image=self.option_image, text="", command=self.menu_options, width=20, height=20).place(x=0, y=0) # make the button look like the image with out borders
-        CTkLabel(self.root, text="Cabug Folder Sorter", text_color="blue", font=("Arial", 20)).place(x=120, y=10) # TODO: unified the Button look to look better
-        CTkLabel(self.root, text="Select a mode", text_color="black", font=("Arial", 12)).place(x=165, y=60) # TODO: Update the Framing
+        CTkButton(self.root, image=self.option_image, text="", command=self.menu_options, width=20, height=20, bg_color="#262626", fg_color="#262626", hover_color="#262626",border_color="#262626").place(x=0, y=0) # make the button look like the image with out borders
+        CTkLabel(self.root, text="Cabug Folder Sorter", font=("Arial", 20), bg_color="#262626", text_color="#eda850").place(x=120, y=10) # TODO: unified the Button look to look better
+        CTkLabel(self.root, text="Select a mode", font=("Arial", 12), bg_color="#262626", text_color="#eda850").place(x=165, y=60) # TODO: Update the Framing
         CTkButton(self.root, text="Simple Mode", command=self.simple_mode, width=wieght, height=heeight,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=90, y=90)
-        CTkButton(self.root, text="Advanced Mode", command=self.sort_advanced_menu, corner_radius=15, width=wieght, height=heeight).place(x=90, y=170)
-        CTkButton(self.root, text="Exit", command=self.on_closing, corner_radius=15, fg_color="Red", hover_color="Darkred", width=140, height=60).place(x=140, y=250)
-        CTkLabel(self.root, text="by Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=40)
+        CTkButton(self.root, text="Advanced Mode", command=self.sort_advanced_menu, width=wieght, height=heeight, font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=90, y=170)
+        CTkButton(self.root, text="Exit", command=self.on_closing, width=140, height=60, font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color="Red", bg_color="#262626",fg_color= "#262626").place(x=140, y=250)
+        CTkLabel(self.root, text="by Maximilian Gründinger 2024",font=("Arial", 9), bg_color="#262626", text_color="#eda850").place(x=150, y=40)
 
     def menu_options(self):
         self.reset()
-        CTkLabel(self.root, text="Cabug Folder Sorter", text_color="blue", font=("Arial", 20)).place(x=120, y=10)
-        CTkButton(self.root, text="About", command=self.about, corner_radius=10).place(x=140, y=50)
-        CTkButton(self.root, text="Help", command=self.help_Basic, corner_radius=10).place(x=140, y=100)
-        CTkLabel(self.root, text="Select a language", text_color="black", font=("Arial", 12)).place(x=150, y=150)
-        CTkButton(self.root, text="English", command=self.menu, corner_radius=10).place(x=140, y=190) # TODO: Add language Models
-        CTkButton(self.root, text="Deutsch", command=self.menu, corner_radius=10).place(x=140, y=220)
-        CTkButton(self.root, text="Main Menu", command=self.menu, corner_radius=10, fg_color="Red", hover_color="Darkred").place(x=140, y=250)
-        CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=350)
-        CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
+        CTkLabel(self.root, text="Cabug Folder Sorter", font=("Arial", 20), bg_color="#262626", text_color="#eda850").place(x=120, y=10)
+        CTkButton(self.root, text="About", command=self.about,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=50)
+        CTkButton(self.root, text="Help", command=self.help_Basic,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=100)
+        CTkLabel(self.root, text="Select a language", font=("Arial", 12), bg_color="#262626", text_color="#eda850").place(x=150, y=150)
+        CTkButton(self.root, text="English", command=self.menu,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=190) # TODO: Add language Models
+        CTkButton(self.root, text="Deutsch", command=self.menu,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=220)
+        CTkButton(self.root, text="Main Menu", command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color="#262626",fg_color= "#262626").place(x=140, y=250)
+        CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="#eda850",font=("Arial", 9), bg_color="#262626").place(x=150, y=350)
+        CTkLabel(self.root, text=f"Version {__version__}", text_color="#eda850",font=("Arial", 9), bg_color="#262626").place(x=185, y=370)
 
     def simple_mode(self):
         self.reset()
         self.folder_path = StringVar()
         self.folder_path.set("")
-        CTkLabel(self.root, text="Cabug Folder Sorter Basic", text_color="blue", font=("Arial", 20)).place(x=90, y=10)
-        CTkButton(self.root, text="Select Folder", command=self.browse, corner_radius=10).place(x=140, y=50)
-        CTkButton(self.root, text="Sort", command=sort, corner_radius=10).place(x=140, y=100)
-        CTkButton(self.root, text="Help", command=self.help_Basic, corner_radius=10).place(x=140, y=150)
-        CTkButton(self.root, text="Main Menu", command=self.menu, corner_radius=10, fg_color="Red", hover_color="Darkred").place(x=140, y=300)
-        CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=350)
-        CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
+        CTkLabel(self.root, text="Cabug Folder Sorter Basic", font=("Arial", 20), bg_color="#262626", text_color="#eda850").place(x=90, y=10)
+        CTkButton(self.root, text="Select Folder", command=self.browse,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=50)
+        CTkButton(self.root, text="Sort", command=sort,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=100)
+        CTkButton(self.root, text="Help", command=self.help_Basic,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=150)
+        CTkButton(self.root, text="Main Menu", command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color="#262626",fg_color= "#262626").place(x=140, y=300)
+
+    def sort_advanced_menu(self):
+        self.reset()
+        heeight = 70
+        wieght = 240
+        CTkLabel(self.root, text="Cabug Folder Sorter Advanced", font=("Arial", 20), bg_color="#262626", text_color="#eda850").place(x=70, y=10)
+        CTkLabel(self.root, text="Select the Mode you want", font=("Arial", 12), bg_color="#262626", text_color="#eda850").place(x=90, y=50)
+        CTkButton(self.root, text="Sort with Config File", command=self.sort_advanced_menu_script, width=wieght, height=heeight,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=90, y=90)
+        CTkButton(self.root, text="Sort with Checkboxes", command=self.advanced_mode, width=wieght, height=heeight,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=90, y=170)
+        CTkButton(self.root, text="Main Menu", command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color="#262626",fg_color= "#262626").place(x=140, y=300)
 
     def advanced_mode(self):
         self.reset()
@@ -105,33 +113,23 @@ class app:
         X_position_1 = 120
         X_position_2 = 220
         # Headline
-        CTkLabel(self.root, text="Cabug Folder Sorter Advanced", text_color="blue", font=("Arial", 20)).place(x=70, y=10)
-        CTkButton(self.root, text="Select Folder", command=self.browse, corner_radius=10).place(x=140, y=50)
+        CTkLabel(self.root, text="Cabug Folder Sorter Advanced", font=("Arial", 20), bg_color="#262626", text_color="#eda850").place(x=70, y=10)
+        CTkButton(self.root, text="Select Folder", command=self.browse,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=50)
         # Checkboxes
-        CTkCheckBox(self.root, text="Images", variable=self.Images).place(x=X_position_1, y=100)
-        CTkCheckBox(self.root, text="Videos", variable=self.Videos).place(x=X_position_2, y=100)
-        CTkCheckBox(self.root, text="Audio", variable=self.Audio).place(x=X_position_1, y=130)
-        CTkCheckBox(self.root, text="Documents", variable=self.Documents).place(x=X_position_2, y=130)
-        CTkCheckBox(self.root, text="Archives", variable=self.Archives).place(x=X_position_1, y=160)
-        CTkCheckBox(self.root, text="3D Models", variable=self.Models).place(x=X_position_2, y=160)
-        CTkCheckBox(self.root, text="PCB", variable=self.PCB).place(x=X_position_1, y=190)
-        CTkCheckBox(self.root, text="Code", variable=self.Code).place(x=X_position_2, y=190)
-        CTkCheckBox(self.root, text="Executables", variable=self.Executables).place(x=X_position_1, y=220)
-        CTkCheckBox(self.root, text="Fonts", variable=self.Fonts).place(x=X_position_2, y=220)
-        CTkCheckBox(self.root, text="Other", variable=self.Other).place(x=X_position_1, y=250)
+        CTkCheckBox(self.root, text="Images", variable=self.Images, bg_color="#262626", text_color="#eda850").place(x=X_position_1, y=100)
+        CTkCheckBox(self.root, text="Videos", variable=self.Videos, bg_color="#262626", text_color="#eda850").place(x=X_position_2, y=100)
+        CTkCheckBox(self.root, text="Audio", variable=self.Audio, bg_color="#262626", text_color="#eda850").place(x=X_position_1, y=130)
+        CTkCheckBox(self.root, text="Documents", variable=self.Documents, bg_color="#262626", text_color="#eda850").place(x=X_position_2, y=130)
+        CTkCheckBox(self.root, text="Archives", variable=self.Archives, bg_color="#262626", text_color="#eda850").place(x=X_position_1, y=160)
+        CTkCheckBox(self.root, text="3D Models", variable=self.Models, bg_color="#262626", text_color="#eda850").place(x=X_position_2, y=160)
+        CTkCheckBox(self.root, text="PCB", variable=self.PCB, bg_color="#262626", text_color="#eda850").place(x=X_position_1, y=190)
+        CTkCheckBox(self.root, text="Code", variable=self.Code, bg_color="#262626", text_color="#eda850").place(x=X_position_2, y=190)
+        CTkCheckBox(self.root, text="Executables", variable=self.Executables, bg_color="#262626", text_color="#eda850").place(x=X_position_1, y=220)
+        CTkCheckBox(self.root, text="Fonts", variable=self.Fonts, bg_color="#262626", text_color="#eda850").place(x=X_position_2, y=220)
+        CTkCheckBox(self.root, text="Other", variable=self.Other, bg_color="#262626", text_color="#eda850").place(x=X_position_1, y=250)
         # Buttons
-        CTkButton(self.root, text="Help", command=self.help_Advanced, corner_radius=10).place(x=140, y=280)
-        CTkButton(self.root, text="Sort", command=self.sort_advanced, corner_radius=10).place(x=140, y=310)
-        CTkButton(self.root, text="Main Menu", command=self.menu, corner_radius=10, fg_color="Red", hover_color="Darkred").place(x=140, y=340)
-        CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=370)
-        CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=390)
-
-    def sort_advanced_menu(self):
-        self.reset()
-        CTkLabel(self.root, text="Cabug Folder Sorter Advanced", text_color="blue", font=("Arial", 20)).place(x=70, y=10)
-        CTkLabel(self.root, text="Select the Mode you want", text_color="black", font=("Arial", 12)).place(x=90, y=50)
-        CTkButton(self.root, text="Sort with Config File", command=self.sort_advanced_menu_script, corner_radius=15, width=240, height=70).place(x=90, y=90)
-        CTkButton(self.root, text="Sort with Checkboxes", command=self.advanced_mode, corner_radius=15, width=240, height=70).place(x=90, y=170)
+        CTkButton(self.root, text="Sort", command=self.sort_advanced,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=310)
+        CTkButton(self.root, text="Main Menu", command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color="#262626",fg_color= "#262626").place(x=140, y=340)
 
     def sort_advanced_menu_script(self):
         self.reset()
@@ -139,13 +137,11 @@ class app:
         self.folder_path.set("")
         self.conf_file = StringVar()
         self.conf_file.set("")
-        CTkLabel(self.root, text="Cabug Folder Sorter Advanced", text_color="blue", font=("Arial", 20)).place(x=70, y=10)
-        CTkButton(self.root, text="Select Folder", command=self.browse, corner_radius=10).place(x=140, y=50)
-        CTkButton(self.root, text="Select Config File", command=self.browse_conf_file, corner_radius=10).place(x=140, y=100)
-        CTkButton(self.root, text="Sort", command=lambda: sort_advanced_script(self.folder_path.get(), self.conf_file.get()), corner_radius=10).place(x=140, y=150)
-        CTkButton(self.root, text="Main Menu", command=self.menu, corner_radius=10, fg_color="Red", hover_color="Darkred").place(x=140, y=300)
-        CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="Blue",font=("Arial", 9)).place(x=150, y=350)
-        CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
+        CTkLabel(self.root, text="Cabug Folder Sorter Advanced", font=("Arial", 20), bg_color="#262626", text_color="#eda850").place(x=70, y=10)
+        CTkButton(self.root, text="Select Folder", command=self.browse,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=50)
+        CTkButton(self.root, text="Select Config File", command=self.browse_conf_file,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=100)
+        CTkButton(self.root, text="Sort", command=lambda: sort_advanced_script(self.folder_path.get(), self.conf_file.get()),font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=150)
+        CTkButton(self.root, text="Main Menu", command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color="#262626",fg_color= "#262626").place(x=140, y=300)
 
     def sort_advanced(self):
         advanced_sort(self.Images.get(), self.Videos.get(), self.Audio.get(), self.Documents.get(), self.Archives.get(), self.Models.get(), self.PCB.get(), self.Code.get(), self.Executables.get(), self.Fonts.get(), self.Other.get())
