@@ -142,7 +142,7 @@ class app:
         CTkButton(self.root, text="Sort", command=lambda: sort_advanced_script(self.folder_path.get(), self.conf_file.get()),font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=150)
         CTkButton(self.root, text="Main Menu", command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color="#262626",fg_color= "#262626").place(x=140, y=300)
 
-    def help_complete(self): # TODO: Add Help for the complete Program after the readme.md 
+    def help_complete(self):
         self.reset()
         CTkLabel(self.root, text="Help", font=("Arial", 20), bg_color="#262626", text_color="#eda850").place(x=120, y=10)
         CTkLabel(self.root, text="To use Folder Sorter, select the option that you want to sort.", font=("Arial", 12), bg_color="#262626", text_color="#eda850").place(x=10, y=50)
@@ -175,7 +175,7 @@ class app:
         global folder_to_sort
         folder_to_sort = filedialog.askdirectory()
         self.folder_path.set(folder_to_sort)
-    
+
     def browse_conf_file(self):
         global conf_file
         conf_file = filedialog.askopenfilename()
@@ -185,6 +185,8 @@ class app:
         for widget in self.root.winfo_children():
             widget.destroy()
 
+
+# TODO: rework sorting system to make it most efficient
 
 class sort:
     def __init__(self):
@@ -297,16 +299,25 @@ class advanced_sort:
         self.prepare()
         print(self.file_ending_)
         for file in os.listdir(self.folder_path):
-            if os.path.isdir(os.path.join(self.folder_path, file)):
-                continue
+            if os.path.isdir(os.path.join(self.folder_path, file)): # TODO: Add subdirectory sorting
+                subfolder = os.path.join(self.folder_path, file)
+                for file_sub in os.listdir(subfolder):
+                    for key in self.file_ending_:
+                        try:
+                            if file_sub.endswith(tuple(self.file_ending_[key])):
+                                if not os.path.exists(os.path.join(subfolder, key)):
+                                    os.makedirs(os.path.join(subfolder, key))
+                                shutil.move(os.path.join(subfolder, file_sub), os.path.join(subfolder, key, file_sub))
+                                self.count_elements += 1
+                                break
+                        except:
+                            pass
             else:
                 for key in self.file_ending_:
-                    print(key)
                     try:
                         if self.file_ending_[key] == []:
                             continue
                         elif file.endswith(tuple(self.file_ending_[key])):
-                            print(tuple(self.file_ending_[key]))
                             if not os.path.exists(os.path.join(self.folder_path, key)):
                                 os.makedirs(os.path.join(self.folder_path, key))
                             shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
