@@ -71,3 +71,5 @@ You have to select the file using the 'Select File' button, and then choose the 
 Here, you can select the categories that you want to sort. After selecting the folder you want to sort, simply press the 'Sort' button.
 
 ![alt text](images/image-6.png)
+
+If you have an Questions you can Write an Email to <Ai.iron.dev@gmail.com>
