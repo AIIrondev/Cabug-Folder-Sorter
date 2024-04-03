@@ -72,4 +72,4 @@ Here, you can select the categories that you want to sort. After selecting the f
 
 ![alt text](images/image-6.png)
 
-If you have an Questions you can Write an Email to <Ai.iron.dev@gmail.com>
+If you have an Questions you can Write an Email to <Ai.iron.dev@gmail.com>.
