@@ -1,6 +1,6 @@
 # The folder sorter v1.2.2.4
 
-[![Python application](https://github.com/AIIrondev/Folder-sorter/actions/workflows/main.yml/badge.svg)](https://github.com/AIIrondev/Folder-sorter/actions/workflows/main.yml)
+[![Python application](https://github.com/AIIrondev/Cabug-Folder-sorter/actions/workflows/main.yml/badge.svg)](https://github.com/AIIrondev/Cabug-Folder-sorter/actions/workflows/main.yml)
 
 This Projekt is developt by AiIronwitch in Python.
 This folder sorter is in active development and has more Versions to come.
