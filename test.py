@@ -2,6 +2,9 @@ import os
 import shutil
 from tkinter import messagebox
 
+folder_to_sort = "C:/Users/username/Desktop/test"
+subfolders = ""
+
 class sorting_normal:
     def __init__(self, file_endings):
         self.folder_path = folder_to_sort
