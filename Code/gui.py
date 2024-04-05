@@ -11,6 +11,7 @@ from PIL import Image
 # Global Variables
 folder_to_sort = ""
 conf_file = ""
+subfolders = ""
 __version__ = "1.0.1.1"
 file_ending = {
     "Images": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff", ".webp", ".svg", ".ico"],
@@ -44,6 +45,8 @@ class app:
         self.root.iconbitmap("Cabug-folder-sorter.ico")
         self.main_font = CTkFont(family="Helvetica", size=12)
         self.root.config(bg="#262626")
+        global button_sub_sort
+        button_sub_sort = BooleanVar() # The value of the checkbox that decides if the subfolders should be sorted or not
         # Template: CTkButton(,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626")
         self.menu()
         self.root.mainloop()
@@ -69,6 +72,7 @@ class app:
         CTkLabel(self.root, text="Select a language", font=("Arial", 12), bg_color="#262626", text_color="#eda850").place(x=150, y=150)
         CTkButton(self.root, text="English", command=self.menu,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=190) # TODO: Add language Models
         CTkButton(self.root, text="Deutsch", command=self.menu,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=220)
+        CTkCheckBox(self.root, text="Sort Subfolders", variable=button_sub_sort, bg_color="#262626", text_color="#eda850").place(x=140, y=250)
         CTkButton(self.root, text="Main Menu", command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color="#262626",fg_color= "#262626").place(x=140, y=300)
         CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="#eda850",font=("Arial", 9), bg_color="#262626").place(x=150, y=350)
         CTkLabel(self.root, text=f"Version {__version__}", text_color="#eda850",font=("Arial", 9), bg_color="#262626").place(x=185, y=370)
@@ -186,45 +190,34 @@ class app:
             widget.destroy()
 
 
-# TODO: rework sorting system to make it most efficient
-
 class sort:
     def __init__(self):
         self.folder_path = folder_to_sort
         if self.folder_path == "":
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder_path):
-            self.sort_files()
-
-    def sort_files(self):
-        self.count_elements = 1
-        for file in os.listdir(self.folder_path):
-            if os.path.isdir(os.path.join(self.folder_path, file)):
-                continue
+            if button_sub_sort:
+                sorting_subdir(self.folder_path)
             else:
-                for key in file_ending:
-                    if file.endswith(tuple(file_ending[key])):
-                        self.count_elements += 1
-                        if not os.path.exists(os.path.join(self.folder_path, key)):
-                            os.makedirs(os.path.join(self.folder_path, key))
-                        shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
-                        break
-        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
-
+                sort_files_normal(self.folder_path)
 
 class sort_advanced_script: # get file ending dict as .json file
     def __init__(self, folder, conf_file):
         self.folder = folder
         self.conf_file = conf_file
+        with open(conf_file, "r") as f:
+            file_ending_conf = json.load(f)
         if self.folder == "":
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder):
-            self.sort_advanced()
+            if button_sub_sort:
+                sorting_subdir(self.folder)
+            else:
+                sort_files_normal(self.folder)
 
     def sort_advanced(self):
         self.count_elements = 1
-        with open(conf_file, "r") as f:
-            file_ending_conf = json.load(f)
+        
         for file in os.listdir(self.folder):
             if os.path.isdir(os.path.join(self.folder, file)):
                 continue
@@ -255,7 +248,11 @@ class advanced_sort:
         if self.folder_path == "":
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder_path):
-            self.sort_files()
+            self.prepare()
+            if button_sub_sort:
+                sorting_subdir(self.folder_path)
+            else:
+                sort_files_normal(self.folder_path)
 
     def prepare(self):
         self.count_elements = 1
@@ -294,24 +291,47 @@ class advanced_sort:
             self.file_ending_["Fonts"] = file_ending["Fonts"]
         if self.Other:
             self.file_ending_["Other"] = file_ending["Other"]
+        
 
-    def sort_files(self):
-        self.prepare()
-        print(self.file_ending_)
+'''
+New sorting classes
+'''
+class sorting_normal:
+    def __init__(self, file_endings):
+        self.folder_path = folder_to_sort
+        if self.folder_path == "":
+            messagebox.showerror("Folder Sorter", "Please select a folder")
+        elif os.path.exists(self.folder_path):
+            sort_files_normal(file_endings)
+
+    def sort_files_normal(self, file_endings):
+        self.count_elements = 1
         for file in os.listdir(self.folder_path):
-            if os.path.isdir(os.path.join(self.folder_path, file)): # TODO: Add subdirectory sorting
-                subfolder = os.path.join(self.folder_path, file)
-                for file_sub in os.listdir(subfolder):
-                    for key in self.file_ending_:
-                        try:
-                            if file_sub.endswith(tuple(self.file_ending_[key])):
-                                if not os.path.exists(os.path.join(subfolder, key)):
-                                    os.makedirs(os.path.join(subfolder, key))
-                                shutil.move(os.path.join(subfolder, file_sub), os.path.join(subfolder, key, file_sub))
-                                self.count_elements += 1
-                                break
-                        except:
-                            pass
+            if os.path.isdir(os.path.join(self.folder_path, file)):
+                continue
+            else:
+                for key in file_endings:
+                    if file.endswith(tuple(file_endings[key])):
+                        self.count_elements += 1
+                        if not os.path.exists(os.path.join(self.folder_path, key)):
+                            os.makedirs(os.path.join(self.folder_path, key))
+                        shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
+                        break
+        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
+
+
+class sorting_subdir:
+    def __init__(self, file_endings):
+        self.folder_path = folder_to_sort
+        if self.folder_path == "":
+            messagebox.showerror("Folder Sorter", "Please select a folder")
+        elif os.path.exists(self.folder_path):
+            self.sort_files(file_endings)
+
+    def sort_files_subdir(self, file_endings):
+        for file in os.listdir(self.folder_path):
+            if os.path.isdir(os.path.join(self.folder_path, file)):
+                sorting_subdir()
             else:
                 for key in self.file_ending_:
                     try:
@@ -326,6 +346,7 @@ class advanced_sort:
                     except:
                         pass
         messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
+
 
 
 if __name__ == "__main__":
