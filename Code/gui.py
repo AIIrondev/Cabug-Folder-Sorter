@@ -12,6 +12,7 @@ from PIL import Image
 folder_to_sort = ""
 conf_file = ""
 subfolders = ""
+language = "en"
 __version__ = "1.0.1.1"
 file_ending = {
     "Images": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff", ".webp", ".svg", ".ico"],
@@ -61,6 +62,7 @@ class app:
         CTkLabel(self.root, text="Select a mode", font=("Arial", 12), bg_color="#262626", text_color="#eda850").place(x=165, y=60)
         CTkButton(self.root, text="Simple Mode", command=self.simple_mode, width=wieght, height=heeight,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=90, y=90)
         CTkButton(self.root, text="Advanced Mode", command=self.sort_advanced_menu, width=wieght, height=heeight, font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=90, y=170)
+        CTkButton(self.root, text="?", command=help_engine("simple_main"),width=3, height=3, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=140, y=170)
         CTkButton(self.root, text="Exit", command=self.on_closing, width=140, height=60, font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color="Red", bg_color="#262626",fg_color= "#262626").place(x=140, y=250)
         CTkLabel(self.root, text="by Maximilian Gründinger 2024",font=("Arial", 9), bg_color="#262626", text_color="#eda850").place(x=150, y=40)
 
@@ -188,6 +190,58 @@ class app:
     def reset(self):
         for widget in self.root.winfo_children():
             widget.destroy()
+            
+
+class help_engine:
+    def __init__(self, menuitem):
+        self.menu_item = menuitem
+        self.help_complete()
+
+    def help_complete(self):
+        match self.menu_item:
+            case "help":
+                self.help_catalog(1)
+            case "simple_main":
+                self.help_catalog(2)
+            case "advanced_main":
+                self.help_catalog(3)
+            case "sel_language":
+                self.help_catalog(4)
+            case "sort_file_menu":
+                self.help_catalog(5)
+            case "sort_check_menu":
+                self.help_catalog(6)
+            case "select_simple":
+                self.help_catalog(7)
+            case "select_advanced_script":
+                self.help_catalog(8)
+            case "select_advanced_script_conf":
+                self.help_catalog(9)
+            case "select_advanced_check":
+                self.help_catalog(10)
+            case "sort_simple":
+                self.help_catalog(11)
+            case "sort_advanced_script":
+                self.help_catalog(12)
+            case "sort_advanced_check":
+                self.help_catalog(13)
+            case "sort_subdir":
+                self.help_catalog(14)
+                
+    def help_catalog(self, case_number): # gets the right help message from a .json file and displays it
+        pass
+    
+    def on_closing(self):
+        self.root.destroy()
+
+
+class language_engine: # returns the right language part for the requestet language and part
+    def __init__(self, part):
+        self.language = language
+        self.set_language()
+    
+    def set_language(self):
+        pass
 
 
 class sort:
@@ -255,7 +309,6 @@ class advanced_sort:
                 sort_files_normal(self.folder_path)
 
     def prepare(self):
-        self.count_elements = 1
         self.file_ending_ = {
             "Images": [],
             "Videos": [],
@@ -293,9 +346,6 @@ class advanced_sort:
             self.file_ending_["Other"] = file_ending["Other"]
         
 
-'''
-New sorting classes
-'''
 class sorting_normal:
     def __init__(self, file_endings):
         self.folder_path = folder_to_sort
