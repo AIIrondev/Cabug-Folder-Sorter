@@ -62,7 +62,7 @@ class app:
         CTkLabel(self.root, text="Select a mode", font=("Arial", 12), bg_color="#262626", text_color="#eda850").place(x=165, y=60)
         CTkButton(self.root, text="Simple Mode", command=self.simple_mode, width=wieght, height=heeight,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=90, y=90)
         CTkButton(self.root, text="Advanced Mode", command=self.sort_advanced_menu, width=wieght, height=heeight, font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=90, y=170)
-        CTkButton(self.root, text="?", command=help_engine("simple_main"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=330, y=200)
+        CTkButton(self.root, text="?", command=lambda:self.help("simple_main"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=330, y=200)
         CTkButton(self.root, text="Exit", command=self.on_closing, width=140, height=60, font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color="Red", bg_color="#262626",fg_color= "#262626").place(x=140, y=250)
         CTkLabel(self.root, text="by Maximilian Gründinger 2024",font=("Arial", 9), bg_color="#262626", text_color="#eda850").place(x=150, y=40)
 
@@ -176,6 +176,9 @@ class app:
 
     def help_Advanced(self):
         messagebox.showinfo("Help", f"To use Folder Sorter, select the folder you want to sort and click the 'Sort' button, after you have selectet the Options you want to sort. The program will then sort the files in the folder.")
+
+    def help(self, menuitem):
+        help_engine(menuitem)
 
     def browse(self):
         global folder_to_sort
