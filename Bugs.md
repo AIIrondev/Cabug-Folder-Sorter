@@ -210,6 +210,20 @@ def menu(self):
     CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
 ```
 
+### TypeError: CTkBaseClass.place() takes 1 positional argument but 2 were given
+
+This error accured because I didn`t define a variabel right:
+
+Before:
+```python
+CTkButton(self.root, text="?", command=lambda:self.help("sort_advanced_check_box"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=330, y=250)
+```
+
+After:
+```python
+CTkButton(self.root, text="?", command=lambda:self.help("sort_advanced_check_box"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=X_position_2, y=250)
+```
+
 ## Critical
 
 ## Unimportant
