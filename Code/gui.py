@@ -49,7 +49,7 @@ class app:
         global button_sub_sort
         button_sub_sort = BooleanVar() # The value of the checkbox that decides if the subfolders should be sorted or not
         # Template: CTkButton(,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626")
-        self.menu()
+        self.menu() 
         self.root.mainloop()
 
     def menu(self):
