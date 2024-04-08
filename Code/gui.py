@@ -11,6 +11,7 @@ from PIL import Image
 # Global Variables
 folder_to_sort = ""
 conf_file = ""
+help_file = "help.json"
 subfolders = ""
 language = "en"
 __version__ = "1.0.1.1"
@@ -200,11 +201,14 @@ class app:
     def reset(self):
         for widget in self.root.winfo_children():
             widget.destroy()
-            
+
 
 class help_engine:
     def __init__(self, menuitem):
         self.menu_item = menuitem
+        self.help_file = {}
+        with open(help_file, "r") as f:
+            self.help_file = json.load(f)
         self.help_complete()
 
     def help_complete(self):
@@ -242,10 +246,13 @@ class help_engine:
                 self.help_catalog(14)
             case "sort_advanced_check_box":
                 self.help_catalog(16)
-                
+
+    def help_get(self, help_key):
+        messagebox.showinfo(help_key, self.help_file[help_key])
+
     def help_catalog(self, case_number): # gets the right help message from a .json file and displays it
         pass
-    
+
     def on_closing(self):
         self.root.destroy()
 
