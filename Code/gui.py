@@ -247,7 +247,7 @@ class help_engine:
     def help_get(self, help_key):
         messagebox.showinfo(help_key, self.help_file[help_key])
 
-    def help_catalog(self, case_number): # Finisch this in version 3.0.1.1 or 2.2.5.1
+    def help_catalog(self, case_number): # TODO: Finisch this in version 3.0.1.1 or 2.2.5.1
         self.app = CTk()
         self.app.title("Help Catalog")
         self.app.geometry("400x420")
