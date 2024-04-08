@@ -216,46 +216,32 @@ class help_engine:
             case "help":
                 self.help_catalog(1)
             case "simple_main":
-                self.help_catalog(2)
                 self.help_get("Simple Menu Help")
             case "advanced_main":
-                self.help_catalog(3)
                 self.help_get("Advanced Menu Help")
             case "sel_language":
-                self.help_catalog(4)
                 self.help_get("Select Language Help")
             case "sort_file_menu":
-                self.help_catalog(5)
                 self.help_get("Sort with Config File Menu Help")
             case "sort_check_menu":
-                self.help_catalog(6)
                 self.help_get("Sort with Checkboxes Menu Help")
             case "select_simple":
-                self.help_catalog(7)
                 self.help_get("Select Folder Help")
             case "select_advanced_script":
-                self.help_catalog(8)
                 self.help_get("Select Folder Advanced script Help")
             case "select_advanced_script_conf":
-                self.help_catalog(9)
                 self.help_get("Select Config File Help")
             case "select_advanced_check":
-                self.help_catalog(10)
                 self.help_get("Select Advanced Checkbox Folder Help")
             case "sort_simple":
-                self.help_catalog(11)
                 self.help_get("Sort Simple Help")
             case "sort_advanced_script":
-                self.help_catalog(12)
                 self.help_get("Sort with Config File Help")
             case "sort_advanced_check":
-                self.help_catalog(13)
                 self.help_get("Sort with Checkboxes Help")
             case "sort_subdir":
-                self.help_catalog(14)
                 self.help_get("Sort Subfolders Help")
             case "sort_advanced_check_box":
-                self.help_catalog(15)
                 self.help_get("Checkboxes Help")
 
     def help_get(self, help_key):
@@ -273,9 +259,10 @@ class help_engine:
         CTkLabel(self.app, text="Help Catalog", font=("Arial", 20), bg_color="#262626", text_color="#eda850").place(x=120, y=10)
         CTkLabel(self.app, text="Select the help you want to see", font=("Arial", 12), bg_color="#262626", text_color="#eda850").place(x=90, y=50)
         CTkLabel(self.app, text="1. Complete Help", font=("Arial", 12), bg_color="#262626", text_color="#eda850").place(x=90, y=90)
+        self.app.mainloop()
 
     def on_closing(self):
-        self.root.destroy()
+        self.app.destroy()
 
 
 class language_engine: # returns the right language part for the requestet language and part
