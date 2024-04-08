@@ -270,7 +270,7 @@ class language_engine: # returns the right language part for the requestet langu
         self.language = language
         self.set_language()
     
-    def set_language(self):
+    def get(self):
         pass
 
 
