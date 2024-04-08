@@ -78,7 +78,7 @@ class app:
         CTkButton(self.root, text="English", command=self.menu,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=190) # TODO: Add language Models
         CTkButton(self.root, text="Deutsch", command=self.menu,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=220)
         CTkCheckBox(self.root, text="Sort Subfolders", variable=button_sub_sort, bg_color="#262626", text_color="#eda850").place(x=140, y=250)
-        CTkButton(self.root, text="?", command=lambda:self.help("sort-sub"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=270, y=250)
+        CTkButton(self.root, text="?", command=lambda:self.help("sort_subdir"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=270, y=250)
         CTkButton(self.root, text="Main Menu", command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color="#262626",fg_color= "#262626").place(x=140, y=300)
         CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="#eda850",font=("Arial", 9), bg_color="#262626").place(x=150, y=350)
         CTkLabel(self.root, text=f"Version {__version__}", text_color="#eda850",font=("Arial", 9), bg_color="#262626").place(x=185, y=370)
@@ -215,43 +215,64 @@ class help_engine:
         match self.menu_item:
             case "help":
                 self.help_catalog(1)
-                print("Help")
             case "simple_main":
                 self.help_catalog(2)
+                self.help_get("Simple Menu Help")
             case "advanced_main":
                 self.help_catalog(3)
+                self.help_get("Advanced Menu Help")
             case "sel_language":
                 self.help_catalog(4)
-            case "sort-sub":
-                self.help_catalog(15)
+                self.help_get("Select Language Help")
             case "sort_file_menu":
                 self.help_catalog(5)
+                self.help_get("Sort with Config File Menu Help")
             case "sort_check_menu":
                 self.help_catalog(6)
+                self.help_get("Sort with Checkboxes Menu Help")
             case "select_simple":
                 self.help_catalog(7)
+                self.help_get("Select Folder Help")
             case "select_advanced_script":
                 self.help_catalog(8)
+                self.help_get("Select Folder Advanced script Help")
             case "select_advanced_script_conf":
                 self.help_catalog(9)
+                self.help_get("Select Config File Help")
             case "select_advanced_check":
                 self.help_catalog(10)
+                self.help_get("Select Advanced Checkbox Folder Help")
             case "sort_simple":
                 self.help_catalog(11)
+                self.help_get("Sort Simple Help")
             case "sort_advanced_script":
                 self.help_catalog(12)
+                self.help_get("Sort with Config File Help")
             case "sort_advanced_check":
                 self.help_catalog(13)
+                self.help_get("Sort with Checkboxes Help")
             case "sort_subdir":
                 self.help_catalog(14)
+                self.help_get("Sort Subfolders Help")
             case "sort_advanced_check_box":
-                self.help_catalog(16)
+                self.help_catalog(15)
+                self.help_get("Checkboxes Help")
 
     def help_get(self, help_key):
         messagebox.showinfo(help_key, self.help_file[help_key])
 
-    def help_catalog(self, case_number): # gets the right help message from a .json file and displays it
-        pass
+    def help_catalog(self, case_number): # Finisch this in version 3.0.1.1 or 2.2.5.1
+        self.app = CTk()
+        self.app.title("Help Catalog")
+        self.app.geometry("400x420")
+        self.app.resizable(False, False)
+        self.app.protocol("WM_DELETE_WINDOW", self.on_closing)
+        self.app.iconbitmap("Cabug-folder-sorter.ico")
+        self.app.config(bg="#262626")
+        self.main_font = CTkFont(family="Helvetica", size=12)
+        CTkLabel(self.app, text="Help Catalog", font=("Arial", 20), bg_color="#262626", text_color="#eda850").place(x=120, y=10)
+        CTkLabel(self.app, text="Select the help you want to see", font=("Arial", 12), bg_color="#262626", text_color="#eda850").place(x=90, y=50)
+        CTkLabel(self.app, text="1. Complete Help", font=("Arial", 12), bg_color="#262626", text_color="#eda850").place(x=90, y=90)
 
     def on_closing(self):
         self.root.destroy()
