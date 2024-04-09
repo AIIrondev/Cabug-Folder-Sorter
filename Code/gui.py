@@ -76,8 +76,8 @@ class app:
         CTkButton(self.root, text="Help", command=lambda:self.help("help"),font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=100)
         CTkLabel(self.root, text="Select a language", font=("Arial", 12), bg_color="#262626", text_color="#eda850").place(x=150, y=150)
         CTkButton(self.root, text="?", command=lambda:self.help("sel_language"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=270, y=150)
-        CTkButton(self.root, text="English", command=self.menu,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=190) # TODO: Add language Models
-        CTkButton(self.root, text="Deutsch", command=self.menu,font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=220)
+        CTkButton(self.root, text="English", command=lambda:self.language_change("en"),font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=190) # TODO: Add language Models
+        CTkButton(self.root, text="Deutsch", command=lambda:self.language_change("de"),font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=220)
         CTkCheckBox(self.root, text=language_engine(5), variable=button_sub_sort, bg_color="#262626", text_color="#eda850").place(x=140, y=250)
         CTkButton(self.root, text="?", command=lambda:self.help("sort_subdir"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=270, y=250)
         CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color="#262626",fg_color= "#262626").place(x=140, y=300)
@@ -189,6 +189,10 @@ class app:
     def reset(self):
         for widget in self.root.winfo_children():
             widget.destroy()
+            
+    def language_change(self, language):
+        global __language__
+        __language__ = language
 
 
 class help_engine:
@@ -254,11 +258,11 @@ class help_engine:
 
 
 def language_engine(part):
-    with open(language_file, "r") as f:
+    with open(language_file, "r", encoding='utf-8') as f: 
         language_import = {}
         language_import = json.load(f)
         language_active = language_import[__language__]
-        language_active = language_active(1)
+        language_active = language_active[part]
         return language_active
 
 

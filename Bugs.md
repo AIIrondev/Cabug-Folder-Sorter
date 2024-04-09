@@ -153,6 +153,61 @@ def sort_advanced_menu_script(self):
     CTkLabel(self.root, text=f"Version {__version__}", text_color="Blue",font=("Arial", 9)).place(x=185, y=370)
 ```
 
+### TypeError: 'list' object is not callable
+
+This Error accured because acidently try'd to call via an () instead of [] and left a placeholder thing.
+
+Before:
+```python
+def language_engine(part):
+    with open(language_file, "r") as f:
+        language_import = {}
+        language_import = json.load(f)
+        language_active = language_import[__language__]
+        language_active = language_active(1)
+        return language_active
+```
+
+After:
+
+```python
+def language_engine(part):
+    with open(language_file, "r") as f:
+        language_import = {}
+        language_import = json.load(f)
+        language_active = language_import[__language__]
+        language_active = language_active[part]
+        return language_active
+```
+
+### UnicodeDecodeError: 'charmap' codec can't decode byte 0x81 in position 2280: character maps to <undefined>
+
+The error message indicates that the Python interpreter is unable to decode a character at position 2280 in your JSON file because it doesn't map to a valid character in the 'charmap' codec. This usually happens when the file contains non-ASCII characters and it's being read using the default encoding.
+
+Before:
+
+```python
+def language_engine(part):
+    with open(language_file, "r") as f: 
+        language_import = {}
+        language_import = json.load(f)
+        language_active = language_import[__language__]
+        language_active = language_active[part]
+        return language_active
+```
+
+After:
+
+```python
+def language_engine(part):
+    with open(language_file, "r", encoding='utf-8') as f: 
+        language_import = {}
+        language_import = json.load(f)
+        language_active = language_import[__language__]
+        language_active = language_active[part]
+        return language_active
+```
+
 ## User Interface
 
 ### `str` object is not callable for habtic featback 1.2.2.4
