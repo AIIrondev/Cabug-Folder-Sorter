@@ -277,7 +277,7 @@ class sort:
             if button_sub_sort.get():
                 sorting_subdir(self.folder_path, file_ending)
             else:
-                sorting_normal(self.folder_path, file_ending)
+                sorting_normal( file_ending)
 
 
 class sort_advanced_script: # get file ending dict as .json file
@@ -290,9 +290,9 @@ class sort_advanced_script: # get file ending dict as .json file
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder):
             if button_sub_sort.get():
-                sorting_subdir(self.folder_path, file_ending)
+                sorting_subdir(self.folder, file_ending_conf)
             else:
-                sorting_normal(self.folder_path, file_ending)
+                sorting_normal(file_ending_conf)
 
     def sort_advanced(self):
         self.count_elements = 1
@@ -331,7 +331,7 @@ class advanced_sort:
             if button_sub_sort.get():
                 sorting_subdir(self.folder_path, self.file_ending_)
             else:
-                sorting_normal(self.folder_path, self.file_ending_)
+                sorting_normal(self.file_ending_)
 
     def prepare(self):
         self.file_ending_ = {
@@ -392,6 +392,12 @@ class sorting_normal:
                             os.makedirs(os.path.join(self.folder_path, key))
                         shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
                         break
+                    elif key == "Other":
+                        if not os.path.exists(os.path.join(self.folder_path, "Other")):
+                            os.makedirs(os.path.join(self.folder_path, "Other"))
+                        shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, "Other", file))
+                        self.count_elements += 1
+                        break
         messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
 
 
@@ -442,6 +448,12 @@ class sorting_subdir:
                             if not os.path.exists(os.path.join(self.folder_path, key)):
                                 os.makedirs(os.path.join(self.folder_path, key))
                             shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
+                            self.count_elements += 1
+                            break
+                        elif key == "Other":
+                            if not os.path.exists(os.path.join(self.folder_path, "Other")):
+                                os.makedirs(os.path.join(self.folder_path, "Other"))
+                            shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, "Other", file))
                             self.count_elements += 1
                             break
                     except:
