@@ -68,7 +68,7 @@ class app:
         CTkButton(self.root, text="?", command=lambda:self.help("advanced_main"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=340, y=195)
         CTkButton(self.root, text=language_engine(3), command=self.on_closing, width=140, height=60, font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color="Red", bg_color="#262626",fg_color= "#262626").place(x=140, y=250)
         CTkLabel(self.root, text="by Maximilian Gründinger 2024",font=("Arial", 9), bg_color="#262626", text_color="#eda850").place(x=150, y=40)
-        print(button_sub_sort)
+        button_sub_sort.get()
 
     def menu_options(self):
         self.reset()
@@ -84,7 +84,7 @@ class app:
         CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color="#262626",fg_color= "#262626").place(x=140, y=300)
         CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="#eda850",font=("Arial", 9), bg_color="#262626").place(x=150, y=350)
         CTkLabel(self.root, text=f"Version {__version__}", text_color="#eda850",font=("Arial", 9), bg_color="#262626").place(x=185, y=370)
-        print(button_sub_sort)
+        button_sub_sort.get()
 
     def simple_mode(self):
         self.reset()
@@ -191,7 +191,7 @@ class app:
     def reset(self):
         for widget in self.root.winfo_children():
             widget.destroy()
-            
+
     def language_change(self, language):
         global __language__
         __language__ = language
@@ -274,10 +274,10 @@ class sort:
         if self.folder_path == "":
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder_path):
-            if button_sub_sort:
-                sorting_subdir(self.folder_path)
+            if button_sub_sort.get():
+                sorting_subdir(self.folder_path, file_ending)
             else:
-                sort_files_normal(self.folder_path)
+                sorting_normal(self.folder_path, file_ending)
 
 
 class sort_advanced_script: # get file ending dict as .json file
@@ -289,14 +289,13 @@ class sort_advanced_script: # get file ending dict as .json file
         if self.folder == "":
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder):
-            if button_sub_sort:
-                sorting_subdir(self.folder)
+            if button_sub_sort.get():
+                sorting_subdir(self.folder_path, file_ending)
             else:
-                sort_files_normal(self.folder)
+                sorting_normal(self.folder_path, file_ending)
 
     def sort_advanced(self):
         self.count_elements = 1
-        
         for file in os.listdir(self.folder):
             if os.path.isdir(os.path.join(self.folder, file)):
                 continue
@@ -329,10 +328,10 @@ class advanced_sort:
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder_path):
             self.prepare()
-            if button_sub_sort:
-                sorting_subdir(self.folder_path)
+            if button_sub_sort.get():
+                sorting_subdir(self.folder_path, self.file_ending_)
             else:
-                sort_files_normal(self.folder_path)
+                sorting_normal(self.folder_path, self.file_ending_)
 
     def prepare(self):
         self.file_ending_ = {
@@ -370,7 +369,7 @@ class advanced_sort:
             self.file_ending_["Fonts"] = file_ending["Fonts"]
         if self.Other:
             self.file_ending_["Other"] = file_ending["Other"]
-        
+
 
 class sorting_normal:
     def __init__(self, file_endings):
@@ -378,7 +377,7 @@ class sorting_normal:
         if self.folder_path == "":
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder_path):
-            sort_files_normal(file_endings)
+            self.sort_files_normal(file_endings)
 
     def sort_files_normal(self, file_endings):
         self.count_elements = 1
@@ -397,23 +396,49 @@ class sorting_normal:
 
 
 class sorting_subdir:
-    def __init__(self, file_endings):
-        self.folder_path = folder_to_sort
+    def __init__(self, folder_path, file_endings):
+        self.count_elements = 1
+        self.folder_path = folder_path
         if self.folder_path == "":
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder_path):
-            self.sort_files(file_endings)
+            match file_endings:
+                case "Images":
+                    pass
+                case "Videos":
+                    pass
+                case "Audio":
+                    pass
+                case "Documents":
+                    pass
+                case "Archives":
+                    pass
+                case "3D Models":
+                    pass
+                case "PCB":
+                    pass
+                case "Code":
+                    pass
+                case "Executables":
+                    pass
+                case "Fonts":
+                    pass
+                case "Other":
+                    pass
+                case _:
+                    self.sort_files_subdir(file_endings)
 
     def sort_files_subdir(self, file_endings):
         for file in os.listdir(self.folder_path):
-            if os.path.isdir(os.path.join(self.folder_path, file)):
-                sorting_subdir()
+            file_path = os.path.join(self.folder_path, file)
+            if os.path.isdir(file_path):
+                sorting_subdir(file_path, file_endings)
             else:
-                for key in self.file_ending_:
+                for key in file_endings:
                     try:
-                        if self.file_ending_[key] == []:
+                        if file_endings[key] == []:
                             continue
-                        elif file.endswith(tuple(self.file_ending_[key])):
+                        elif file.endswith(tuple(file_endings[key])):
                             if not os.path.exists(os.path.join(self.folder_path, key)):
                                 os.makedirs(os.path.join(self.folder_path, key))
                             shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))

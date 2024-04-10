@@ -158,6 +158,7 @@ def sort_advanced_menu_script(self):
 This Error accured because acidently try'd to call via an () instead of [] and left a placeholder thing.
 
 Before:
+
 ```python
 def language_engine(part):
     with open(language_file, "r") as f:
@@ -206,6 +207,138 @@ def language_engine(part):
         language_active = language_import[__language__]
         language_active = language_active[part]
         return language_active
+```
+
+### TypeError: sorting_subdir.__init__() missing 1 required positional argument: 'file_endings' v2.0.2.4
+
+This error accured because I forgot to add the `file_endings` argument to the `sorting_subdir` class.
+
+Before:
+
+```python
+class sorting_subdir:
+    def __init__(self, file_endings):
+        self.folder_path = folder_to_sort
+        if self.folder_path == "":
+            messagebox.showerror("Folder Sorter", "Please select a folder")
+        elif os.path.exists(self.folder_path):
+            self.sort_files_subdir(file_endings)
+
+    def sort_files_subdir(self, file_endings):
+        for file in os.listdir(self.folder_path):
+            if os.path.isdir(os.path.join(self.folder_path, file)):
+                sorting_subdir() # <- Error
+            else:
+                for key in file_endings:
+                    try:
+                        if file_endings[key] == []:
+                            continue
+                        elif file.endswith(tuple(file_endings[key])):
+                            if not os.path.exists(os.path.join(self.folder_path, key)):
+                                os.makedirs(os.path.join(self.folder_path, key))
+                            shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
+                            self.count_elements += 1
+                            break
+                    except:
+                        pass
+        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
+```
+
+After:
+
+```python
+class sorting_subdir:
+    def __init__(self, file_endings):
+        self.folder_path = folder_to_sort
+        if self.folder_path == "":
+            messagebox.showerror("Folder Sorter", "Please select a folder")
+        elif os.path.exists(self.folder_path):
+            self.sort_files_subdir(file_endings)
+
+    def sort_files_subdir(self, file_endings):
+        for file in os.listdir(self.folder_path):
+            if os.path.isdir(os.path.join(self.folder_path, file)):
+                sorting_subdir(file_endings)
+            else:
+                for key in file_endings:
+                    try:
+                        if file_endings[key] == []:
+                            continue
+                        elif file.endswith(tuple(file_endings[key])):
+                            if not os.path.exists(os.path.join(self.folder_path, key)):
+                                os.makedirs(os.path.join(self.folder_path, key))
+                            shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
+                            self.count_elements += 1
+                            break
+                    except:
+                        pass
+        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
+```
+
+### RecursionError: maximum recursion depth exceeded while calling a Python object v2.0.2.5
+
+This error accured because I was calling the `sorting_subdir` class in the `sort_files_subdir` function.
+
+Before:
+
+```python
+class sorting_subdir:
+    def __init__(self, file_endings):
+        self.folder_path = folder_to_sort
+        if self.folder_path == "":
+            messagebox.showerror("Folder Sorter", "Please select a folder")
+        elif os.path.exists(self.folder_path):
+            self.sort_files_subdir(file_endings)
+
+    def sort_files_subdir(self, file_endings):
+        for file in os.listdir(self.folder_path):
+            if os.path.isdir(os.path.join(self.folder_path, file)):
+                sorting_subdir(file_endings)
+            else:
+                for key in file_endings:
+                    try:
+                        if file_endings[key] == []:
+                            continue
+                        elif file.endswith(tuple(file_endings[key])):
+                            if not os.path.exists(os.path.join(self.folder_path, key)):
+                                os.makedirs(os.path.join(self.folder_path, key))
+                            shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
+                            self.count_elements += 1
+                            break
+                    except:
+                        pass
+        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
+```
+
+After:
+
+```python
+class sorting_subdir:
+    def __init__(self, file_endings):
+        self.folder_path = folder_to_sort
+        if self.folder_path == "":
+            messagebox.showerror("Folder Sorter", "Please select a folder")
+        elif os.path.exists(self.folder_path):
+            self.sort_files_subdir(file_endings)
+
+    def sort_files_subdir(self, file_endings):
+        for file in os.listdir(self.folder_path):
+            if os.path.isdir(os.path.join(self.folder_path, file)):
+                sorting_subdir(file_endings)
+            else:
+                for key in file_endings:
+                    try:
+                        if file_endings[key] == []:
+                            continue
+                        elif file.endswith(tuple(file_endings[key])):
+                            if not os.path.exists(os.path.join(self.folder_path, key)):
+                                os.makedirs(os.path.join(self.folder_path, key))
+                            shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
+                            self.count_elements += 1
+                            break
+                    except:
+                        pass
+        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
 ```
 
 ## User Interface
@@ -270,11 +403,13 @@ def menu(self):
 This error accured because I didn`t define a variabel right:
 
 Before:
+
 ```python
 CTkButton(self.root, text="?", command=lambda:self.help("sort_advanced_check_box"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=330, y=250)
 ```
 
 After:
+
 ```python
 CTkButton(self.root, text="?", command=lambda:self.help("sort_advanced_check_box"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=X_position_2, y=250)
 ```
@@ -330,7 +465,6 @@ elif os.path.exists(self.folder_path):
 ```
 
 ## Other
-
 
 ### AttributeError: `app` object has no attribute `Images` 1.2.2.3
 
