@@ -15,7 +15,7 @@ The unsupportet and has some minor bugs or not released but planed versions are 
 | 1.1.1.1 | :x: | 2024.03.23 | Added advanced option |
 | 1.2.2.4 | :x: | 2024.03.29 | Added an nother advanced option |
 | 2.0.0.0 | ✅ | 2024.03.30 | Added an new look, option Menu and fixed some bugs |
-| 2.1.2.5 | ✅ | 2024.03.31 | Updatet User functionalities and fixed some bugs |
+| 2.1.2.5 | ✅ | 2024.04.10 | Updatet User functionalities and fixed some bugs |
 
 ## Reporting a Vulnerability
 

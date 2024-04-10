@@ -77,11 +77,10 @@ class app:
         CTkButton(self.root, text="Help", command=lambda:self.help("help"),font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=100)
         CTkLabel(self.root, text="Select a language", font=("Arial", 12), bg_color="#262626", text_color="#eda850").place(x=150, y=150)
         CTkButton(self.root, text="?", command=lambda:self.help("sel_language"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=270, y=150)
-        CTkButton(self.root, text="English", command=lambda:self.language_change("en"),font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=190) # TODO: Add language Models
-        CTkButton(self.root, text="Deutsch", command=lambda:self.language_change("de"),font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=220)
-        CTkCheckBox(self.root, text=language_engine(5), variable=button_sub_sort, bg_color="#262626", text_color="#eda850").place(x=140, y=250)
-        CTkButton(self.root, text="?", command=lambda:self.help("sort_subdir"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=270, y=250)
-        CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color="#262626",fg_color= "#262626").place(x=140, y=300)
+        CTkButton(self.root, text="Language Menu", command=lambda:self.language_menu(),font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=250)
+        CTkCheckBox(self.root, text=language_engine(5), variable=button_sub_sort, bg_color="#262626", text_color="#eda850").place(x=140, y=280)
+        CTkButton(self.root, text="?", command=lambda:self.help("sort_subdir"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=270, y=280)
+        CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color="#262626",fg_color= "#262626").place(x=140, y=310)
         CTkLabel(self.root, text=f"© Maximilian Gründinger 2024", text_color="#eda850",font=("Arial", 9), bg_color="#262626").place(x=150, y=350)
         CTkLabel(self.root, text=f"Version {__version__}", text_color="#eda850",font=("Arial", 9), bg_color="#262626").place(x=185, y=370)
         button_sub_sort.get()
@@ -163,6 +162,17 @@ class app:
         CTkButton(self.root, text="?", command=lambda:self.help("select_advanced_script_conf"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=290, y=100)
         CTkButton(self.root, text=language_engine(8), command=lambda: sort_advanced_script(self.folder_path.get(), self.conf_file.get()),font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=140, y=150)
         CTkButton(self.root, text="?", command=lambda:self.help("sort_advanced_script"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=290, y=150)
+        CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color="#262626",fg_color= "#262626").place(x=140, y=300)
+
+    def language_menu(self):
+        self.reset()
+        CTkLabel(self.root, text="Language Menu", font=("Arial", 20), bg_color="#262626", text_color="#eda850").place(x=60, y=10)
+        CTkLabel(self.root, text="Please select the language you want to use:", font=("Arial", 16), bg_color="#262626", text_color="#eda850").place(x=60, y=30)
+        CTkButton(self.root, text="English", command=lambda:self.language_change("en"),font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=80, y=190)
+        CTkButton(self.root, text="Deutsch", command=lambda:self.language_change("de"),font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=80, y=220)
+        CTkButton(self.root, text="spanisch", command=lambda:self.language_change("es"),font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=200, y=190)
+        CTkButton(self.root, text="japanese", command=lambda:self.language_change("ja"),font=self.main_font,text_color="#eda850",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "#eda850", bg_color="#262626",fg_color= "#262626").place(x=200, y=220)
+        CTkButton(self.root, text="?", command=lambda:self.help("language_menu"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=290, y=50)
         CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color="#262626",fg_color= "#262626").place(x=140, y=300)
 
     def sort_advanced(self):
