@@ -186,16 +186,19 @@ class app:
     def select_color_background(self):
         global color_background
         color_background = askcolor()[1]
+        self.root.config(bg=color_background)
 
     def select_main_color(self):
         global color_main
         color_main = askcolor()[1]
+        self.root.config(bg=color_background)
     
     def reset_colors(self):
         global color_background
         global color_main
         color_background = "#262626"
         color_main = "#eda850"
+        self.root.config(bg=color_background)
     
     def sort_advanced(self):
         advanced_sort(self.Images.get(), self.Videos.get(), self.Audio.get(), self.Documents.get(), self.Archives.get(), self.Models.get(), self.PCB.get(), self.Code.get(), self.Executables.get(), self.Fonts.get(), self.Other.get())
