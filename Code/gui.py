@@ -1,4 +1,4 @@
-#folder sorter
+# Cabug Folder Sorter
 import os
 import shutil
 from customtkinter import *

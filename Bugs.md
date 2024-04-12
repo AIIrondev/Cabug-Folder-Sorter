@@ -414,6 +414,49 @@ After:
 CTkButton(self.root, text="?", command=lambda:self.help("sort_advanced_check_box"),width=15, height=20, bg_color="#262626",fg_color= "#262626",hover=True, hover_color="#262626", border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=X_position_2, y=250)
 ```
 
+### Color background corection error v2.1.3.6
+
+This accured because I forgot to update the background color.
+
+Before:
+
+```python
+    def select_color_background(self):
+        global color_background
+        color_background = askcolor()[1]
+
+    def select_main_color(self):
+        global color_main
+        color_main = askcolor()[1]
+    
+    def reset_colors(self):
+        global color_background
+        global color_main
+        color_background = "#262626"
+        color_main = "#eda850"
+```
+
+After:
+
+```python
+    def select_color_background(self):
+        global color_background
+        color_background = askcolor()[1]
+        self.root.config(bg=color_background)
+
+    def select_main_color(self):
+        global color_main
+        color_main = askcolor()[1]
+        self.root.config(bg=color_background)
+    
+    def reset_colors(self):
+        global color_background
+        global color_main
+        color_background = "#262626"
+        color_main = "#eda850"
+        self.root.config(bg=color_background)
+```
+
 ## Critical
 
 ## Unimportant
