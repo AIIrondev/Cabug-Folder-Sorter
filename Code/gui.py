@@ -11,10 +11,11 @@ from PIL import Image
 
 # Global Variables
 folder_to_sort = ""
-conf_file = ""
 help_file = "help.json"
 language_file = "language.json"
 subfolders = ""
+conf_file = "conf.json"
+sort_subdir = False
 __language__ = "en"
 __version__ = "1.0.1.1"
 color_background = "#262626"
@@ -36,8 +37,14 @@ file_ending = {
 
 
 try:
-    with open("version", "r") as f:
-        __version__ = f.read()
+    with open(conf_file, "r") as f:
+        json_file = json.load(f)
+        version = json_file["version"]
+        __version__ = version
+        sort_subdir = json_file["sort_subdir"]
+        color_background = json_file["color_background"]
+        color_main = json_file["color_main"]
+        __language__ = json_file["active_lang"]
 except:
     pass
 
@@ -191,11 +198,15 @@ class app:
         global color_background
         color_background = askcolor()[1]
         self.root.config(bg=color_background)
+        with open(conf_file, "w") as f:
+            json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main}, f)
 
     def select_main_color(self):
         global color_main
         color_main = askcolor()[1]
         self.root.config(bg=color_background)
+        with open(conf_file, "w") as f:
+            json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main}, f)
     
     def reset_colors(self):
         global color_background
@@ -203,6 +214,8 @@ class app:
         color_background = "#262626"
         color_main = "#eda850"
         self.root.config(bg=color_background)
+        with open(conf_file, "w") as f:
+            json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main}, f)
     
     def sort_advanced(self):
         advanced_sort(self.Images.get(), self.Videos.get(), self.Audio.get(), self.Documents.get(), self.Archives.get(), self.Models.get(), self.PCB.get(), self.Code.get(), self.Executables.get(), self.Fonts.get(), self.Other.get())
@@ -234,6 +247,10 @@ class app:
     def language_change(self, language):
         global __language__
         __language__ = language
+        
+    def __del__(self):# save on closing
+        with open(conf_file, "w") as f:
+            json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main, "active_lang": __language__}, f)
 
 
 class help_engine:
