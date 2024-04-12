@@ -180,7 +180,11 @@ class app:
         CTkButton(self.root, text="Deutsch", command=lambda:self.language_change("de"),font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=70, y=130)
         CTkButton(self.root, text="spanisch", command=lambda:self.language_change("es"),font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=210, y=100)
         CTkButton(self.root, text="japanese", command=lambda:self.language_change("ja"),font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=210, y=130)
-        CTkButton(self.root, text="?", command=lambda:self.help("language_menu"),width=15, height=20, bg_color=color_background,fg_color= color_background,hover=True, hover_color=color_background, border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=200, y=260)
+        CTkButton(self.root, text="Svedisch", command=lambda:self.language_change("sv"),font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=210, y=130)
+        CTkButton(self.root, text="portugiesisch", command=lambda:self.language_change("pt"),font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=210, y=130)
+        CTkButton(self.root, text="russian", command=lambda:self.language_change("ru"),font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=210, y=130)
+        CTkButton(self.root, text="französisch", command=lambda:self.language_change("fr"),font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=210, y=130)
+        CTkButton(self.root, text="?", command=lambda:self.help("language menu"),width=15, height=20, bg_color=color_background,fg_color= color_background,hover=True, hover_color=color_background, border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=200, y=260)
         CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color=color_background,fg_color= color_background).place(x=140, y=300)
 
     def select_color_background(self):
@@ -272,6 +276,8 @@ class help_engine:
                 self.help_get("Sort Subfolders Help")
             case "sort_advanced_check_box":
                 self.help_get("Checkboxes Help")
+            case "language menu":
+                self.help_get("Language Menu Help")
 
     def help_get(self, help_key):
         messagebox.showinfo(help_key, self.help_file[help_key])
