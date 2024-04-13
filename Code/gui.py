@@ -196,18 +196,37 @@ class app:
 
     def select_color_background(self):
         global color_background
-        color_background = askcolor()[1]
-        self.root.config(bg=color_background)
-        with open(conf_file, "w") as f:
-            json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main}, f)
+        try:
+            color_background = askcolor()[1]
+            self.root.config(bg=color_background)
+            if color_background == None:
+                color_background = "#262626"
+            with open(conf_file, "w") as f:
+                json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main}, f)
+        except:
+            pass
 
     def select_main_color(self):
-        global color_main
-        color_main = askcolor()[1]
-        self.root.config(bg=color_background)
-        with open(conf_file, "w") as f:
-            json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main}, f)
-    
+        try:
+            global color_main
+            color_main = askcolor()[1]
+            self.root.config(bg=color_background)
+            if color_background == None:
+                    color_background = "#eda850"
+            with open(conf_file, "w") as f:
+                json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main}, f)
+        except:
+            pass
+
+    def ask_sort_subdir(self):
+        global button_sub_sort
+        if button_sub_sort.get():
+            pass
+        else:
+            ask = messagebox.askyesno("Folder Sorter", "Do you want to sort the subfolders too?")
+            if ask:
+                button_sub_sort.set(True)
+
     def reset_colors(self):
         global color_background
         global color_main
@@ -216,7 +235,7 @@ class app:
         self.root.config(bg=color_background)
         with open(conf_file, "w") as f:
             json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main}, f)
-    
+
     def sort_advanced(self):
         advanced_sort(self.Images.get(), self.Videos.get(), self.Audio.get(), self.Documents.get(), self.Archives.get(), self.Models.get(), self.PCB.get(), self.Code.get(), self.Executables.get(), self.Fonts.get(), self.Other.get())
 
@@ -247,7 +266,7 @@ class app:
     def language_change(self, language):
         global __language__
         __language__ = language
-        
+
     def __del__(self):# save on closing
         with open(conf_file, "w") as f:
             json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main, "active_lang": __language__}, f)
