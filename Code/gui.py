@@ -102,6 +102,7 @@ class app:
 
     def simple_mode(self):
         self.reset()
+        self.ask_sort_subdir()
         self.folder_path = StringVar()
         self.folder_path.set("")
         CTkLabel(self.root, text=language_engine(28), font=("Arial", 20), bg_color=color_background, text_color=color_main).place(x=90, y=10)
@@ -113,6 +114,7 @@ class app:
 
     def sort_advanced_menu(self):
         self.reset()
+        self.ask_sort_subdir()
         heeight = 70
         wieght = 240
         CTkLabel(self.root, text=language_engine(12), font=("Arial", 20), bg_color=color_background, text_color=color_main).place(x=70, y=10)
@@ -125,6 +127,7 @@ class app:
 
     def advanced_mode(self):
         self.reset()
+        self.ask_sort_subdir()
         # Variables
         self.folder_path = StringVar()
         self.folder_path.set("")
