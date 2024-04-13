@@ -1,4 +1,4 @@
-# The folder sorter v2.1.3.6
+# The folder sorter v2.2.4.7
 
 [![Python application](https://github.com/AIIrondev/Cabug-Folder-sorter/actions/workflows/main.yml/badge.svg)](https://github.com/AIIrondev/Cabug-Folder-sorter/actions/workflows/main.yml)
 
