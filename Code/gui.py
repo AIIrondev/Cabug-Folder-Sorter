@@ -208,8 +208,8 @@ class app:
         pass
 
     def select_color_background(self):
-        global color_background
         try:
+            global color_background
             color_background = askcolor()[1]
             self.root.config(bg=color_background)
             if color_background == None:
