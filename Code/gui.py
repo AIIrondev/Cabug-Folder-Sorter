@@ -198,9 +198,9 @@ class app:
         self.reset()
         CTkLabel(self.root, text="Color Menu", font=("Arial", 20), bg_color=color_background, text_color=color_main).place(x=130, y=10)
         CTkLabel(self.root, text="Please select the color you want to use:", font=("Arial", 16), bg_color=color_background, text_color=color_main).place(x=50, y=40)
-        CTkButton(self.root, text="Select Background color", command=self.select_color_background,font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=90, y=100)
-        CTkButton(self.root, text="Select Text color", command=self.select_main_color,font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=90, y=130)
-        CTkButton(self.root, text="Reset Colors", command=self.reset_colors,font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=90, y=160)
+        CTkButton(self.root, text="Select Background color", command=self.select_color_background,font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=140, y=100)
+        CTkButton(self.root, text="Select Text color", command=self.select_main_color,font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=140, y=130)
+        CTkButton(self.root, text="Reset Colors", command=self.reset_colors,font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=140, y=160)
         CTkButton(self.root, text="?", command=lambda:self.help("color_menu"),width=15, height=20, bg_color=color_background,fg_color= color_background,hover=True, hover_color=color_background, border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=200, y=260)
         CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color=color_background,fg_color= color_background).place(x=140, y=340)
 
@@ -283,6 +283,11 @@ class app:
     def __del__(self):# save on closing
         with open(conf_file, "w") as f:
             json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main, "active_lang": __language__}, f)
+
+
+class statistics:
+    def __init__(self):
+        self.data = {}
 
 
 class help_engine:
