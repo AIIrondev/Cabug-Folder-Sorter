@@ -60,12 +60,16 @@ class app:
         self.main_font = CTkFont(family="Helvetica", size=12)
         self.root.config(bg=color_background)
         global button_sub_sort
+        global button_stat_sort
         button_sub_sort = BooleanVar() # The value of the checkbox that decides if the subfolders should be sorted or not
+        button_stat_sort = BooleanVar() # The value of the checkbox that decides if the statistics should be generated or not
         # Template: CTkButton(,font=self.main_font,text_color_background=color_main,hover=True,hover_color_background="black",border_width=2,corner_radius=3,border_color_background= color_main, bg_color_background=color_background,fg_color_background= color_background)
         self.menu() 
         self.root.mainloop()
 
     def menu(self):
+        if button_stat_sort.get():
+            statistics.initialise()
         self.option_image = CTkImage(light_image=Image.open("option.png"),size=(40, 40))
         self.reset()
         heeight = 70
@@ -90,6 +94,7 @@ class app:
         CTkButton(self.root, text="?", command=lambda:self.help("sel_language"),width=15, height=20, bg_color=color_background,fg_color= color_background,hover=True, hover_color=color_background, border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=270, y=120)
         CTkButton(self.root, text="Language Menu", command=lambda:self.language_menu(),font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=140, y=150)
         CTkButton(self.root, text="Color Menu", command=lambda:self.color_menu(),font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=140, y=180)
+        CTkButton(self.root, text="Statistics", command=self.statistics,font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=140, y=210)
         CTkCheckBox(self.root, text=language_engine(5), variable=button_sub_sort, bg_color=color_background, text_color=color_main).place(x=140, y=300)
         CTkButton(self.root, text="?", command=lambda:self.help("sort_subdir"),width=15, height=20, bg_color=color_background,fg_color= color_background,hover=True, hover_color=color_background, border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=270, y=300)
         CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color=color_background,fg_color= color_background).place(x=140, y=330)
@@ -205,14 +210,20 @@ class app:
         CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color=color_background,fg_color= color_background).place(x=140, y=340)
 
     def statistics(self):
-        pass
+        self.reset()
+        CTkLabel(self.root, text="Statistics", font=("Arial", 20), bg_color=color_background, text_color=color_main).place(x=130, y=10)
+        CTkLabel(self.root, text="Here will be the statistics", font=("Arial", 16), bg_color=color_background, text_color=color_main).place(x=50, y=40)
+        CTkButton(self.root, text="generate statistics", command=statistics.generate,font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=140, y=100)
+        CTkCheckBox(self.root, text="Activate Statistics", variable=button_stat_sort, bg_color=color_background, text_color=color_main).place(x=140, y=150)
+        CTkButton(self.root, text="?", command=lambda:self.help("statistics"),width=15, height=20, bg_color=color_background,fg_color= color_background,hover=True, hover_color=color_background, border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=200, y=260)
+        CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color=color_background,fg_color= color_background).place(x=140, y=300)
 
     def select_color_background(self):
         try:
-            global color_background
             color_background = askcolor()[1]
+            self.color_background = color_background
             self.root.config(bg=color_background)
-            if color_background == None:
+            if self.color_background == None:
                 color_background = "#262626"
             with open(conf_file, "w") as f:
                 json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main}, f)
@@ -221,7 +232,6 @@ class app:
 
     def select_main_color(self):
         try:
-            global color_main
             color_main = askcolor()[1]
             self.root.config(bg=color_background)
             if color_background == None:
@@ -232,7 +242,6 @@ class app:
             pass
 
     def ask_sort_subdir(self):
-        global button_sub_sort
         if button_sub_sort.get():
             pass
         else:
@@ -241,8 +250,6 @@ class app:
                 button_sub_sort.set(True)
 
     def reset_colors(self):
-        global color_background
-        global color_main
         color_background = "#262626"
         color_main = "#eda850"
         self.root.config(bg=color_background)
@@ -282,12 +289,16 @@ class app:
 
     def __del__(self):# save on closing
         with open(conf_file, "w") as f:
-            json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main, "active_lang": __language__}, f)
+            json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main, "active_lang": __language__, "stats": button_stat_sort.get()}, f)
 
 
-class statistics:
-    def __init__(self):
-        self.data = {}
+class statistics:        
+    def generate():
+        pass
+
+    def initialise():
+        with open(stat_file, "w") as f:
+            json.dump({"count_folder_sortet": "0", "count_file_sortet": "0", "count_file_type": [("Images", "0"),("Videos", "0")]}, f) # append the statistics to the file
 
 
 class help_engine:
