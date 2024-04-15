@@ -345,6 +345,8 @@ class help_engine:
                 self.help_get("Language Menu Help")
             case "color_menu":
                 self.help_get("Color Menu Help")
+            case "statistics":
+                self.help_get("Statistics Help")
 
     def help_get(self, help_key):
         messagebox.showinfo(help_key, self.help_file[help_key])

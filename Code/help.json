@@ -14,6 +14,7 @@
     "Sort Subfolders Help": "If you check this checkbox, the program will sort every subfolder within the selected folder; otherwise, it will ignore them.",
     "Checkboxes Help": "Here, you can check every category that you'd like to sort.",
     "Language Menu Help": "In this menu, you can select the language for the program.",
-    "Color Menu Help": "In this menu, you can select the color for the program."
+    "Color Menu Help": "In this menu, you can select the color for the program.",
+    "Statistics Help": "This will show you the statistics of the sorting process."
   }
   
