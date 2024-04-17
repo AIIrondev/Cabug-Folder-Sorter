@@ -235,8 +235,8 @@ class app:
         try:
             color_main = askcolor()[1]
             self.root.config(bg=color_background)
-            if color_background == None:
-                    color_background = "#eda850"
+            if color_main == None:
+                color_main = "#eda850"
             with open(conf_file, "w") as f:
                 json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main}, f)
         except:
