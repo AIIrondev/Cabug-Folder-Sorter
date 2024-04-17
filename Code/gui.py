@@ -7,6 +7,7 @@ from tkinter import messagebox
 from tkinter.colorchooser import askcolor
 import json
 from PIL import Image
+import matplotlib.pyplot as plt
 
 
 # Global Variables
@@ -292,9 +293,47 @@ class app:
             json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main, "active_lang": __language__, "stats": button_stat_sort.get()}, f)
 
 
-class statistics:        
-    def generate():
-        pass
+class statistics:
+    def __init__(self):
+        if button_stat_sort.get():
+            if os.path.exists(stat_file):
+                self.load()
+            else:
+                self.initialise()
+            with open(stat_file, "r") as f:
+                self.stat_file = json.load(f)
+            self.count_folder_sortet = self.stat_file["count_folder_sortet"]
+            self.count_file_sortet = self.stat_file["count_file_sortet"]
+            self.count_file_type = self.stat_file["count_file_type"]
+
+    def generate(self):
+        # Create a new figure
+        plt.figure()
+
+        # Create a bar plot for count_file_type
+        file_types, counts = zip(*self.count_file_type)
+        plt.bar(file_types, counts)
+        plt.title('File Types')
+        plt.xlabel('Type')
+        plt.ylabel('Count')
+        plt.savefig('file_types.png')
+        plt.clf()
+
+        # Create a bar plot for count_file_sortet
+        plt.bar(['Files Sorted'], [self.count_file_sortet])
+        plt.title('Files Sorted')
+        plt.xlabel('Category')
+        plt.ylabel('Count')
+        plt.savefig('files_sorted.png')
+        plt.clf()
+
+        # Create a bar plot for count_folder_sortet
+        plt.bar(['Folders Sorted'], [self.count_folder_sortet])
+        plt.title('Folders Sorted')
+        plt.xlabel('Category')
+        plt.ylabel('Count')
+        plt.savefig('folders_sorted.png')
+        plt.clf()
 
     def initialise():
         with open(stat_file, "w") as f:
