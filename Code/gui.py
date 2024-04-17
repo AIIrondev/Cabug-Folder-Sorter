@@ -234,6 +234,7 @@ class app:
     def select_main_color(self):
         try:
             color_main = askcolor()[1]
+            color_background = color_main
             self.root.config(bg=color_background)
             if color_main == None:
                 color_main = "#eda850"
