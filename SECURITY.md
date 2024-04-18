@@ -16,9 +16,9 @@ The unsupportet and has some minor bugs or not released but planed versions are 
 | 1.0.0.0 | ✅ | 2024.03.24 | Versions fix from 0.1.3.2 -> better and more stabel version |
 | 1.1.1.1 | :x: | 2024.03.23 | Added advanced option |
 | 1.2.2.4 | :x: | 2024.03.29 | Added an nother advanced option |
-| 2.0.0.0 | ✅ | 2024.03.30 | Added an new look, option Menu and fixed some bugs |
-| 2.1.3.5 | :x: | 2024.04.10 | Updatet User functionalities and fixed some bugs |
-| 2.2.4.7 | ✅ | 2024.04.13 | Added conf.json and fixed bugs |
+| 2.0.0 | ✅ | 2024.03.30 | Added an new look, option Menu and fixed some bugs |
+| 2.1.0 | :x: | 2024.04.10 | Updatet User functionalities and fixed some bugs |
+| 2.2.0 | ✅ | 2024.04.13 | Added conf.json and fixed bugs |
 
 ## Reporting a Vulnerability
 
