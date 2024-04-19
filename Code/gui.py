@@ -17,6 +17,7 @@ language_file = "language.json"
 subfolders = ""
 conf_file = "conf.json"
 sort_subdir = False
+stat_file = "statistics.json"
 __language__ = "en"
 __version__ = "1.0.1.1"
 color_background = "#262626"
@@ -306,10 +307,6 @@ class statistics:
             self.count_folder_sortet = self.stat_file["count_folder_sortet"]
             self.count_file_sortet = self.stat_file["count_file_sortet"]
             self.count_file_type = self.stat_file["count_file_type"]
-
-    def actualise(self):
-        self.count_folder_sortet += 1
-        self.count_file_sortet += 1
 
     def load(self):
         with open(stat_file, "r") as f:
