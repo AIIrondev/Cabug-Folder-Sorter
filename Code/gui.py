@@ -23,6 +23,9 @@ __version__ = "1.0.1.1"
 color_background = "#262626"
 color_main = "#eda850"
 color_help = "white"
+count_file_sortet_add = 0
+count_folder_sortet_add = 0
+count_file_type_add = {}
 file_ending = {
     "Images": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff", ".webp", ".svg", ".ico"],
     "Videos": [".mp4", ".mkv", ".webm", ".flv", ".avi", ".mov", ".wmv", ".mpg", ".mpeg", ".3gp", ".3g2"],
@@ -106,7 +109,6 @@ class app:
 
     def simple_mode(self):
         self.reset()
-        self.ask_sort_subdir()
         self.folder_path = StringVar()
         self.folder_path.set("")
         CTkLabel(self.root, text=language_engine(28), font=("Arial", 20), bg_color=color_background, text_color=color_main).place(x=90, y=10)
@@ -115,10 +117,10 @@ class app:
         CTkButton(self.root, text=language_engine(8), command=sort,font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=140, y=100)
         CTkButton(self.root, text="?", command=lambda:self.help("sort_simple"),width=15, height=20, bg_color=color_background,fg_color= color_background,hover=True, hover_color=color_background, border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=290, y=100)
         CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color=color_background,fg_color= color_background).place(x=140, y=300)
+        self.ask_sort_subdir()
 
     def sort_advanced_menu(self):
         self.reset()
-        self.ask_sort_subdir()
         heeight = 70
         wieght = 240
         CTkLabel(self.root, text=language_engine(12), font=("Arial", 20), bg_color=color_background, text_color=color_main).place(x=70, y=10)
@@ -170,6 +172,7 @@ class app:
         CTkButton(self.root, text=language_engine(8), command=self.sort_advanced,font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=140, y=310)
         CTkButton(self.root, text="?", command=lambda:self.help("sort_advanced_check"),width=15, height=20, bg_color=color_background,fg_color= color_background,hover=True, hover_color=color_background, border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=290, y=315)
         CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color=color_background,fg_color= color_background).place(x=140, y=340)
+        self.ask_sort_subdir()
 
     def sort_advanced_menu_script(self):
         self.reset()
@@ -185,6 +188,7 @@ class app:
         CTkButton(self.root, text=language_engine(8), command=lambda: sort_advanced_script(self.folder_path.get(), self.conf_file.get()),font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=140, y=150)
         CTkButton(self.root, text="?", command=lambda:self.help("sort_advanced_script"),width=15, height=20, bg_color=color_background,fg_color= color_background,hover=True, hover_color=color_background, border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=290, y=150)
         CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color=color_background,fg_color= color_background).place(x=140, y=300)
+        self.ask_sort_subdir()
 
     def language_menu(self):
         self.reset()
@@ -297,6 +301,7 @@ class app:
 
 class statistics:
     def __init__(self):
+        global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
         if button_stat_sort.get():
             if os.path.exists(stat_file):
                 self.load()
@@ -307,6 +312,19 @@ class statistics:
             self.count_folder_sortet = self.stat_file["count_folder_sortet"]
             self.count_file_sortet = self.stat_file["count_file_sortet"]
             self.count_file_type = self.stat_file["count_file_type"]
+        else:
+            pass
+        
+    def save(self):
+        self.count_file_sortet += count_file_sortet_add
+        self.count_folder_sortet += count_folder_sortet_add
+        for i in count_file_type_add:
+            if i in self.count_file_type:
+                self.count_file_type[i] += count_file_type_add[i]
+            else:
+                self.count_file_type[i] = count_file_type_add[i]
+        with open(stat_file, "w") as f:
+            json.dump({"count_folder_sortet": self.count_folder_sortet, "count_file_sortet": self.count_file_sortet, "count_file_type": self.count_file_type}, f)
 
     def load(self):
         with open(stat_file, "r") as f:
@@ -346,7 +364,7 @@ class statistics:
 
     def initialise():
         with open(stat_file, "w") as f:
-            json.dump({"count_folder_sortet": "0", "count_file_sortet": "0", "count_file_type": [("Images", "0"),("Videos", "0")]}, f) # append the statistics to the file
+            json.dump({"count_folder_sortet": 0, "count_file_sortet": 0, "count_file_type": {"Images": 0, "Videos": 0}}, f) # append the statistics to the file
 
 
 class help_engine:
@@ -399,7 +417,7 @@ class help_engine:
     def help_get(self, help_key):
         messagebox.showinfo(help_key, self.help_file[help_key])
 
-    def help_catalog(self, case_number): # TODO: Finisch this in version 3.0.1.1 or 2.2.5.1
+    def help_catalog(self, case_number): # TODO: Finisch this in version 3.0.1.1
         self.app = CTk()
         self.app.title("Help Catalog")
         self.app.geometry("400x420")
@@ -428,10 +446,12 @@ def language_engine(part):
 
 class sort:
     def __init__(self):
+        global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
         self.folder_path = folder_to_sort
         if self.folder_path == "":
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder_path):
+            count_folder_sortet_add += 1
             if button_sub_sort.get():
                 sorting_subdir(self.folder_path, file_ending)
             else:
@@ -440,6 +460,7 @@ class sort:
 
 class sort_advanced_script: # get file ending dict as .json file
     def __init__(self, folder, conf_file):
+        global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
         self.folder = folder
         self.conf_file = conf_file
         with open(conf_file, "r") as f:
@@ -447,25 +468,11 @@ class sort_advanced_script: # get file ending dict as .json file
         if self.folder == "":
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder):
+            count_folder_sortet_add += 1
             if button_sub_sort.get():
                 sorting_subdir(self.folder, file_ending_conf)
             else:
                 sorting_normal(file_ending_conf)
-
-    def sort_advanced(self):
-        self.count_elements = 1
-        for file in os.listdir(self.folder):
-            if os.path.isdir(os.path.join(self.folder, file)):
-                continue
-            else:
-                for key in file_ending_conf:
-                    if file.endswith(tuple(file_ending_conf[key])):
-                        self.count_elements += 1
-                        if not os.path.exists(os.path.join(self.folder, key)):
-                            os.makedirs(os.path.join(self.folder, key))
-                        shutil.move(os.path.join(self.folder, file), os.path.join(self.folder, key, file))
-                        break
-        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {self.folder}.")
 
 
 class advanced_sort:
@@ -482,10 +489,12 @@ class advanced_sort:
         self.Executables = Executables
         self.Fonts = Fonts
         self.Other = Other
+        global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
         if self.folder_path == "":
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder_path):
             self.prepare()
+            count_folder_sortet_add += 1
             if button_sub_sort.get():
                 sorting_subdir(self.folder_path, self.file_ending_)
             else:
@@ -532,6 +541,7 @@ class advanced_sort:
 class sorting_normal:
     def __init__(self, file_endings):
         self.folder_path = folder_to_sort
+        global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
         if self.folder_path == "":
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder_path):
@@ -545,22 +555,27 @@ class sorting_normal:
             else:
                 for key in file_endings:
                     if file.endswith(tuple(file_endings[key])):
+                        count_file_type_add[key] += 1
                         self.count_elements += 1
+                        count_file_sortet_add += 1
                         if not os.path.exists(os.path.join(self.folder_path, key)):
                             os.makedirs(os.path.join(self.folder_path, key))
                         shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
                         break
                     elif key == "Other":
+                        count_file_type_add["Other"] += 1
                         if not os.path.exists(os.path.join(self.folder_path, "Other")):
                             os.makedirs(os.path.join(self.folder_path, "Other"))
                         shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, "Other", file))
                         self.count_elements += 1
+                        count_file_sortet_add += 1
                         break
         messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
 
 
 class sorting_subdir:
     def __init__(self, folder_path, file_endings):
+        global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
         self.count_elements = 1
         self.folder_path = folder_path
         if self.folder_path == "":
@@ -603,16 +618,20 @@ class sorting_subdir:
                         if file_endings[key] == []:
                             continue
                         elif file.endswith(tuple(file_endings[key])):
+                            count_file_type_add[key] += 1
                             if not os.path.exists(os.path.join(self.folder_path, key)):
                                 os.makedirs(os.path.join(self.folder_path, key))
                             shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
                             self.count_elements += 1
+                            count_file_sortet_add += 1
                             break
                         elif key == "Other":
+                            count_file_type_add["Other"] += 1
                             if not os.path.exists(os.path.join(self.folder_path, "Other")):
                                 os.makedirs(os.path.join(self.folder_path, "Other"))
                             shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, "Other", file))
                             self.count_elements += 1
+                            count_file_sortet_add += 1
                             break
                     except:
                         pass

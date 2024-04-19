@@ -341,6 +341,17 @@ class sorting_subdir:
         messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
 ```
 
+### UnboundLocalError: cannot access local variable 'count_folder_sortet_add' where it is not associated with a value | Bug: 1
+
+This error accured because I didn't declare the variable global.
+
+After:
+
+```python
+# added The following line of code in the apropriate positions
+global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
+```
+
 ## User Interface
 
 ### `str` object is not callable for habtic featback 1.2.2.4
