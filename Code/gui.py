@@ -307,6 +307,17 @@ class statistics:
             self.count_file_sortet = self.stat_file["count_file_sortet"]
             self.count_file_type = self.stat_file["count_file_type"]
 
+    def actualise(self):
+        self.count_folder_sortet += 1
+        self.count_file_sortet += 1
+
+    def load(self):
+        with open(stat_file, "r") as f:
+            self.stat_file = json.load(f)
+        self.count_folder_sortet = self.stat_file["count_folder_sortet"]
+        self.count_file_sortet = self.stat_file["count_file_sortet"]
+        self.count_file_type = self.stat_file["count_file_type"]
+    
     def generate(self):
         # Create a new figure
         plt.figure()
