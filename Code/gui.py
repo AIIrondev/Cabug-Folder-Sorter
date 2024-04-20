@@ -548,6 +548,7 @@ class sorting_normal:
             self.sort_files_normal(file_endings)
 
     def sort_files_normal(self, file_endings):
+        global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
         self.count_elements = 1
         for file in os.listdir(self.folder_path):
             if os.path.isdir(os.path.join(self.folder_path, file)):
@@ -608,6 +609,7 @@ class sorting_subdir:
                     self.sort_files_subdir(file_endings)
 
     def sort_files_subdir(self, file_endings):
+        global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
         for file in os.listdir(self.folder_path):
             file_path = os.path.join(self.folder_path, file)
             if os.path.isdir(file_path):
