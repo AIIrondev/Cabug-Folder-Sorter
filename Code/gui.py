@@ -314,7 +314,7 @@ class statistics:
             self.count_file_type = self.stat_file["count_file_type"]
         else:
             pass
-        
+
     def save(self):
         self.count_file_sortet += count_file_sortet_add
         self.count_folder_sortet += count_folder_sortet_add
@@ -332,34 +332,45 @@ class statistics:
         self.count_folder_sortet = self.stat_file["count_folder_sortet"]
         self.count_file_sortet = self.stat_file["count_file_sortet"]
         self.count_file_type = self.stat_file["count_file_type"]
-    
-    def generate(self):
+
+    def generate():
         # Create a new figure
         plt.figure()
 
-        # Create a bar plot for count_file_type
-        file_types, counts = zip(*self.count_file_type)
-        plt.bar(file_types, counts)
+        # Plot line graph for count_file_type
+        file_types, counts = zip(*count_file_type.items())  # Extract items from dictionary
+        plt.plot(file_types, counts, marker='o', linestyle='-')
         plt.title('File Types')
         plt.xlabel('Type')
         plt.ylabel('Count')
-        plt.savefig('file_types.png')
+        plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
+        plt.grid(True)  # Add grid lines
+        plt.tight_layout()  # Adjust layout to prevent overlapping labels
+
+        # Save the line graph
+        plt.savefig('file_types_line.png')
+
+        # Clear the current figure
         plt.clf()
 
-        # Create a bar plot for count_file_sortet
-        plt.bar(['Files Sorted'], [self.count_file_sortet])
+        # Plot line graph for count_file_sortet
+        plt.plot(['Files Sorted'], [count_file_sortet], marker='o', linestyle='-')
         plt.title('Files Sorted')
         plt.xlabel('Category')
         plt.ylabel('Count')
-        plt.savefig('files_sorted.png')
+        plt.grid(True)
+        plt.tight_layout()
+        plt.savefig('files_sorted_line.png')
         plt.clf()
 
-        # Create a bar plot for count_folder_sortet
-        plt.bar(['Folders Sorted'], [self.count_folder_sortet])
+        # Plot line graph for count_folder_sortet
+        plt.plot(['Folders Sorted'], [count_folder_sortet], marker='o', linestyle='-')
         plt.title('Folders Sorted')
         plt.xlabel('Category')
         plt.ylabel('Count')
-        plt.savefig('folders_sorted.png')
+        plt.grid(True)
+        plt.tight_layout()
+        plt.savefig('folders_sorted_line.png')
         plt.clf()
 
     def initialise():
