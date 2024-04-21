@@ -9,6 +9,8 @@ import json
 from PIL import Image
 import matplotlib.pyplot as plt
 import logging as log
+import magika
+import threading
 
 # sertup logging
 log.basicConfig(filename="folder_sorter.log", level=log.DEBUG, format="%(asctime)s - %(message)s")
@@ -541,6 +543,18 @@ class advanced_sort:
         if self.Other:
             self.file_ending_["Other"] = file_ending["Other"]
 
+
+class sorting_magika:
+    def __init__(self, file_endings):
+        self.folder_path = folder_to_sort
+        global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
+        if self.folder_path == "":
+            messagebox.showerror("Folder Sorter", "Please select a folder")
+        elif os.path.exists(self.folder_path):
+            self.sort_files_magika(file_endings)
+            
+    def sort_files_magika(self, file_endings):
+        pass
 
 class sorting_normal:
     def __init__(self, file_endings):
