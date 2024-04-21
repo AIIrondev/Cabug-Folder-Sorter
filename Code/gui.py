@@ -8,7 +8,10 @@ from tkinter.colorchooser import askcolor
 import json
 from PIL import Image
 import matplotlib.pyplot as plt
+import logging as log
 
+# sertup logging
+log.basicConfig(filename="folder_sorter.log", level=log.DEBUG, format="%(asctime)s - %(message)s")
 
 # Global Variables
 folder_to_sort = ""
@@ -334,44 +337,28 @@ class statistics:
         self.count_file_type = self.stat_file["count_file_type"]
 
     def generate():
-        # Create a new figure
         plt.figure()
 
-        # Plot line graph for count_file_type
-        file_types, counts = zip(*count_file_type.items())  # Extract items from dictionary
+        file_types, counts = zip(*count_file_type.items())
         plt.plot(file_types, counts, marker='o', linestyle='-')
         plt.title('File Types')
         plt.xlabel('Type')
         plt.ylabel('Count')
-        plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
-        plt.grid(True)  # Add grid lines
-        plt.tight_layout()  # Adjust layout to prevent overlapping labels
-
-        # Save the line graph
-        plt.savefig('file_types_line.png')
-
-        # Clear the current figure
-        plt.clf()
-
-        # Plot line graph for count_file_sortet
-        plt.plot(['Files Sorted'], [count_file_sortet], marker='o', linestyle='-')
-        plt.title('Files Sorted')
-        plt.xlabel('Category')
-        plt.ylabel('Count')
+        plt.xticks(rotation=45)
         plt.grid(True)
         plt.tight_layout()
-        plt.savefig('files_sorted_line.png')
-        plt.clf()
-
-        # Plot line graph for count_folder_sortet
-        plt.plot(['Folders Sorted'], [count_folder_sortet], marker='o', linestyle='-')
-        plt.title('Folders Sorted')
-        plt.xlabel('Category')
-        plt.ylabel('Count')
+        plt.show()
+        plt.savefig("stats_file_types.png")
+        
+        plt.plot(count_folder_sortet, count_file_sortet, marker='o', linestyle='-')
+        plt.title('Folder and File Count')
+        plt.xlabel('Folder')
+        plt.ylabel('File')
+        plt.xticks(rotation=45)
         plt.grid(True)
         plt.tight_layout()
-        plt.savefig('folders_sorted_line.png')
-        plt.clf()
+        plt.show()
+        plt.savefig("stats_folder_file.png")
 
     def initialise():
         with open(stat_file, "w") as f:
@@ -463,6 +450,7 @@ class sort:
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder_path):
             count_folder_sortet_add += 1
+            log.info("Folder")
             if button_sub_sort.get():
                 sorting_subdir(self.folder_path, file_ending)
             else:
@@ -480,6 +468,7 @@ class sort_advanced_script: # get file ending dict as .json file
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder):
             count_folder_sortet_add += 1
+            log.info("Folder")
             if button_sub_sort.get():
                 sorting_subdir(self.folder, file_ending_conf)
             else:
@@ -506,6 +495,7 @@ class advanced_sort:
         elif os.path.exists(self.folder_path):
             self.prepare()
             count_folder_sortet_add += 1
+            log.info("Folder")
             if button_sub_sort.get():
                 sorting_subdir(self.folder_path, self.file_ending_)
             else:
@@ -568,6 +558,7 @@ class sorting_normal:
                 for key in file_endings:
                     if file.endswith(tuple(file_endings[key])):
                         count_file_type_add[key] += 1
+                        log.info(f"File: {file}: {key}")
                         self.count_elements += 1
                         count_file_sortet_add += 1
                         if not os.path.exists(os.path.join(self.folder_path, key)):
@@ -576,6 +567,7 @@ class sorting_normal:
                         break
                     elif key == "Other":
                         count_file_type_add["Other"] += 1
+                        log.info(f"File: {file}: Other")
                         if not os.path.exists(os.path.join(self.folder_path, "Other")):
                             os.makedirs(os.path.join(self.folder_path, "Other"))
                         shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, "Other", file))
@@ -632,6 +624,7 @@ class sorting_subdir:
                             continue
                         elif file.endswith(tuple(file_endings[key])):
                             count_file_type_add[key] += 1
+                            log.info(f"File: {file}: {key}")
                             if not os.path.exists(os.path.join(self.folder_path, key)):
                                 os.makedirs(os.path.join(self.folder_path, key))
                             shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
@@ -640,6 +633,7 @@ class sorting_subdir:
                             break
                         elif key == "Other":
                             count_file_type_add["Other"] += 1
+                            log.info(f"File: {file}: Other")
                             if not os.path.exists(os.path.join(self.folder_path, "Other")):
                                 os.makedirs(os.path.join(self.folder_path, "Other"))
                             shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, "Other", file))
