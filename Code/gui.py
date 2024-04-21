@@ -329,6 +329,9 @@ class statistics:
         with open(stat_file, "w") as f:
             json.dump({"count_folder_sortet": self.count_folder_sortet, "count_file_sortet": self.count_file_sortet, "count_file_type": self.count_file_type}, f)
 
+    def load_log(self):
+        pass
+
     def load(self):
         with open(stat_file, "r") as f:
             self.stat_file = json.load(f)
