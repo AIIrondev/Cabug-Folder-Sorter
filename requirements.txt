@@ -101,7 +101,6 @@ python-dateutil==2.8.2
 python-dotenv==1.0.1
 pytz==2023.3.post1
 pyusb==1.2.1
-PyWavelets==1.4.1
 pywin32==306
 pywin32-ctypes==0.2.2
 PyYAML==6.0.1
