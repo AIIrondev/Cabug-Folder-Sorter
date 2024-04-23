@@ -121,8 +121,9 @@ class app:
         CTkButton(self.root, text="?", command=lambda:self.help("select_simple"),width=15, height=20, bg_color=color_background,fg_color= color_background,hover=True, hover_color=color_background, border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=290, y=55)
         CTkButton(self.root, text=language_engine(8), command=sort,font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=140, y=100)
         CTkButton(self.root, text="?", command=lambda:self.help("sort_simple"),width=15, height=20, bg_color=color_background,fg_color= color_background,hover=True, hover_color=color_background, border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=290, y=100)
+        CTkCheckBox(self.root, text=language_engine(5), variable=button_sub_sort, bg_color=color_background, text_color=color_main).place(x=140, y=200)
+        CTkCheckBox(self.root, text="sort with magika", variable=button_stat_sort, bg_color=color_background, text_color=color_main).place(x=140, y=230)
         CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color=color_background,fg_color= color_background).place(x=140, y=300)
-        self.ask_sort_subdir()
 
     def sort_advanced_menu(self):
         self.reset()
