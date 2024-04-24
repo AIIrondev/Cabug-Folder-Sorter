@@ -23,6 +23,7 @@ subfolders = ""
 conf_file = "conf.json"
 sort_subdir = False
 stat_file = "statistics.json"
+button_magika = False
 __language__ = "en"
 __version__ = "1.0.1.1"
 color_background = "#262626"
@@ -55,6 +56,7 @@ try:
         color_background = json_file["color_background"]
         color_main = json_file["color_main"]
         __language__ = json_file["active_lang"]
+        sort_magika = json_file["sort_magika"]
 except:
     pass
 
@@ -71,8 +73,10 @@ class app:
         self.root.config(bg=color_background)
         global button_sub_sort
         global button_stat_sort
-        button_sub_sort = BooleanVar() # The value of the checkbox that decides if the subfolders should be sorted or not
-        button_stat_sort = BooleanVar() # The value of the checkbox that decides if the statistics should be generated or not
+        global button_magika
+        button_sub_sort = BooleanVar()
+        button_stat_sort = BooleanVar()
+        button_magika = BooleanVar()
         # Template: CTkButton(,font=self.main_font,text_color_background=color_main,hover=True,hover_color_background="black",border_width=2,corner_radius=3,border_color_background= color_main, bg_color_background=color_background,fg_color_background= color_background)
         self.menu() 
         self.root.mainloop()
@@ -122,7 +126,7 @@ class app:
         CTkButton(self.root, text=language_engine(8), command=sort,font=self.main_font,text_color=color_main,hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= color_main, bg_color=color_background,fg_color= color_background).place(x=140, y=100)
         CTkButton(self.root, text="?", command=lambda:self.help("sort_simple"),width=15, height=20, bg_color=color_background,fg_color= color_background,hover=True, hover_color=color_background, border_color="white", text_color="white",font=self.main_font,border_width=1,corner_radius=32).place(x=290, y=100)
         CTkCheckBox(self.root, text=language_engine(5), variable=button_sub_sort, bg_color=color_background, text_color=color_main).place(x=140, y=200)
-        CTkCheckBox(self.root, text="sort with magika", variable=button_stat_sort, bg_color=color_background, text_color=color_main).place(x=140, y=230)
+        CTkCheckBox(self.root, text="sort with magika", variable=button_magika, bg_color=color_background, text_color=color_main).place(x=140, y=230)
         CTkButton(self.root, text=language_engine(6), command=self.menu,font=self.main_font,text_color="red",hover=True,hover_color="black",border_width=2,corner_radius=3,border_color= "red", bg_color=color_background,fg_color= color_background).place(x=140, y=300)
 
     def sort_advanced_menu(self):
@@ -302,7 +306,7 @@ class app:
 
     def __del__(self):# save on closing
         with open(conf_file, "w") as f:
-            json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main, "active_lang": __language__, "stats": button_stat_sort.get()}, f)
+            json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main, "active_lang": __language__, "stats": button_stat_sort.get(),  "sort_magika": button}, f)
 
 
 class statistics:
