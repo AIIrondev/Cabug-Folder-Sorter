@@ -9,7 +9,7 @@ import json
 from PIL import Image
 import matplotlib.pyplot as plt
 import logging as log
-import magika
+from magika import Magika
 import threading
 
 # sertup logging
@@ -44,6 +44,20 @@ file_ending = {
     "Executables": [".exe", ".msi", ".apk", ".app", ".bat", ".com", ".gadget", ".jar", ".wsf", ".sh", ".bash", ".csh", ".zsh", ".fish", ".ps1", ".psm1", ".psd1", ".ps1xml", ".pssc", ".psc1", ".pssc", ".psh", ".pash", ".pasm", ".pas", ".pl", ".pm", ".tcl", ".r", ".cs", ".vb", ".vbs", ".vba", ".vbscript", ".vbe", ".vbs"],
     "Fonts": [".ttf", ".otf", ".woff", ".woff2", ".eot", ".svg", ".svgz", ".dfont", ".pfa", ".pfb", ".pfm", ".afm", ".cid", ".cff", ".otc", ".t42", ".t11", ".fon", ".fnt", ".woff", ".woff2", ".eot", ".svg", ".svgz", ".dfont", ".pfa", ".pfb", ".pfm", ".afm", ".cid", ".cff", ".otc", ".t42", ".t11", ".fon", ".fnt"],
     "Other": [".*"]
+}
+file_endings_magika = {
+    "Images": ["Image"],
+    "Videos": ["Video"],
+    "Audio": ["Audio"],
+    "Documents": ["Document"],
+    "Archives": ["Archive"],
+    "3D Models": ["3D Model"],
+    "PCB": ["PCB"],
+    "Code": ["Code"],
+    "Executables": ["Executable"],
+    "Fonts": ["Font"],
+    "Other": [".*"]
+    
 }
 
 
@@ -603,7 +617,6 @@ class sorting_normal:
 
     def sort_files_normal_magika(self, file_endings): # TODO: Finisch the magika sorting in version 2.3.0
         magika = Magika()
-        print(result.output.ct_label)  # Output: "markdown"
         global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
         self.count_elements = 1
         for file in os.listdir(self.folder_path):
@@ -611,7 +624,7 @@ class sorting_normal:
                 continue
             else:
                 result = magika.identify_path(Path(file))
-                for key in file_endings:
+                for key in file_endings_magika:
                     if result.output.ct_label == key:
                         count_file_type_add[key] += 1
                         log.info(f"File: {file}: {key}")
