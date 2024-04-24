@@ -306,7 +306,7 @@ class app:
 
     def __del__(self):# save on closing
         with open(conf_file, "w") as f:
-            json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main, "active_lang": __language__, "stats": button_stat_sort.get(),  "sort_magika": button}, f)
+            json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main, "active_lang": __language__, "stats": button_stat_sort.get(),  "sort_magika": button_magika}, f)
 
 
 class statistics:
@@ -568,7 +568,10 @@ class sorting_normal:
         if self.folder_path == "":
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder_path):
-            self.sort_files_normal(file_endings)
+            if button_magika:
+                self.sort_files_normal_magika(file_endings)
+            else:
+                self.sort_files_normal(file_endings)
 
     def sort_files_normal(self, file_endings):
         global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
@@ -599,14 +602,17 @@ class sorting_normal:
         messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
 
     def sort_files_normal_magika(self, file_endings): # TODO: Finisch the magika sorting in version 2.3.0
+        magika = Magika()
+        print(result.output.ct_label)  # Output: "markdown"
         global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
         self.count_elements = 1
         for file in os.listdir(self.folder_path):
             if os.path.isdir(os.path.join(self.folder_path, file)):
                 continue
             else:
+                result = magika.identify_path(Path(file))
                 for key in file_endings:
-                    if file.endswith(tuple(file_endings[key])):
+                    if result.output.ct_label == key:
                         count_file_type_add[key] += 1
                         log.info(f"File: {file}: {key}")
                         self.count_elements += 1
