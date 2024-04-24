@@ -598,6 +598,34 @@ class sorting_normal:
                         break
         messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
 
+    def sort_files_normal_magika(self, file_endings): # TODO: Finisch the magika sorting in version 2.3.0
+        global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
+        self.count_elements = 1
+        for file in os.listdir(self.folder_path):
+            if os.path.isdir(os.path.join(self.folder_path, file)):
+                continue
+            else:
+                for key in file_endings:
+                    if file.endswith(tuple(file_endings[key])):
+                        count_file_type_add[key] += 1
+                        log.info(f"File: {file}: {key}")
+                        self.count_elements += 1
+                        count_file_sortet_add += 1
+                        if not os.path.exists(os.path.join(self.folder_path, key)):
+                            os.makedirs(os.path.join(self.folder_path, key))
+                        shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
+                        break
+                    elif key == "Other":
+                        count_file_type_add["Other"] += 1
+                        log.info(f"File: {file}: Other")
+                        if not os.path.exists(os.path.join(self.folder_path, "Other")):
+                            os.makedirs(os.path.join(self.folder_path, "Other"))
+                        shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, "Other", file))
+                        self.count_elements += 1
+                        count_file_sortet_add += 1
+                        break
+        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
+
 
 class sorting_subdir:
     def __init__(self, folder_path, file_endings):
@@ -634,6 +662,39 @@ class sorting_subdir:
                     self.sort_files_subdir(file_endings)
 
     def sort_files_subdir(self, file_endings):
+        global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
+        for file in os.listdir(self.folder_path):
+            file_path = os.path.join(self.folder_path, file)
+            if os.path.isdir(file_path):
+                sorting_subdir(file_path, file_endings)
+            else:
+                for key in file_endings:
+                    try:
+                        if file_endings[key] == []:
+                            continue
+                        elif file.endswith(tuple(file_endings[key])):
+                            count_file_type_add[key] += 1
+                            log.info(f"File: {file}: {key}")
+                            if not os.path.exists(os.path.join(self.folder_path, key)):
+                                os.makedirs(os.path.join(self.folder_path, key))
+                            shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
+                            self.count_elements += 1
+                            count_file_sortet_add += 1
+                            break
+                        elif key == "Other":
+                            count_file_type_add["Other"] += 1
+                            log.info(f"File: {file}: Other")
+                            if not os.path.exists(os.path.join(self.folder_path, "Other")):
+                                os.makedirs(os.path.join(self.folder_path, "Other"))
+                            shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, "Other", file))
+                            self.count_elements += 1
+                            count_file_sortet_add += 1
+                            break
+                    except:
+                        pass
+        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
+
+    def sort_files_subdir_magika(self, file_endings): # TODO: Finisch the magika sorting in version 2.3.0
         global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
         for file in os.listdir(self.folder_path):
             file_path = os.path.join(self.folder_path, file)
