@@ -571,7 +571,7 @@ class sorting_magika:
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder_path):
             self.sort_files_magika(file_endings)
-            
+
     def sort_files_magika(self, file_endings):
         pass
 
