@@ -41,4 +41,6 @@ for file in file_path:
                 print(f"{file} is spreadsheet file")
             case "empty":
                 print(f"{file} is empty file")
+                
+                # finisch this code
             
