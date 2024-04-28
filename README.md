@@ -10,12 +10,13 @@ This folder sorter is in active development and has more Versions to come.
 - [Installation](#installation)
 - [Functions](#functions)
 - [Guide](#guide)
+— [Further](#further)
 
 ## Installation
 
 To use the Cabug folder sorter, you need to install the Software. Follow the instructions below to get started:
 
-1. Download the latest version of the Cabug folder sorter from the official website or from the [github repository](https://github.com/AIIrondev/Folder-sorter/releases).
+1. Download the latest version of the Cabug folder sorter from the [github repository](https://github.com/AIIrondev/Folder-sorter/releases).
 2. Verify the installation by running the programm.
 3. If there is any Problem please send a Email to <Iron.ai.dev@gmail.com> for bug fixing.
 
@@ -72,3 +73,7 @@ Here, you can select the categories that you want to sort. After selecting the f
 ![alt text](images/image-6.png)
 
 If you have an Questions you can Write an Email to <Iron.ai.dev@gmail.com>.
+
+## Further
+
+I will add this in on version 3.0.0 for other stuff.
