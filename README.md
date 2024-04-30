@@ -3,7 +3,7 @@
 [![Python application](https://github.com/AIIrondev/Cabug-Folder-sorter/actions/workflows/main.yml/badge.svg)](https://github.com/AIIrondev/Cabug-Folder-sorter/actions/workflows/main.yml)
 
 This Projekt is developt by AiIrondev(Maximilian Gründinger) in Python.
-This folder sorter is in active development and has more Versions to come.
+This folder sorter is in active development and has more Versions to come -> v3.0.0.
 
 ## Table of Contents
 
