@@ -10,7 +10,7 @@ This folder sorter is in active development and has more Versions to come -> v3.
 - [Installation](#installation)
 - [Functions](#functions)
 - [Guide](#guide)
-— [Further](#further)
+- [Further](#further)
 
 ## Installation
 
