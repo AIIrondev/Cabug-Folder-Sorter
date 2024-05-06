@@ -44,3 +44,32 @@ for file in file_path:
                 
                 # finisch this code
             
+def sort_files_normal_magika(self, file_endings): # TODO: Finisch the magika sorting in version 2.3.0
+        magika = Magika()
+        global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
+        self.count_elements = 1
+        for file in os.listdir(self.folder_path):
+            if os.path.isdir(os.path.join(self.folder_path, file)):
+                continue
+            else:
+                result = magika.identify_path(Path(file))
+                for key in file_endings_magika:
+                    if result.output.ct_label == key:
+                        count_file_type_add[key] += 1
+                        log.info(f"File: {file}: {key}")
+                        self.count_elements += 1
+                        count_file_sortet_add += 1
+                        if not os.path.exists(os.path.join(self.folder_path, key)):
+                            os.makedirs(os.path.join(self.folder_path, key))
+                        shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, key, file))
+                        break
+                    elif key == "Other":
+                        count_file_type_add["Other"] += 1
+                        log.info(f"File: {file}: Other")
+                        if not os.path.exists(os.path.join(self.folder_path, "Other")):
+                            os.makedirs(os.path.join(self.folder_path, "Other"))
+                        shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, "Other", file))
+                        self.count_elements += 1
+                        count_file_sortet_add += 1
+                        break
+        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")

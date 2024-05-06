@@ -53,11 +53,10 @@ file_endings_magika = {
     "Archives": ["Archive"],
     "3D Models": ["3D Model"],
     "PCB": ["PCB"],
-    "Code": ["Code"],
+    "Code": ["python", "json", "html", "css", "php", "java", "javascript", "typescript", "c", "cpp", "c++", "c#", "go", "rust", "ruby", "swift", "kotlin", "dart", "lua", "shell", "batch", "powershell", "psm1", "psd1", "ps1xml", "pssc", "psc1", "pssc", "psh", "pash", "pasm", "pas", "perl", "tcl", "r", "cs", "vb", "vbs", "vba", "vbscript", "vbe", "vbs"],
     "Executables": ["Executable"],
     "Fonts": ["Font"],
     "Other": [".*"]
-    
 }
 
 
