@@ -10,7 +10,7 @@ This folder sorter is in active development and has more Versions to come -> v3.
 - [Installation](#installation)
 - [Functions](#functions)
 - [Guide](#guide)
-— [Further](#further)
+- [Further](#further)
 
 ## Installation
 
@@ -76,4 +76,4 @@ If you have an Questions you can Write an Email to <Iron.ai.dev@gmail.com>.
 
 ## Further
 
-I will add this in on version 3.0.0 for other stuff.
+I startet the Projekt in 2019, because I liked standardised stuff so this is the way for my Dokuments and evry Golfer on my PC.
