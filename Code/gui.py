@@ -19,6 +19,7 @@ log.basicConfig(filename="folder_sorter.log", level=log.DEBUG, format="%(asctime
 folder_to_sort = ""
 help_file = "help.json"
 language_file = "language.json"
+magika_conf_file = "magika_conf.json"
 subfolders = ""
 conf_file = "conf.json"
 sort_subdir = False
@@ -70,6 +71,8 @@ try:
         color_main = json_file["color_main"]
         __language__ = json_file["active_lang"]
         sort_magika = json_file["sort_magika"]
+    with open(magika_conf_file, "r") as f:
+        magika_conf = json.load(f)
 except:
     pass
 
