@@ -70,6 +70,3 @@ def sort_files_normal_magika(self, file_endings): # TODO: Finisch the magika sor
                             os.makedirs(os.path.join(self.folder_path, "Other"))
                         shutil.move(os.path.join(self.folder_path, file), os.path.join(self.folder_path, "Other", file))
                         self.count_elements += 1
-                        count_file_sortet_add += 1
-                        break
-        messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
