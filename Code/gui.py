@@ -60,7 +60,6 @@ file_endings_magika = {
     "Other": [".*"]
 }
 
-
 try:
     with open(conf_file, "r") as f:
         json_file = json.load(f)
@@ -377,7 +376,7 @@ class statistics:
         plt.tight_layout()
         plt.show()
         plt.savefig("stats_file_types.png")
-        
+
         plt.plot(count_folder_sortet, count_file_sortet, marker='o', linestyle='-')
         plt.title('Folder and File Count')
         plt.xlabel('Folder')
@@ -391,6 +390,16 @@ class statistics:
     def initialise():
         with open(stat_file, "w") as f:
             json.dump({"count_folder_sortet": 0, "count_file_sortet": 0, "count_file_type": {"Images": 0, "Videos": 0}}, f) # append the statistics to the file
+
+
+class delet_dir:
+    def __init__(self, folder):
+        self.folder = folder
+        if os.path.exists(self.folder):
+            # TODO:delete the empty folder finischen
+                shutil.rmtree(self.folder)
+        else:
+            messagebox.showerror("Folder Sorter", "Internal Error: Folder not found")
 
 
 class help_engine:
