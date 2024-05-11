@@ -392,15 +392,6 @@ class statistics:
             json.dump({"count_folder_sortet": 0, "count_file_sortet": 0, "count_file_type": {"Images": 0, "Videos": 0}}, f) # append the statistics to the file
 
 
-class delet_dir:
-    def __init__(self, folder):
-        self.folder = folder
-        if os.path.exists(self.folder):
-            # TODO:delete the empty folder finischen
-                shutil.rmtree(self.folder)
-        else:
-            messagebox.showerror("Folder Sorter", "Internal Error: Folder not found")
-
 
 class help_engine:
     def __init__(self, menuitem):
@@ -605,6 +596,10 @@ class sorting_normal:
         self.count_elements = 1
         for file in os.listdir(self.folder_path):
             if os.path.isdir(os.path.join(self.folder_path, file)):
+                if not os.listdir(file_path):
+                    ask = messagebox.showinfo("Folder Sorter",f"Folder {file_path} is empty and will be deleted.")
+                    if ask:
+                        os.rmdir(file_path)
                 continue
             else:
                 for key in file_endings:
@@ -634,6 +629,10 @@ class sorting_normal:
         self.count_elements = 1
         for file in os.listdir(self.folder_path):
             if os.path.isdir(os.path.join(self.folder_path, file)):
+                if not os.listdir(file_path):
+                    ask = messagebox.showinfo("Folder Sorter",f"Folder {file_path} is empty and will be deleted.")
+                    if ask:
+                        os.rmdir(file_path)
                 continue
             else:
                 result = magika.identify_path(Path(file))
@@ -698,6 +697,10 @@ class sorting_subdir:
         for file in os.listdir(self.folder_path):
             file_path = os.path.join(self.folder_path, file)
             if os.path.isdir(file_path):
+                if not os.listdir(file_path):
+                    ask = messagebox.showinfo("Folder Sorter",f"Folder {file_path} is empty and will be deleted.")
+                    if ask:
+                        os.rmdir(file_path)
                 sorting_subdir(file_path, file_endings)
             else:
                 for key in file_endings:
@@ -731,6 +734,10 @@ class sorting_subdir:
         for file in os.listdir(self.folder_path):
             file_path = os.path.join(self.folder_path, file)
             if os.path.isdir(file_path):
+                if not os.listdir(file_path):
+                    ask = messagebox.showinfo("Folder Sorter",f"Folder {file_path} is empty and will be deleted.")
+                    if ask:
+                        os.rmdir(file_path)
                 sorting_subdir(file_path, file_endings)
             else:
                 for key in file_endings:
