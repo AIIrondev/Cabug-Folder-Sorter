@@ -462,7 +462,7 @@ class help_engine:
 
 
 def language_engine(part):
-    with open(language_file, "r", encoding='utf-8') as f: 
+    with open(language_file, "r", encoding='utf-8') as f:
         language_import = {}
         language_import = json.load(f)
         language_active = language_import[__language__]
@@ -623,7 +623,7 @@ class sorting_normal:
                         break
         messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
 
-    def sort_files_normal_magika(self, file_endings): # TODO: Finisch the magika sorting in version 2.3.0
+    def sort_files_normal_magika(self, file_endings):
         magika = Magika()
         global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
         self.count_elements = 1
