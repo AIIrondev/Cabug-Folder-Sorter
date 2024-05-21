@@ -323,7 +323,7 @@ class app:
 
     def __del__(self):# save on closing
         with open(conf_file, "w") as f:
-            json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main, "active_lang": __language__, "stats": button_stat_sort.get(),  "sort_magika": button_magika}, f)
+            json.dump({"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main, "active_lang": __language__, "stats": button_stat_sort.get(),  "sort_magika": button_magika.get()}, f)
 
 
 class statistics:
