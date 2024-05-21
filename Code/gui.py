@@ -729,7 +729,7 @@ class sorting_subdir:
                         pass
         messagebox.showinfo("Folder Sorter",f"Finisched sorting of {str(self.count_elements)} elements \n in the folder {folder_to_sort}.")
 
-    def sort_files_subdir_magika(self, file_endings): # TODO: Finisch the magika sorting in version 2.3.0
+    def sort_files_subdir_magika(self, file_endings):
         global count_file_sortet_add, count_folder_sortet_add, count_file_type_add
         for file in os.listdir(self.folder_path):
             file_path = os.path.join(self.folder_path, file)
