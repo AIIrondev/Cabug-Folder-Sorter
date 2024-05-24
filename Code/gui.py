@@ -61,17 +61,21 @@ file_endings_magika = {
 }
 
 try:
-    with open(conf_file, "r") as f:
-        json_file = json.load(f)
-        version = json_file["version"]
-        __version__ = version
-        sort_subdir = json_file["sort_subdir"]
-        color_background = json_file["color_background"]
-        color_main = json_file["color_main"]
-        __language__ = json_file["active_lang"]
-        sort_magika = json_file["sort_magika"]
-    with open(magika_conf_file, "r") as f:
-        magika_conf = json.load(f)
+    with open(conf_file, "r", encoding='utf-8') as f:
+        data = json.load(f)
+        for element in data:
+            if element == "conf":
+                conf = data[element]
+                version = conf["version"]
+                sort_subdir = conf["sort_subdir"]
+                color_background = conf["color_background"]
+                color_main = conf["color_main"]
+                __language__ = conf["active_lang"]
+                sort_magika = conf["sort_magika"]
+            if element == "magika":
+                magika = data[element]
+            if element == "language":
+                language_import = data[element]
 except:
     pass
 
@@ -462,12 +466,9 @@ class help_engine:
 
 
 def language_engine(part):
-    with open(language_file, "r", encoding='utf-8') as f:
-        language_import = {}
-        language_import = json.load(f)
-        language_active = language_import[__language__]
-        language_active = language_active[part]
-        return language_active
+    language_active = language_import[__language__]
+    language_active = language_active[part]
+    return language_active
 
 
 class sort:
