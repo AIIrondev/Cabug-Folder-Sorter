@@ -17,11 +17,8 @@ log.basicConfig(filename="folder_sorter.log", level=log.DEBUG, format="%(asctime
 
 # Global Variables
 folder_to_sort = ""
-help_file = "help.json"
-language_file = "language.json"
-magika_conf_file = "magika_conf.json"
 subfolders = ""
-conf_file = "conf.json"
+conf_file = "all_conf.json"
 sort_subdir = False
 stat_file = "statistics.json"
 button_magika = False
@@ -76,6 +73,8 @@ try:
                 magika = data[element]
             if element == "language":
                 language_import = data[element]
+            if element == "help":
+                help_loaded = data[element]
 except:
     pass
 
@@ -164,7 +163,6 @@ class app:
 
     def advanced_mode(self):
         self.reset()
-        self.ask_sort_subdir()
         # Variables
         self.folder_path = StringVar()
         self.folder_path.set("")
@@ -401,8 +399,7 @@ class help_engine:
     def __init__(self, menuitem):
         self.menu_item = menuitem
         self.help_file = {}
-        with open(help_file, "r") as f:
-            self.help_file = json.load(f)
+        self.help_file = help_loaded
         self.help_complete()
 
     def help_complete(self):
