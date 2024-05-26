@@ -27,6 +27,7 @@ To use the Cabug folder sorter, you need to install the Software. Follow the ins
 - Advanced Scripting Mode -> In this Mode, you can select an .json file in that you can write the Label and the file endings that you want to sort.
 - Sort subfolders in the cwd
 - Sort with Magika automatic file type detection
+- Automisation is easy with this tool
 
 ## Guide
 
