@@ -7,6 +7,7 @@ from tkinter import messagebox
 from tkinter.colorchooser import askcolor
 import json
 from PIL import Image
+import zipfile
 import matplotlib.pyplot as plt
 import logging as log
 from magika import Magika
@@ -328,6 +329,8 @@ class app:
             config = {"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main, "active_lang": __language__, "stats": button_stat_sort.get(),  "sort_magika": button_magika.get()}
             data["conf"] = config
             json.dump(data, f, indent=4)
+        zipfile.ZipFile("Cabug-folder-sorter.zip", "w").write(conf_file) # TODO: Test
+        
 
 
 class statistics:
