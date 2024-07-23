@@ -40,7 +40,7 @@ except:
 
 ### Atributte error 0.1.2.3
 
-This is an error where I acidently try'd to use the `_path_exist` function from the `os` library wich doesent exist.
+This is an error where I acidently try'd to use the `_path_exist` function from the `os` library wich doesn't exist.
 
 Before:
 
