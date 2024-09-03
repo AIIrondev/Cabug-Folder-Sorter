@@ -14,14 +14,14 @@ from magika import Magika
 import threading
 
 # sertup logging
-log.basicConfig(filename="folder_sorter.log", level=log.DEBUG, format="%(asctime)s - %(message)s")
+log.basicConfig(filename="Data/log/folder_sorter.log", level=log.DEBUG, format="%(asctime)s - %(message)s")
 
 # Global Variables
 folder_to_sort = ""
 subfolders = ""
-conf_file = "all_conf.json"
+conf_file = "Data/conf/all_conf.json"
 sort_subdir = False
-stat_file = "statistics.json"
+stat_file = "Data/conf/statistics.json"
 button_magika = False
 __language__ = "en"
 __version__ = "1.0.1.1"
@@ -89,7 +89,7 @@ class app:
         self.root.geometry("400x420")
         self.root.resizable(False, False)
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
-        self.root.iconbitmap("Cabug-folder-sorter.ico")
+        self.root.iconbitmap("Data/images/Cabug-folder-sorter.ico")
         self.main_font = CTkFont(family="Helvetica", size=12)
         self.root.config(bg=color_background)
         global button_sub_sort
@@ -105,7 +105,7 @@ class app:
     def menu(self):
         if button_stat_sort.get():
             statistics.initialise()
-        self.option_image = CTkImage(light_image=Image.open("option.png"),size=(40, 40))
+        self.option_image = CTkImage(light_image=Image.open("Data/images/option.png"),size=(40, 40))
         self.reset()
         heeight = 70
         wieght = 240
@@ -455,7 +455,7 @@ class help_engine:
         self.app.geometry("400x420")
         self.app.resizable(False, False)
         self.app.protocol("WM_DELETE_WINDOW", self.on_closing)
-        self.app.iconbitmap("Cabug-folder-sorter.ico")
+        self.app.iconbitmap("Data/images/Cabug-folder-sorter.ico")
         self.app.config(bg=color_background)
         self.main_font = CTkFont(family="Helvetica", size=12)
         CTkLabel(self.app, text="Help Catalog", font=("Arial", 20), bg_color=color_background, text_color=color_main).place(x=120, y=10)
