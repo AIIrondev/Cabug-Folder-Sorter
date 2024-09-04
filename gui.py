@@ -16,7 +16,7 @@ from sort import *
 from help import help_engine as help_engine
 #from statistics import *
 
-# sertup logging
+# setup logging
 log.basicConfig(filename="Data/log/folder_sorter.log", level=log.DEBUG, format="%(asctime)s - %(message)s")
 
 # Global Variables
