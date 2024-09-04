@@ -67,7 +67,7 @@ try:
         for element in data:
             if element == "conf":
                 conf = data[element]
-                version = conf["version"]
+                __version__ = conf["version"]
                 sort_subdir = conf["sort_subdir"]
                 color_background = conf["color_background"]
                 color_main = conf["color_main"]
@@ -332,7 +332,7 @@ class app:
             config = {"version": __version__, "sort_subdir": button_sub_sort.get(), "color_background": color_background, "color_main": color_main, "active_lang": __language__, "stats": button_stat_sort.get(),  "sort_magika": button_magika.get()}
             data["conf"] = config
             json.dump(data, f, indent=4)
-        zipfile.ZipFile("Cabug-folder-sorter.zip", "w").write(conf_file) # TODO: Test
+        zipfile.ZipFile("Data/log/Cabug-folder-sorter.zip", "w").write(conf_file) # TODO: Test
         
 
 

@@ -19,7 +19,7 @@ The unsupportet and has some minor bugs or not released but planed versions are 
 | 2.0.0 | ✅ | 2024.03.30 | Added an new look, option Menu and fixed some bugs |
 | 2.1.0 | :x: | 2024.04.10 | Updatet User functionalities and fixed some bugs |
 | 2.2.0 | :x: | 2024.04.13 | Added conf.json and fixed bugs |
-| 3.0.0 | ✅ | 2024.05.11 | Affe new Features and fixed some Bugs
+| 3.0.0 | ✅ | 2024.05.11 | Added new Features and fixed some Bugs |
 
 ## Reporting a Vulnerability
 
