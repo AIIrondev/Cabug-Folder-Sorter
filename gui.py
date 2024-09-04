@@ -12,6 +12,8 @@ import matplotlib.pyplot as plt
 import logging as log
 from magika import Magika
 import threading
+from sort import *
+from statistics import *
 
 # sertup logging
 log.basicConfig(filename="Data/log/folder_sorter.log", level=log.DEBUG, format="%(asctime)s - %(message)s")
