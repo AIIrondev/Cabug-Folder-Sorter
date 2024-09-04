@@ -525,7 +525,8 @@ class sorting_normal:
         if self.folder_path == "":
             messagebox.showerror("Folder Sorter", "Please select a folder")
         elif os.path.exists(self.folder_path):
-            if button_magika:
+            print(button_magika)
+            if button_magika.get():
                 self.sort_files_normal_magika(file_endings)
             else:
                 self.sort_files_normal(file_endings)
